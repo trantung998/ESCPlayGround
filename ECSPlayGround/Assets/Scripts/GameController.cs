@@ -9,7 +9,7 @@ namespace Assets.Scripts
 {
     public class GameController : MonoBehaviour
     {
-        Systems _systems;
+        Entitas.Systems _systems;
         void Start()
         {
             // get a reference to the contexts
