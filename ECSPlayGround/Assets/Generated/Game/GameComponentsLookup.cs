@@ -8,15 +8,42 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DebugMessage = 0;
+    public const int AssetsScriptsComponentsBlueprintsBlueprint = 0;
+    public const int AssetsScriptsComponentsGameBoardDestroyed = 1;
+    public const int AssetsScriptsComponentsGameBoardGameBoardElemnt = 2;
+    public const int AssetsScriptsComponentsGameBoardMoveable = 3;
+    public const int AssetsScriptsComponentsGameBoardPosition = 4;
+    public const int AssetsScriptsComponentsGameBoard = 5;
+    public const int AssetsScriptsComponentsGameInputInteractive = 6;
+    public const int AssetsScriptsComponentsGameViewAssert = 7;
+    public const int AssetsScriptsComponentsGameViewView = 8;
+    public const int DebugMessage = 9;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
+        "AssetsScriptsComponentsBlueprintsBlueprint",
+        "AssetsScriptsComponentsGameBoardDestroyed",
+        "AssetsScriptsComponentsGameBoardGameBoardElemnt",
+        "AssetsScriptsComponentsGameBoardMoveable",
+        "AssetsScriptsComponentsGameBoardPosition",
+        "AssetsScriptsComponentsGameBoard",
+        "AssetsScriptsComponentsGameInputInteractive",
+        "AssetsScriptsComponentsGameViewAssert",
+        "AssetsScriptsComponentsGameViewView",
         "DebugMessage"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(Assets.Scripts.Components.Blueprints.BlueprintComponent),
+        typeof(Assets.Scripts.Components.GameBoard.DestroyedComponent),
+        typeof(Assets.Scripts.Components.GameBoard.GameBoardElemntComponent),
+        typeof(Assets.Scripts.Components.GameBoard.MoveableComponent),
+        typeof(Assets.Scripts.Components.GameBoard.PositionComponent),
+        typeof(Assets.Scripts.Components.GameBoardComponent),
+        typeof(Assets.Scripts.Components.GameInput.InteractiveComponent),
+        typeof(Assets.Scripts.Components.GameView.AssertComponent),
+        typeof(Assets.Scripts.Components.GameView.ViewComponent),
         typeof(DebugMessageComponent)
     };
 }
