@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Entitas;
+﻿using Entitas;
 using Entitas.CodeGenerator.Api;
 using SourceMatchOne;
 
-namespace Assets.Scripts.Components.GameBoard
+namespace Components.GameBoard
 {
     [Game]
     public class PositionComponent : IComponent
