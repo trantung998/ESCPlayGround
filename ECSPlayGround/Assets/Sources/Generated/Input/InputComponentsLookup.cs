@@ -10,16 +10,31 @@ public static class InputComponentsLookup {
 
     public const int BurstMode = 0;
     public const int Input = 1;
+    public const int LeftMouse = 2;
+    public const int MouseDown = 3;
+    public const int MousePosition = 4;
+    public const int MouseUp = 5;
+    public const int RightMouse = 6;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "BurstMode",
-        "Input"
+        "Input",
+        "LeftMouse",
+        "MouseDown",
+        "MousePosition",
+        "MouseUp",
+        "RightMouse"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(BurstModeComponent),
-        typeof(InputComponent)
+        typeof(InputComponent),
+        typeof(LeftMouseComponent),
+        typeof(MouseDownComponent),
+        typeof(MousePositionComponent),
+        typeof(MouseUpComponent),
+        typeof(RightMouseComponent)
     };
 }

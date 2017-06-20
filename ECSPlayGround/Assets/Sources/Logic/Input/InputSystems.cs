@@ -5,7 +5,12 @@ using System.Text;
 
 namespace Assets.Sources.Logic.Input
 {
-    class InputSystems
+    public sealed class InputSystems : Feature
     {
+        public InputSystems(Contexts contexts) : base("Input Systems")
+        {
+            Add(new EmitInputSystem(contexts));
+            Add(new ProcessInputSystem(contexts));
+        }
     }
 }
