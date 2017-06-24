@@ -1,47 +1,51 @@
 ﻿using Entitas;
 using UnityEngine;
 
-    public sealed class EmitInputSystem : IExecuteSystem, ICleanupSystem
+    public sealed class EmitInputSystem : IExecuteSystem, IInitializeSystem
     {
         private readonly InputContext _context;
-        private readonly IGroup<InputEntity> _inputs;
+        private InputEntity _leftMouseEntity;
+        private InputEntity _rightMouseEntity;
 
         public EmitInputSystem(Contexts contexts)
         {
             _context = contexts.input;
-            _inputs = _context.GetGroup(InputMatcher.Input);
         }
 
         public void Execute()
         {
-            if (UnityEngine.Input.GetKeyDown("b"))
-            {
-                _context.isBurstMode = !_context.isBurstMode;
-            }
+            var mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-            var input = _context.isBurstMode 
-            ? Input.GetMouseButton(0)
-            : Input.GetMouseButtonDown(0);
+            // left mouse button
+            if (Input.GetMouseButtonDown(0))
+                _leftMouseEntity.ReplaceMouseDown(mousePosition);
 
-            if (input)
-            {
-                var hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, 100);
-                if (hit.collider != null)
-                {
-                    var pos = hit.collider.transform.position;
+            if (Input.GetMouseButton(0))
+                _leftMouseEntity.ReplaceMousePosition(mousePosition);
 
-                    _context.CreateEntity()
-                        .AddInput((int) pos.x, (int) pos.y);
-                }
-            }
+            if (Input.GetMouseButtonUp(0))
+                _leftMouseEntity.ReplaceMouseUp(mousePosition);
+
+
+            // left mouse button
+            if (Input.GetMouseButtonDown(1))
+                _rightMouseEntity.ReplaceMouseDown(mousePosition);
+
+            if (Input.GetMouseButton(1))
+                _rightMouseEntity.ReplaceMousePosition(mousePosition);
+
+            if (Input.GetMouseButtonUp(1))
+                _rightMouseEntity.ReplaceMouseUp(mousePosition);
         }
 
-        public void Cleanup()
+        public void Initialize()
         {
-            foreach (var e in _inputs.GetEntities())
-            {
-                e.Destroy();
-            }
+            _context.isLeftMouse = true;
+            _leftMouseEntity = _context.leftMouseEntity;
+
+            _context.isRightMouse = true;
+            _rightMouseEntity = _context.rightMouseEntity;
+
         }
     }
 

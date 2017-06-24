@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Entitas;
+using UnityEngine;
 
 namespace Assets.Sources.Logic
 {
@@ -31,6 +32,9 @@ namespace Assets.Sources.Logic
             foreach (var e in entities)
             {
                 var gameObject = e.view.gameObject;
+                SpriteRenderer sp = gameObject.GetComponent<SpriteRenderer>();
+                if (sp == null) sp = gameObject.AddComponent<SpriteRenderer>();
+                sp.sprite = Resources.Load<Sprite>(e.sprite.name);
             }
         }
     }
