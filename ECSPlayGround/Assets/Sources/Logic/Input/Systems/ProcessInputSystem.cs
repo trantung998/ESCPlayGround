@@ -10,7 +10,7 @@ using Entitas;
             _contexts = contexts;
         }
 
-        protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
+        protected override Collector<InputEntity> GetTrigger(IContext<InputEntity> context)
         {
             return context.CreateCollector(InputMatcher.Input);
         }

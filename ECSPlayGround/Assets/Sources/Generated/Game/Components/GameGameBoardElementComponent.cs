@@ -8,16 +8,16 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly MoveableComponent moveableComponent = new MoveableComponent();
+    static readonly GameBoardElementComponent gameBoardElementComponent = new GameBoardElementComponent();
 
-    public bool isMoveable {
-        get { return HasComponent(GameComponentsLookup.Moveable); }
+    public bool isGameBoardElement {
+        get { return HasComponent(GameComponentsLookup.GameBoardElement); }
         set {
-            if (value != isMoveable) {
+            if (value != isGameBoardElement) {
                 if (value) {
-                    AddComponent(GameComponentsLookup.Moveable, moveableComponent);
+                    AddComponent(GameComponentsLookup.GameBoardElement, gameBoardElementComponent);
                 } else {
-                    RemoveComponent(GameComponentsLookup.Moveable);
+                    RemoveComponent(GameComponentsLookup.GameBoardElement);
                 }
             }
         }
@@ -34,17 +34,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherMoveable;
+    static Entitas.IMatcher<GameEntity> _matcherGameBoardElement;
 
-    public static Entitas.IMatcher<GameEntity> Moveable {
+    public static Entitas.IMatcher<GameEntity> GameBoardElement {
         get {
-            if (_matcherMoveable == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Moveable);
+            if (_matcherGameBoardElement == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.GameBoardElement);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherMoveable = matcher;
+                _matcherGameBoardElement = matcher;
             }
 
-            return _matcherMoveable;
+            return _matcherGameBoardElement;
         }
     }
 }

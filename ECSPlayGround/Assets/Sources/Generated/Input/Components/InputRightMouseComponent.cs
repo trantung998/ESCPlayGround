@@ -18,7 +18,7 @@ public partial class InputContext {
                 if (value) {
                     CreateEntity().isRightMouse = true;
                 } else {
-                    entity.Destroy();
+                    DestroyEntity(entity);
                 }
             }
         }

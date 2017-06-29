@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
-    [Game]
-    public sealed class InteractiveComponent : IComponent
-    {
-    }
+[Game]
+public sealed class InteractiveComponent : IComponent
+{
+}
 

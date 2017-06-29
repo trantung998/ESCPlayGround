@@ -7,11 +7,11 @@ using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
 
-    [Game]
-    public sealed class PositionComponent : IComponent
-    {
-        public Vector2 value;
-    }
+//[Game]
+//public sealed class PositionComponent : IComponent
+//{
+////    public Vector2 value;
+//}
 
 [Game]
 public sealed class DirectionComponent : IComponent
@@ -19,21 +19,16 @@ public sealed class DirectionComponent : IComponent
     public float value;
 }
 
-[Game]
-public sealed class ViewComponent : IComponent
-{
-    public GameObject gameObject;
-}
+//[Game]
+//public sealed class ViewComponent : IComponent
+//{
+//    public GameObject gameObject;
+//}
 
 [Game]
 public sealed class SpriteComponent : IComponent
 {
     public string name;
-}
-
-[Game]
-public class MoveableComponent : IComponent
-{
 }
 
 [Game]

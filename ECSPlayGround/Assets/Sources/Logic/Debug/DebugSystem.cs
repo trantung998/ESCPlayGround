@@ -12,11 +12,11 @@ namespace Assets.Sources.Logic.Debug
         {
         }
 
-        public DebugSystem(ICollector<GameEntity> collector) : base(collector)
+        public DebugSystem(Collector<GameEntity> collector) : base(collector)
         {
         }
 
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+        protected override Collector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
             return context.CreateCollector(GameMatcher.DebugMessage);
         }

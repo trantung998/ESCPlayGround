@@ -8,23 +8,33 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int DebugMessage = 0;
-    public const int Direction = 1;
-    public const int Interactive = 2;
-    public const int Moveable = 3;
-    public const int MoveComplete = 4;
-    public const int Move = 5;
-    public const int Position = 6;
-    public const int Sprite = 7;
-    public const int View = 8;
+    public const int Asset = 0;
+    public const int Blueprints = 1;
+    public const int DebugMessage = 2;
+    public const int Destroyed = 3;
+    public const int Direction = 4;
+    public const int GameBoard = 5;
+    public const int GameBoardElement = 6;
+    public const int Interactive = 7;
+    public const int Movable = 8;
+    public const int MoveComplete = 9;
+    public const int Move = 10;
+    public const int Position = 11;
+    public const int Sprite = 12;
+    public const int View = 13;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
+        "Asset",
+        "Blueprints",
         "DebugMessage",
+        "Destroyed",
         "Direction",
+        "GameBoard",
+        "GameBoardElement",
         "Interactive",
-        "Moveable",
+        "Movable",
         "MoveComplete",
         "Move",
         "Position",
@@ -33,10 +43,15 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AssetComponent),
+        typeof(BlueprintsComponent),
         typeof(DebugMessageComponent),
+        typeof(DestroyedComponent),
         typeof(DirectionComponent),
+        typeof(GameBoardComponent),
+        typeof(GameBoardElementComponent),
         typeof(InteractiveComponent),
-        typeof(MoveableComponent),
+        typeof(MovableComponent),
         typeof(MoveCompleteComponent),
         typeof(MoveComponent),
         typeof(PositionComponent),
