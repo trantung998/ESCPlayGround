@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Remoting.Contexts;
 using System.Text;
 using Entitas;
+using Entitas.Unity;
 using UnityEngine;
 
 
@@ -16,6 +17,10 @@ public class AddViewSystem : ReactiveSystem<GameEntity>
     private readonly GameContext context;
 
 
+    public AddViewSystem(Contexts context) : base(context.game)
+    {
+        this.context = context.game;
+    }
 
     protected override Collector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
@@ -29,12 +34,27 @@ public class AddViewSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
-        throw new NotImplementedException();
+        foreach (var e in entities)
+        {
+            var assert = Resources.Load<GameObject>(e.asset.name);
+            GameObject gameObject = null;
+            try
+            {
+                gameObject = UnityEngine.Object.Instantiate(assert);
+            }
+            catch (Exception)
+            {
+                Debug.Log("Cannot instantiate " + e.asset.name);
+            }
+
+            if (gameObject != null)
+            {
+                gameObject.transform.SetParent(_viewContainer);
+                e.AddView(gameObject);
+                gameObject.Link(e, context);
+            }
+        }
     }
 
-    public AddViewSystem(Contexts context) : base(context.game)
-    {
-        this.context = context.game;
-    }
 }
 

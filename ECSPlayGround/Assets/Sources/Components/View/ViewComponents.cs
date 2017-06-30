@@ -13,7 +13,6 @@ public class ViewComponent : IComponent
 [Game]
 public sealed class AssetComponent : IComponent
 {
-
     public string name;
 }
 
