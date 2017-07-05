@@ -10,18 +10,36 @@ using UnityEngine;
 
 public class DestroyPieceSystem : ReactiveSystem<GameEntity>
 {
-    private readonly GameContext context;
+
 
     public DestroyPieceSystem(Contexts contexts) : base(contexts.game)
     {
-        context = contexts.game;
+
     }
 
     protected override Collector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
         return new Collector<GameEntity>(
-            new [] {context.GetGroup(GameMatcher.Asset), context.GetGroup(GameMatcher.Destroyed)}, 
-            new GroupEvent[] {GroupEvent.Added, GroupEvent.Removed });
+            new [] {
+                context.GetGroup(GameMatcher.Asset),
+                context.GetGroup(GameMatcher.Destroyed)}, 
+            new []
+            {
+                GroupEvent.Removed,
+                GroupEvent.Added
+  
+            });
+
+//        return new Collector<GameEntity>(
+//            new[] {
+//                        context.GetGroup(GameMatcher.Asset),
+//                        context.GetGroup(GameMatcher.Destroyed)
+//            },
+//            new[] {
+//                        GroupEvent.Removed,
+//                        GroupEvent.Added
+//            }
+//        );
     }
 
     protected override bool Filter(GameEntity entity)

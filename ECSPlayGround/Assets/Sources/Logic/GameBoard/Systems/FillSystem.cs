@@ -29,11 +29,12 @@ public class FillSystem : ReactiveSystem<GameEntity>
         for (int i = 0; i < gameBoard.cols; i++)
         {
             var pos = new IntVector2(i, gameBoard.rows);//vi tri tren/duoi cung
+
             var nextRowPos = GameBoardLogic.GetNextEmptyRow(context, pos);
 
             while (nextRowPos != gameBoard.rows)
             {
-                context.CreateRandomPiece(nextRowPos, i);
+                context.CreateRandomPiece(i, nextRowPos);
                 nextRowPos = GameBoardLogic.GetNextEmptyRow(context, pos);
             }
         }

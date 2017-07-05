@@ -9,19 +9,30 @@
 public partial class GameStateContext {
 
     public GameStateEntity scoreEntity { get { return GetGroup(GameStateMatcher.Score).GetSingleEntity(); } }
+    public ScoreComponent score { get { return scoreEntity.score; } }
+    public bool hasScore { get { return scoreEntity != null; } }
 
-    public bool isScore {
-        get { return scoreEntity != null; }
-        set {
-            var entity = scoreEntity;
-            if (value != (entity != null)) {
-                if (value) {
-                    CreateEntity().isScore = true;
-                } else {
-                    DestroyEntity(entity);
-                }
-            }
+    public GameStateEntity SetScore(int newValue) {
+        if (hasScore) {
+            throw new Entitas.EntitasException("Could not set Score!\n" + this + " already has an entity with ScoreComponent!",
+                "You should check if the context already has a scoreEntity before setting it or use context.ReplaceScore().");
         }
+        var entity = CreateEntity();
+        entity.AddScore(newValue);
+        return entity;
+    }
+
+    public void ReplaceScore(int newValue) {
+        var entity = scoreEntity;
+        if (entity == null) {
+            entity = SetScore(newValue);
+        } else {
+            entity.ReplaceScore(newValue);
+        }
+    }
+
+    public void RemoveScore() {
+        DestroyEntity(scoreEntity);
     }
 }
 
@@ -35,19 +46,25 @@ public partial class GameStateContext {
 //------------------------------------------------------------------------------
 public partial class GameStateEntity {
 
-    static readonly ScoreComponent scoreComponent = new ScoreComponent();
+    public ScoreComponent score { get { return (ScoreComponent)GetComponent(GameStateComponentsLookup.Score); } }
+    public bool hasScore { get { return HasComponent(GameStateComponentsLookup.Score); } }
 
-    public bool isScore {
-        get { return HasComponent(GameStateComponentsLookup.Score); }
-        set {
-            if (value != isScore) {
-                if (value) {
-                    AddComponent(GameStateComponentsLookup.Score, scoreComponent);
-                } else {
-                    RemoveComponent(GameStateComponentsLookup.Score);
-                }
-            }
-        }
+    public void AddScore(int newValue) {
+        var index = GameStateComponentsLookup.Score;
+        var component = CreateComponent<ScoreComponent>(index);
+        component.value = newValue;
+        AddComponent(index, component);
+    }
+
+    public void ReplaceScore(int newValue) {
+        var index = GameStateComponentsLookup.Score;
+        var component = CreateComponent<ScoreComponent>(index);
+        component.value = newValue;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemoveScore() {
+        RemoveComponent(GameStateComponentsLookup.Score);
     }
 }
 

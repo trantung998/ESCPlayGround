@@ -13,10 +13,6 @@ public class FallSystem : ReactiveSystem<GameEntity>
         context = contexts.game;
     }
 
-    public FallSystem(Collector<GameEntity> collector) : base(collector)
-    {
-    }
-
     protected override Collector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
         return context.CreateCollector(GameMatcher.GameBoardElement, GroupEvent.Removed);

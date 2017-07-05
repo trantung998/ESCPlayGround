@@ -32,15 +32,15 @@ public static class BlueprintsExtensions
     public static GameEntity CreateGameBoard(this GameContext context)
     {
         var entity = context.CreateEntity();
-        entity.ApplyBlueprint(context.blueprints.value.GetBlueprint("GameBoard"));
+        entity.ApplyBlueprint(context.blueprints.value.GameBoard());
         return entity;
     }
 
-    public static GameEntity CreateRandomPiece(this GameContext context, int row, int col)
+    public static GameEntity CreateRandomPiece(this GameContext context, int x, int y)
     {
         var entity = context.CreateEntity();
-        entity.ApplyBlueprint(context.blueprints.value.GetBlueprint("Piece"));
-        entity.AddPosition(new IntVector2(row, col));
+        entity.ApplyBlueprint(context.blueprints.value.Piece());
+        entity.AddPosition(new IntVector2(x, y));
         entity.AddAsset(_pieces[Random.Range(0, _pieces.Length)]);
         return entity;
     }
@@ -48,7 +48,7 @@ public static class BlueprintsExtensions
     public static GameEntity CreateBlock(this GameContext context, int x, int y)
     {
         var entity = context.CreateEntity();
-        entity.ApplyBlueprint(context.blueprints.value.GetBlueprint("Blocker"));
+        entity.ApplyBlueprint(context.blueprints.value.Blocker());
         entity.AddPosition(new IntVector2(x, y));
         entity.AddAsset(Res.Blocker);
 
