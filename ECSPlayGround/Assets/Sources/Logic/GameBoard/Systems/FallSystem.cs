@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Assets.Sources.Logic.GameBoard;
 using Entitas;
 
 public class FallSystem : ReactiveSystem<GameEntity>
 {
     private GameContext context;
 
-    public FallSystem(IContext<GameEntity> context) : base(context)
+    public FallSystem(Contexts contexts) : base(contexts.game)
     {
+        context = contexts.game;
     }
 
     public FallSystem(Collector<GameEntity> collector) : base(collector)
