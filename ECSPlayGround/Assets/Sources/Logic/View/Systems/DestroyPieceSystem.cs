@@ -10,8 +10,6 @@ using UnityEngine;
 
 public class DestroyPieceSystem : ReactiveSystem<GameEntity>
 {
-
-
     public DestroyPieceSystem(Contexts contexts) : base(contexts.game)
     {
 
@@ -29,17 +27,6 @@ public class DestroyPieceSystem : ReactiveSystem<GameEntity>
                 GroupEvent.Added
   
             });
-
-//        return new Collector<GameEntity>(
-//            new[] {
-//                        context.GetGroup(GameMatcher.Asset),
-//                        context.GetGroup(GameMatcher.Destroyed)
-//            },
-//            new[] {
-//                        GroupEvent.Removed,
-//                        GroupEvent.Added
-//            }
-//        );
     }
 
     protected override bool Filter(GameEntity entity)

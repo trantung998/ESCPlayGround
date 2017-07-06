@@ -40,7 +40,7 @@ using UnityEngine;
         {
             foreach (var e in _inputs.GetEntities())
             {
-                e.Destroy();
+                _context.DestroyEntity(e);
             }
         }
     }

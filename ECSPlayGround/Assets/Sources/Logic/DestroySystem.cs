@@ -11,6 +11,7 @@ public class DestroySystem :ReactiveSystem<GameEntity>
 
     public DestroySystem(Contexts contexts) : base(contexts.game)
     {
+        context = contexts.game;
     }
 
     protected override Collector<GameEntity> GetTrigger(IContext<GameEntity> context)

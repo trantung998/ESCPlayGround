@@ -23,7 +23,7 @@ public class MovePieceSystem : ReactiveSystem<GameEntity>
 
     protected override bool Filter(GameEntity entity)
     {
-        return entity.hasView && entity.hasPosition && entity.hasMove;
+        return entity.hasView && entity.hasPosition;
     }
 
     protected override void Execute(List<GameEntity> entities)

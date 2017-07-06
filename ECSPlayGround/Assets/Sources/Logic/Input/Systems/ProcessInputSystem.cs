@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entitas;
 
     public sealed class ProcessInputSystem : ReactiveSystem<InputEntity>
@@ -25,12 +26,10 @@ using Entitas;
             var inputEntity = entities.SingleEntity();
             var input = inputEntity.input;
             //Todo: remove comment
-
-
-//            foreach (var e in _contexts.game.GetEntitiesWithPosition(new IntVector2(input.x, input.y)).Where(e => e.isInteractive))
-//            {
-//                e.isDestroyed = true;
-//            }
+            foreach (var e in _contexts.game.GetEntitiesWithPosition(new IntVector2(input.x, input.y)).Where(e => e.isInteractive))
+            {
+                e.isDestroyed = true;
+            }
         }
     }
 
