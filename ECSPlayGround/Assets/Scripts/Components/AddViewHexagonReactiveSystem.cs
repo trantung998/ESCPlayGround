@@ -23,15 +23,21 @@ public class AddViewHexagonReactiveSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        var globals = contexts.game.globals;
         var hexageonPrefab = contexts.game.globals.value.HexagonGameObject;
         var uiRoot = contexts.game.uiRoot.rectTransform;
+
+        var wSpacing = globals.value.widthSpacing;
+        var hSpacing = globals.value.heightSpacing;
+
         foreach (var e in  entities)
         {
             var hex = GameObject.Instantiate(hexageonPrefab, uiRoot) as GameObject;
 
             var hexRectransform =(RectTransform) hex.transform;
-            hexRectransform.anchoredPosition = new Vector2(e.position.Value.x, e.position.Value.y);
+            hexRectransform.anchoredPosition = new Vector2(e.position.Value.x * wSpacing, e.position.Value.y * hSpacing);
             
+
         }
     }
 }
