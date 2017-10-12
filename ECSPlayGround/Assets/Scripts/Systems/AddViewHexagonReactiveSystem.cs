@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Entitas;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AddViewHexagonReactiveSystem : ReactiveSystem<GameEntity>
 {
@@ -29,14 +30,26 @@ public class AddViewHexagonReactiveSystem : ReactiveSystem<GameEntity>
 
         var wSpacing = globals.value.widthSpacing;
         var hSpacing = globals.value.heightSpacing;
+        var hOffset = globals.value.heightOffset;
 
         foreach (var e in  entities)
         {
             var hex = GameObject.Instantiate(hexageonPrefab, uiRoot) as GameObject;
-
             var hexRectransform =(RectTransform) hex.transform;
-            hexRectransform.anchoredPosition = new Vector2(e.position.Value.x * wSpacing, e.position.Value.y * hSpacing);
+            var position = new Vector2(e.position.Value.x * wSpacing, e.position.Value.y * hSpacing);
+
             
+            var isEven = e.position.Value.x % 2 == 0;
+            var image = hex.GetComponent<Image>();
+
+            if (!isEven)
+            {
+                image.color = globals.value.oddColor;
+                position.y += hOffset;
+            }
+            hexRectransform.anchoredPosition = position;
+
+            e.AddView(hex);
 
         }
     }
