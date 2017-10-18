@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using System.Linq;
+using Entitas;
 using UnityEngine;
 
 
@@ -17,10 +18,11 @@ public class CheckClickInputSystem : IExecuteSystem
         if (Input.GetMouseButtonDown(0))
         {
             var entities = _hexagonGroup.GetEntities();
-            foreach (var entity in entities)
-            {
-                
-            }
+            var mousePos = Input.mousePosition;
+            var clickHex = entities.OrderBy(x => (x.view.value.transform.position - mousePos).sqrMagnitude)
+                .FirstOrDefault(x => (x.view.value.transform.position - mousePos).magnitude < contexts.game.globals.value.clickRange);
+
+            Debug.Log(clickHex);
         }
     }
 }

@@ -36,6 +36,7 @@ public class AddViewHexagonReactiveSystem : ReactiveSystem<GameEntity>
         {
             var hex = GameObject.Instantiate(hexageonPrefab, uiRoot) as GameObject;
             var hexRectransform =(RectTransform) hex.transform;
+            hexRectransform.localScale = Vector3.one;
             var position = new Vector2(e.position.Value.x * wSpacing, e.position.Value.y * hSpacing);
 
             

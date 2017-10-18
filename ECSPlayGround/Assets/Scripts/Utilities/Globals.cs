@@ -17,5 +17,6 @@ public class Globals : ScriptableObject
 
     public Color oddColor;
 
+    public float clickRange = 30f;
 }
 

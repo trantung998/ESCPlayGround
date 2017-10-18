@@ -29,6 +29,8 @@ public class GameControler : MonoBehaviour
     {
         return new Feature("Hello System")
             .Add(new InitializeHecagonSystem(contexts))
-            .Add(new AddViewHexagonReactiveSystem(contexts));
+            .Add(new AddViewHexagonReactiveSystem(contexts))
+            .Add(new ShowHexagontypeSystem(contexts))
+            .Add(new CheckClickInputSystem(contexts));
     }
 }

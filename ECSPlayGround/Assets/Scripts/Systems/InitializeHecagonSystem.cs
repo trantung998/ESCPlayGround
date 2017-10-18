@@ -21,6 +21,7 @@ public class InitializeHecagonSystem : IInitializeSystem
             {
                 var entity = contexts.game.CreateEntity();
                 entity.AddPosition(new IntVector2() {x = j, y = i});
+                entity.AddHexagonType(HexagonType.Empty);
                 entity.isHexagon = true;
             }
         }   
