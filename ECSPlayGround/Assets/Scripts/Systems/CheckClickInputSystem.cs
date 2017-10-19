@@ -15,15 +15,26 @@ public class CheckClickInputSystem : IExecuteSystem
 
     public void Execute()
     {
-        if (Input.GetMouseButtonDown(0))
+        for (int i = 0; i < 2; i++)
         {
-            var entities = _hexagonGroup.GetEntities();
-            var mousePos = Input.mousePosition;
-            var clickHex = entities.OrderBy(x => (x.view.value.transform.position - mousePos).sqrMagnitude)
-                .FirstOrDefault(x => (x.view.value.transform.position - mousePos).magnitude < contexts.game.globals.value.clickRange);
+            if (Input.GetMouseButtonDown(i))
+            {
+                var entities = _hexagonGroup.GetEntities();
+                var mousePos = Input.mousePosition;
+                var clickHex = entities.OrderBy(x => (x.view.value.transform.position - mousePos).sqrMagnitude)
+                    .FirstOrDefault(x => (x.view.value.transform.position - mousePos).magnitude < contexts.game.globals.value.clickRange);
 
-            Debug.Log(clickHex);
+                Debug.Log(clickHex);
+                if (clickHex != null)
+                {
+                    var inputEntity = contexts.game.CreateEntity();
+                    inputEntity.isClickInput = true;
+                    inputEntity.AddPosition(clickHex.position.Value);
+                    inputEntity.AddClickButtonNumber(i);
+                }
+            }
         }
+
     }
 }
 

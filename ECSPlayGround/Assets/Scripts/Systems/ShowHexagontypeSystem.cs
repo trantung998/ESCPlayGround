@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+
 using Entitas;
+using UnityEngine;
 
 public class ShowHexagontypeSystem : ReactiveSystem<GameEntity>
 {
@@ -11,6 +13,7 @@ public class ShowHexagontypeSystem : ReactiveSystem<GameEntity>
 
     protected override void Execute(List<GameEntity> entities)
     {
+        Debug.Log("Execute ShowHexagontypeSystem");
         foreach (var entity in entities)
         {
             entity.view.value.GetComponent<HexagonTypeView>().ShowType(entity.hexagonType.value);
