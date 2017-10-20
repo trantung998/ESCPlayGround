@@ -33,6 +33,7 @@ public class GameControler : MonoBehaviour
             .Add(new ShowHexagontypeSystem(contexts))
             .Add(new CheckClickInputSystem(contexts))
             .Add(new RotateHexagonSystem(contexts))
-            .Add(new ChangeHextypeReactiveSystem(contexts));
+            .Add(new ChangeHextypeReactiveSystem(contexts))
+            .Add(new ChangeHexagonRotationSystem(contexts));
     }
 }

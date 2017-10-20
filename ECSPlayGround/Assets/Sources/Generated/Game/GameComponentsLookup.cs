@@ -10,19 +10,21 @@ public static class GameComponentsLookup {
 
     public const int ClickButtonNumber = 0;
     public const int ClickInput = 1;
-    public const int Globals = 2;
-    public const int Hexagon = 3;
-    public const int HexagonRotation = 4;
-    public const int HexagonType = 5;
-    public const int Position = 6;
-    public const int UiRoot = 7;
-    public const int View = 8;
+    public const int Destroyed = 2;
+    public const int Globals = 3;
+    public const int Hexagon = 4;
+    public const int HexagonRotation = 5;
+    public const int HexagonType = 6;
+    public const int Position = 7;
+    public const int UiRoot = 8;
+    public const int View = 9;
 
-    public const int TotalComponents = 9;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "ClickButtonNumber",
         "ClickInput",
+        "Destroyed",
         "Globals",
         "Hexagon",
         "HexagonRotation",
@@ -35,6 +37,7 @@ public static class GameComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(ClickButtonNumberComponent),
         typeof(ClickInputComponent),
+        typeof(DestroyedComponent),
         typeof(GlobalsComponent),
         typeof(HexagonComponent),
         typeof(HexagonRotationComponent),

@@ -25,6 +25,7 @@ public class RotateHexagonSystem : ReactiveSystem<GameEntity>
                     hex.ReplaceHexagonRotation(newRoration);
                 }
             }
+            entity.Destroy();
         }
     }
 
