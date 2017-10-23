@@ -1,38 +1,16 @@
-﻿using UnityEngine;
-using Entitas;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class GameControler : MonoBehaviour
-{
-    [SerializeField] private Globals globals;
-    [SerializeField] private RectTransform UiRoot;
+public class GameControler : MonoBehaviour {
 
-    private Systems system;
 	// Use this for initialization
-	void Start ()
-	{
-	    var contexts = Contexts.sharedInstance;
-
-	    contexts.game.SetGlobals(globals);
-        contexts.game.SetUiRoot(UiRoot);
-
-	    system = CreateSystems(contexts);
-        system.Initialize();
-        
+	void Start () {
+		
 	}
-
-    void Update()
-    {
-        system.Execute();
-    }
-
-    private Systems CreateSystems(Contexts contexts)
-    {
-        return new Feature("Hello System")
-            .Add(new InitializeHecagonSystem(contexts))
-            .Add(new AddViewHexagonReactiveSystem(contexts))
-            .Add(new ShowHexagontypeSystem(contexts))
-            .Add(new CheckClickInputSystem(contexts))
-            .Add(new RotateHexagonSystem(contexts))
-            .Add(new ChangeHextypeReactiveSystem(contexts));
-    }
+	
+	// Update is called once per frame
+	void Update () {
+		
+	}
 }
