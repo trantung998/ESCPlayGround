@@ -1,30 +1,44 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using Entitas;
+using Debug = UnityEngine.Debug;
 
-namespace Assets.Scripts.Systems.Input
+
+public class ProcessMoveInputSystems : ReactiveSystem<InputEntity>
 {
-    public class ProcessMoveInputSystems : ReactiveSystem<InputEntity>
+    private Contexts contexts;
+
+    public ProcessMoveInputSystems(Contexts ctx) : base(ctx.input)
     {
-        public ProcessMoveInputSystems(ICollector<InputEntity> collector) : base(collector)
-        {
-        }
+        contexts = ctx;
+    }
 
-        protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
-        {
-            throw new NotImplementedException();
-        }
+    protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
+    {
+        return context.CreateCollector(InputMatcher.MoveInput);
+    }
 
-        protected override bool Filter(InputEntity entity)
-        {
-            throw new NotImplementedException();
-        }
+    protected override bool Filter(InputEntity entity)
+    {
+        return entity.hasMoveInput;
+    }
 
-        protected override void Execute(List<InputEntity> entities)
+    protected override void Execute(List<InputEntity> entities)
+    {
+        var input = entities[entities.Count - 1];
+        var playerid = input.playerId.value;
+
+        var players = contexts.game.GetEntitiesWithPlayerId(playerid);
+        Debug.Log("GetEntitiesWithPlayerId: " + players.Count);
+        foreach (var player in players)
         {
-            throw new NotImplementedException();
+            if (player.hasVelocity)
+            {
+                player.ReplaceVelocity(input.moveInput.value);
+            }
         }
     }
 }

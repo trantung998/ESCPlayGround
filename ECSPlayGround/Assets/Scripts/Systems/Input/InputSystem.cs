@@ -13,16 +13,17 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
         this.contexts = ctx;
         moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
         atkInputs = contexts.input.GetGroup(InputMatcher.PlayerAttackInput);
-            
     }
 
     public void Execute()
     {
-        var moveX = Input.GetAxisRaw("Horizontal");
-        var moveY = Input.GetAxisRaw("Vertical");
-
-        contexts.input.CreateEntity()
-            .AddMoveInput(new Vector3(moveX, moveY));
+        var positionVector = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        //if (positionVector != Vector3.zero)
+        {
+            var moveInputEntity = contexts.input.CreateEntity();
+            moveInputEntity.AddPlayerId("Player1");
+            moveInputEntity.AddMoveInput("Player1", positionVector);
+        }
 
         if (Input.GetButton("Fire1"))
         {

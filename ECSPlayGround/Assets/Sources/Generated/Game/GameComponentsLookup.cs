@@ -9,14 +9,23 @@
 public static class GameComponentsLookup {
 
     public const int Destroyed = 0;
+    public const int PlayerId = 1;
+    public const int Position = 2;
+    public const int Velocity = 3;
 
-    public const int TotalComponents = 1;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
-        "Destroyed"
+        "Destroyed",
+        "PlayerId",
+        "Position",
+        "Velocity"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(DestroyedComponent)
+        typeof(DestroyedComponent),
+        typeof(PlayerIdComponent),
+        typeof(PositionComponent),
+        typeof(VelocityComponent)
     };
 }
