@@ -33,11 +33,12 @@ public class ProcessMoveInputSystems : ReactiveSystem<InputEntity>
 
         var players = contexts.game.GetEntitiesWithPlayerId(playerid);
         Debug.Log("GetEntitiesWithPlayerId: " + players.Count);
+        var playerMoveSpeedFactor = contexts.game.playerData.value.moveSpeed;
         foreach (var player in players)
         {
             if (player.hasVelocity)
             {
-                player.ReplaceVelocity(input.moveInput.value);
+                player.ReplaceVelocity(input.moveInput.value * playerMoveSpeedFactor);
             }
         }
     }

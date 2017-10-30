@@ -25,5 +25,11 @@ public class PositionHandlerSystem : ReactiveSystem<GameEntity>
     protected override void Execute(List<GameEntity> entities)
     {
 //        Debug.Log("Position change");
+        foreach (var entity in entities)
+        {
+            var transform = entity.view.value.transform;
+            var pos = entity.position.value;
+            transform.localPosition = pos;
+        }
     }
 }

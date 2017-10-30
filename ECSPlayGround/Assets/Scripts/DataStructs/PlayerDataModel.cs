@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.DataStructs
+[CreateAssetMenu]
+public class PlayerDataModel : ScriptableObject
 {
-    public class PlayerDataModel : ScriptableObject
-    {
-        public GameObject playerModel;
-        public float fireRate;
-        public float moveSpeed;
-    }
+    public GameObject playerModel;
+    public float fireRate;
+    public float moveSpeed;
+    public float bulletSpeed;
 }
+

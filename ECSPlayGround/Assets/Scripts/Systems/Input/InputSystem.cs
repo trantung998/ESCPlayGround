@@ -17,7 +17,7 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
 
     public void Execute()
     {
-        var positionVector = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        var positionVector = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical"));
         //if (positionVector != Vector3.zero)
         {
             var moveInputEntity = contexts.input.CreateEntity();

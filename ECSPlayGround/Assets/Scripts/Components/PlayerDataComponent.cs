@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Entitas;
+using Entitas.CodeGeneration.Attributes;
 
-namespace Assets.Scripts.Components
+
+[Game, Unique]
+public class PlayerDataComponent : IComponent
 {
-    class PlayerDataComponent
-    {
-    }
+    public PlayerDataModel value;
 }
+

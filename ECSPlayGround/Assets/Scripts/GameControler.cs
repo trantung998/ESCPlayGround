@@ -6,11 +6,14 @@ using UnityEngine;
 
 public class GameControler : MonoBehaviour
 {
+    [SerializeField] private PlayerDataModel playerData;
+
     private Systems systems;
 
 	// Use this for initialization
 	void Start () {
 		Contexts contexts = Contexts.sharedInstance;
+	    contexts.game.ReplacePlayerData(playerData);
 
 	    systems = CreateSystem(contexts);
 
