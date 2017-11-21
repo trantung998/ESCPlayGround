@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 
-[Game]
+[Game, Input]
 public class DestroyedComponent : IComponent
 {
 }

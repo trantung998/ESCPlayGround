@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Assets.Scripts.Systems;
+using Assets.Scripts.Systems.CooldownSystem;
 using Entitas;
 using UnityEngine;
 
@@ -39,6 +40,7 @@ public class GameControler : MonoBehaviour
 
             //update
             .Add(new VelocityHandlerSystem(contexts))
+            .Add(new DecreaseCooldownTimeSystem(contexts))
             //reactive
             .Add(new PositionHandlerSystem(contexts))
             .Add(new ProcessMoveInputSystems(contexts));

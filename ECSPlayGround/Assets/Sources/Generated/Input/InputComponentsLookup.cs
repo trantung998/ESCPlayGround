@@ -8,19 +8,25 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int MoveInput = 0;
-    public const int PlayerAttackInput = 1;
-    public const int PlayerId = 2;
+    public const int Coolddown = 0;
+    public const int Destroyed = 1;
+    public const int MoveInput = 2;
+    public const int PlayerAttackInput = 3;
+    public const int PlayerId = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
+        "Coolddown",
+        "Destroyed",
         "MoveInput",
         "PlayerAttackInput",
         "PlayerId"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(CoolddownComponent),
+        typeof(DestroyedComponent),
         typeof(MoveInputComponent),
         typeof(PlayerAttackInputComponent),
         typeof(PlayerIdComponent)

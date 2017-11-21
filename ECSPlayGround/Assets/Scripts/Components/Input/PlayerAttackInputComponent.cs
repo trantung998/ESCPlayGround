@@ -3,5 +3,6 @@
 [Input]
 public class PlayerAttackInputComponent : IComponent
 {
+
 }
 

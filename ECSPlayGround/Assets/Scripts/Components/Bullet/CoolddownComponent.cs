@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using Entitas;
 
-    //[Game]
-    //public class BulletDestroyComponent : IComponent
-    //{
-    //}
+
+[Input]
+public class CoolddownComponent : IComponent
+{
+    public string id;
+    public float value;
+}
+

@@ -1,18 +1,20 @@
-﻿using Entitas;
+﻿using System.Linq;
+using Entitas;
 using Entitas.Utils;
 using UnityEngine;
 
 public class InputSystem : IExecuteSystem, ICleanupSystem
 {
     private IGroup<InputEntity> moveInputs;
-    private IGroup<InputEntity> atkInputs;
+    private IGroup<InputEntity> cooldown;
+
     private Contexts contexts;
 
     public InputSystem(Contexts ctx)
     {
         this.contexts = ctx;
         moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
-        atkInputs = contexts.input.GetGroup(InputMatcher.PlayerAttackInput);
+        cooldown = contexts.input.GetGroup(InputMatcher.Coolddown);
     }
 
     public void Execute()
@@ -27,18 +29,26 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
 
         if (Input.GetButton("Fire1"))
         {
-            contexts.input.CreateEntity()
-                .isPlayerAttackInput = true;
+            if (!IsContainInput("Fire1"))
+            {
+                var atkInput = contexts.input.CreateEntity();
+                atkInput.isPlayerAttackInput = true;
+                atkInput.AddCoolddown("Fire1", 2.0f);
+            }
         }
+    }
+
+    private bool IsContainInput(string id)
+    {
+        foreach (var entity in cooldown.GetEntities())
+        {
+            if (entity.coolddown.id == id) return true;
+        }
+        return false;
     }
 
     public void Cleanup()
     {
-        foreach (var input in atkInputs.GetEntities())
-        {
-            input.Destroy();
-        }
-
         foreach (var input in moveInputs.GetEntities())
         {
             input.Destroy();

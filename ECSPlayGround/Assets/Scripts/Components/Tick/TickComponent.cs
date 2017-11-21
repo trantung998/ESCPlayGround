@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Entitas;
+﻿using Entitas;
 
-namespace Assets.Scripts.Components.Tick
+
+[Game]
+public class TickComponent : IComponent
 {
-    [Game]
-    public class TickComponent : IComponent
-    {
-    }
 }
