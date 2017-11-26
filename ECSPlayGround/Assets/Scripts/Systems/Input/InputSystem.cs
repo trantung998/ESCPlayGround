@@ -10,11 +10,14 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
 
     private Contexts contexts;
 
+    private PlayerDataModel _dataModel;
+
     public InputSystem(Contexts ctx)
     {
         this.contexts = ctx;
         moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
         cooldown = contexts.input.GetGroup(InputMatcher.Coolddown);
+        _dataModel = contexts.game.playerData.value;
     }
 
     public void Execute()
@@ -33,7 +36,14 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
             {
                 var atkInput = contexts.input.CreateEntity();
                 atkInput.isPlayerAttackInput = true;
-                atkInput.AddCoolddown("Fire1", 2.0f);
+                atkInput.AddCoolddown("Fire1", .5f);
+
+                var bulletCooldown = _dataModel.fireRate;
+                
+                var bullet = contexts.game.CreateEntity();
+                bullet.AddDamage(10);
+                bullet.AddPosition(Vector3.zero);
+                bullet.AddVelocity(Vector3.one);                
             }
         }
     }
