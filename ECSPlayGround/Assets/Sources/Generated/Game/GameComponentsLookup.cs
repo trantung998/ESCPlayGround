@@ -8,7 +8,7 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int AssetsScriptsComponentsBulletBulletDestroy = 0;
+    public const int Bullet = 0;
     public const int Damage = 1;
     public const int Destroyed = 2;
     public const int PlayerData = 3;
@@ -21,7 +21,7 @@ public static class GameComponentsLookup {
     public const int TotalComponents = 9;
 
     public static readonly string[] componentNames = {
-        "AssetsScriptsComponentsBulletBulletDestroy",
+        "Bullet",
         "Damage",
         "Destroyed",
         "PlayerData",
@@ -33,6 +33,7 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(BulletComponent),
         typeof(DamageComponent),
         typeof(DestroyedComponent),
         typeof(PlayerDataComponent),

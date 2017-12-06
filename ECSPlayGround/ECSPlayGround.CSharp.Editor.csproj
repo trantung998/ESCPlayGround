@@ -16,7 +16,7 @@
     <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
-    <UnityVersion>5.5.2p4</UnityVersion>
+    <UnityVersion>5.5.2f1</UnityVersion>
     <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
@@ -115,129 +115,75 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>Library\UnityAssemblies\SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Entitas.Blueprints">
+      <HintPath>Assets\Entitas\Entitas.Blueprints.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Attributes">
+      <HintPath>Assets\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas">
+      <HintPath>Assets\Entitas\Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity">
+      <HintPath>Assets\Entitas\Entitas.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Utils">
+      <HintPath>Assets\Entitas\Entitas.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.Unity">
+      <HintPath>Assets\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="fabl">
+      <HintPath>Assets\Entitas\fabl.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.CodeGenerator">
+      <HintPath>Assets\Entitas\Editor\Entitas.CodeGeneration.CodeGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration">
+      <HintPath>Assets\Entitas\Editor\Entitas.CodeGeneration.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Plugins">
+      <HintPath>Assets\Entitas\Editor\Entitas.CodeGeneration.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Unity.Editor">
+      <HintPath>Assets\Entitas\Editor\Entitas.CodeGeneration.Unity.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Migration">
+      <HintPath>Assets\Entitas\Editor\Entitas.Migration.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Migration.Unity.Editor">
+      <HintPath>Assets\Entitas\Editor\Entitas.Migration.Unity.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity.Editor">
+      <HintPath>Assets\Entitas\Editor\Entitas.Unity.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.CodeGeneration.Plugins">
+      <HintPath>Assets\Entitas\Editor\Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.Unity.Editor">
+      <HintPath>Assets\Entitas\Editor\Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="ECSPlayGround.CSharp.Plugins.csproj">
+      <Project>{0FF1288A-5353-04FB-8CE9-B0BDFAF2F6C7}</Project>
+      <Name>ECSPlayGround.CSharp.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="ECSPlayGround.CSharp.csproj">
       <Project>{48061CE6-200C-74C6-7B60-BD9E3686114C}</Project>
       <Name>ECSPlayGround.CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="ECSPlayGround.CSharp.Editor.Plugins.csproj">
+      <Project>{6941C849-7F34-10A4-BB77-8AB64FFEDDFA}</Project>
+      <Name>ECSPlayGround.CSharp.Editor.Plugins</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\CodeGenFile.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\CodeGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\CodeGeneratorConfig.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\CodeGeneratorStringExtensions.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\CodeGeneratorUtil.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\CodeGeneratorData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\AbstractComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\ComponentData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\ComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\ComponentTypeComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\ContextsComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\IComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\IsUniqueComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\MemberData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\MemberDataComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\ShouldGenerateComponentComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\ShouldGenerateComponentIndexComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\ShouldGenerateMethodsComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Components\Providers\UniquePrefixComponentDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Contexts\ContextData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\Contexts\ContextDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\EntityIndex\EntityIndexData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\EntityIndex\EntityIndexDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\DataProviders\ICodeGeneratorDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ComponentContextGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ComponentEntityGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ComponentGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ComponentsLookupGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ContextAttributeGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ContextGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ContextsGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\EntityGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\EntityIndexGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\ICodeGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\Generators\MatcherGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\ICodeGeneratorInterface.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\AddFileHeaderPostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\ConsoleWriteLinePostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\ICodeGenFilePostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\MergeFilesPostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\NewLinePostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.CodeGenerator\PostProcessors\WriteToDiskPostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\IMigration.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0180.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0190.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0220.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0260.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0300.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0320.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0360_1.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\M0360_2.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\MigrationFile.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Editor\Entitas.Migration\MigrationUtils.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\BinaryBlueprintInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\BinaryBlueprintPostprocessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\BlueprintsInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\CodeGenerator\BlueprintData.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\CodeGenerator\BlueprintDataProvider.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Blueprints\Editor\CodeGenerator\BlueprintsGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.CodeGenerator\Editor\CodeGeneratorPreferencesDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.CodeGenerator\Editor\DebugLogPostProcessor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.CodeGenerator\Editor\UnityCodeGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.Migration\Editor\EntitasMigrationWindow.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\CodeGenerator\Editor\ContextObserverGenerator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\ContextObserver\Editor\ContextObserverInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\DebugSystems\Editor\DebugSystemsInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\DebugSystems\Editor\SystemsMonitor.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Editor\EntitasHierarchyIcon.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Editor\EntitasStats.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Editor\VisualDebuggingConfig.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Editor\VisualDebuggingEntitasExtension.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Editor\VisualDebuggingPreferencesDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\DefaultInstanceCreator\DefaultArrayCreator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\DefaultInstanceCreator\DefaultStringCreator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\DefaultInstanceCreator\IDefaultInstanceCreator.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\Entity\EntityDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\Entity\EntityDrawerState.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\Entity\EntityInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\EntityLinkInspector.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\IComponentDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\AnimationCurveTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\ArrayTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\BoolTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\BoundsTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\CharTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\ColorTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\DateTimeTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\DictionaryTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\DoubleTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\EnumTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\FloatTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\HashSetTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\ITypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\IntTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\ListTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\RectTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\StringTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\UnityObjectTypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\Vector2TypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\Vector3TypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity.VisualDebugging\Entity\Editor\TypeDrawer\Vector4TypeDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\EntitasPreferencesDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\AbstractEntitasPreferencesDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\EntitasPreferencesWindow.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\EntitasStyles.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\IEntitasPreferencesDrawer.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\Layout\EditorWindow.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\Layout\GUI.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\GUI\Layout\Layout.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\Menu\EntitasCheckForUpdates.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\Menu\EntitasMenuItems.cs" />
-    <Compile Include="Assets\Entitas-Unity\Addons\Entitas.Unity\Editor\ScriptingDefineSymbols.cs" />
+    <Compile Include="Assets\SpaceShooterAsset\TutorialInfo\Scripts\Editor\TutorialInfoEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Entitas-Unity\LICENSE.txt" />
+    <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
+    <None Include="Assets\SpaceShooterAsset\TutorialInfo\Fonts\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>

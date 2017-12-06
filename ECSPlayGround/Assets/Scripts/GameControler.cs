@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Systems.Bullet;
 using Assets.Scripts.Systems;
-using Assets.Scripts.Systems.CooldownSystem;
+using Systems.CooldownSystem;
 using Entitas;
 using UnityEngine;
 
@@ -9,7 +10,7 @@ public class GameControler : MonoBehaviour
 {
     [SerializeField] private PlayerDataModel playerData;
 
-    private Systems systems;
+    private Entitas.Systems systems;
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +33,7 @@ public class GameControler : MonoBehaviour
         systems.TearDown();
     }
 
-    private Systems CreateSystem(Contexts contexts)
+    private Entitas.Systems CreateSystem(Contexts contexts)
     {
         return new Feature("Systems")
             .Add(new InputSystem(contexts))
@@ -42,6 +43,8 @@ public class GameControler : MonoBehaviour
             .Add(new VelocityHandlerSystem(contexts))
             .Add(new DecreaseCooldownTimeSystem(contexts))
             //reactive
+            .Add(new GenerateBulletSystems(contexts))
+            .Add(new AddViewBulletSystem(contexts))
             .Add(new PositionHandlerSystem(contexts))
             .Add(new ProcessMoveInputSystems(contexts));
     }

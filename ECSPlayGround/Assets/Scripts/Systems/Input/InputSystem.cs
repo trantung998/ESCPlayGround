@@ -34,16 +34,10 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
         {
             if (!IsContainInput("Fire1"))
             {
+                var bulletCooldown = _dataModel.fireRate;
                 var atkInput = contexts.input.CreateEntity();
                 atkInput.isPlayerAttackInput = true;
-                atkInput.AddCoolddown("Fire1", .5f);
-
-                var bulletCooldown = _dataModel.fireRate;
-                
-                var bullet = contexts.game.CreateEntity();
-                bullet.AddDamage(10);
-                bullet.AddPosition(Vector3.zero);
-                bullet.AddVelocity(Vector3.one);                
+                atkInput.AddCoolddown("Fire1", bulletCooldown);           
             }
         }
     }

@@ -5,7 +5,7 @@ using System.Text;
 using Entitas;
 using UnityEngine;
 
-namespace Assets.Scripts.Systems.CooldownSystem
+namespace Systems.CooldownSystem
 {
     public class DecreaseCooldownTimeSystem : IExecuteSystem, ICleanupSystem
     {
