@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.2f1</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -98,15 +96,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ECSPlayGround.CSharp.Plugins.csproj">
-      <Project>{0FF1288A-5353-04FB-8CE9-B0BDFAF2F6C7}</Project>
-      <Name>ECSPlayGround.CSharp.Plugins</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\Entitas\Compile.cs" />
-    <Compile Include="Assets\Scripts\BulletPool\BulletPool.cs" />
-    <Compile Include="Assets\Scripts\Components\Bullet\BulletComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\BulletDestroyComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\CoolddownComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\DamageComponent.cs" />
@@ -121,9 +111,6 @@
     <Compile Include="Assets\Scripts\Components\ViewComponent.cs" />
     <Compile Include="Assets\Scripts\DataStructs\PlayerDataModel.cs" />
     <Compile Include="Assets\Scripts\GameControler.cs" />
-    <Compile Include="Assets\Scripts\Systems\Bullet\AddViewBulletSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\Bullet\DestroyBulletSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\Bullet\GenerateBulletSystems.cs" />
     <Compile Include="Assets\Scripts\Systems\CooldownSystem\DecreaseCooldownTimeSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Input\InputSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Input\ProcessMoveInputSystems.cs" />
@@ -134,7 +121,6 @@
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IPlayerId.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameBulletComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameDestroyedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerDataComponent.cs" />
@@ -158,7 +144,6 @@
     <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
-    <Compile Include="Assets\Sources\Inputs\CollisionEmmiter.cs" />
     <Compile Include="Assets\SpaceShooterAsset\TutorialInfo\Scripts\TutorialInfo.cs" />
     <Compile Include="Assets\SpaceShooterAsset\_Completed-Assets\Scripts\Done_BGScroller.cs" />
     <Compile Include="Assets\SpaceShooterAsset\_Completed-Assets\Scripts\Done_DestroyByBoundary.cs" />
@@ -172,7 +157,6 @@
     <Compile Include="Assets\SpaceShooterAsset\_Completed-Assets\Scripts\Done_WeaponController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
     <None Include="Assets\SpaceShooterAsset\TutorialInfo\Fonts\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />

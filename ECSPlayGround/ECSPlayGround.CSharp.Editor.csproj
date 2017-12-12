@@ -165,24 +165,15 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="ECSPlayGround.CSharp.Plugins.csproj">
-      <Project>{0FF1288A-5353-04FB-8CE9-B0BDFAF2F6C7}</Project>
-      <Name>ECSPlayGround.CSharp.Plugins</Name>
-    </ProjectReference>
     <ProjectReference Include="ECSPlayGround.CSharp.csproj">
       <Project>{48061CE6-200C-74C6-7B60-BD9E3686114C}</Project>
       <Name>ECSPlayGround.CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="ECSPlayGround.CSharp.Editor.Plugins.csproj">
-      <Project>{6941C849-7F34-10A4-BB77-8AB64FFEDDFA}</Project>
-      <Name>ECSPlayGround.CSharp.Editor.Plugins</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SpaceShooterAsset\TutorialInfo\Scripts\Editor\TutorialInfoEditor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Plugins\UniRx\ReadMe.txt" />
     <None Include="Assets\SpaceShooterAsset\TutorialInfo\Fonts\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
