@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Systems.Bullet;
 using Assets.Scripts.Systems;
 using Systems.CooldownSystem;
+using DataStructs;
 using Entitas;
 using UnityEngine;
 
 public class GameControler : MonoBehaviour
 {
     [SerializeField] private PlayerDataModel playerData;
+    [SerializeField] private EnemyData enemyData;
 
     private Entitas.Systems systems;
 
@@ -16,7 +18,7 @@ public class GameControler : MonoBehaviour
 	void Start () {
 		Contexts contexts = Contexts.sharedInstance;
 	    contexts.game.ReplacePlayerData(playerData);
-
+        contexts.game.ReplaceEnemyConfig(enemyData);
 	    systems = CreateSystem(contexts);
 
         systems.Initialize();

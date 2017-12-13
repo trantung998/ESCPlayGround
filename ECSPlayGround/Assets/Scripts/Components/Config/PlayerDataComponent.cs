@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using DataStructs;
+using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
 

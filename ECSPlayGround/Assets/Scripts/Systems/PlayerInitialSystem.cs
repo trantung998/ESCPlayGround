@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using Entitas;
 using Entitas.Unity;
@@ -36,6 +37,18 @@ namespace Assets.Scripts.Systems
                 playerObj.Link(player, contexts.game);
                 player.AddView(playerObj);
             }
+
+            var enemyConfig = contexts.game.enemyConfig;
+            var enemyEntity = contexts.game.CreateEntity();
+            enemyEntity.AddPosition(enemyConfig.value.spawnPosition);
+            enemyEntity.AddVelocity(Vector3.zero);
+
+            var enemyObj = GameObject.Instantiate(enemyConfig.value.prefab);
+            var enemyObjTransform = enemyObj.transform;
+            enemyObjTransform.localPosition = Vector3.zero;
+            enemyObjTransform.localScale = Vector3.one;
+            enemyObj.Link(enemyEntity, contexts.game);
+            enemyEntity.AddView(enemyObj);
 
         }
     }
