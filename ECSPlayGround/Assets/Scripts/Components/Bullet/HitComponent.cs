@@ -4,4 +4,5 @@
 public class HitComponent : IComponent
 {
     public int damage;
+
 }

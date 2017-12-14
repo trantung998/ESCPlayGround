@@ -14,10 +14,16 @@ public partial class GameEntity {
         get { return HasComponent(GameComponentsLookup.Bullet); }
         set {
             if (value != isBullet) {
+                var index = GameComponentsLookup.Bullet;
                 if (value) {
-                    AddComponent(GameComponentsLookup.Bullet, bulletComponent);
+                    var componentPool = GetComponentPool(index);
+                    var component = componentPool.Count > 0
+                            ? componentPool.Pop()
+                            : bulletComponent;
+
+                    AddComponent(index, component);
                 } else {
-                    RemoveComponent(GameComponentsLookup.Bullet);
+                    RemoveComponent(index);
                 }
             }
         }

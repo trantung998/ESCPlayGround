@@ -14,10 +14,16 @@ public partial class InputEntity {
         get { return HasComponent(InputComponentsLookup.Destroyed); }
         set {
             if (value != isDestroyed) {
+                var index = InputComponentsLookup.Destroyed;
                 if (value) {
-                    AddComponent(InputComponentsLookup.Destroyed, destroyedComponent);
+                    var componentPool = GetComponentPool(index);
+                    var component = componentPool.Count > 0
+                            ? componentPool.Pop()
+                            : destroyedComponent;
+
+                    AddComponent(index, component);
                 } else {
-                    RemoveComponent(InputComponentsLookup.Destroyed);
+                    RemoveComponent(index);
                 }
             }
         }

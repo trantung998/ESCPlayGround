@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using Entitas;
-using Entitas.Utils;
+﻿using Entitas;
 using UnityEngine;
 
 public class InputSystem : IExecuteSystem, ICleanupSystem

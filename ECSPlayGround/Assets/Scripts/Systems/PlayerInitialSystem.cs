@@ -22,6 +22,8 @@ namespace Assets.Scripts.Systems
             var player = contexts.game.CreateEntity();
             player.AddPosition(Vector3.zero);
             player.AddVelocity(Vector3.zero);
+            player.AddArmor(10);
+            player.AddHealth(1000);
             player.AddPlayerId("Player1");
             player.isDestroyed = false;
 

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using Systems.Bullet;
+using Systems.Collision;
 using Assets.Scripts.Systems;
 using Systems.CooldownSystem;
 using DataStructs;
@@ -48,6 +49,7 @@ public class GameControler : MonoBehaviour
             .Add(new GenerateBulletSystems(contexts))
             .Add(new AddViewBulletSystem(contexts))
             .Add(new PositionHandlerSystem(contexts))
+	        .Add(new CollisionProcessSystem(contexts))
             .Add(new ProcessMoveInputSystems(contexts));
     }
 }

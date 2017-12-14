@@ -11,13 +11,15 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>GamePlugins:3</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.5f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -43,7 +45,7 @@
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
@@ -73,8 +75,17 @@
     <Reference Include="UnityEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Entitas.Blueprints">
-      <HintPath>Assets\Entitas\Entitas.Blueprints.dll</HintPath>
+    <Reference Include="DesperateDevs.Logging">
+      <HintPath>Assets\Entitas\DesperateDevs.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="DesperateDevs.Networking">
+      <HintPath>Assets\Entitas\DesperateDevs.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="DesperateDevs.Serialization">
+      <HintPath>Assets\Entitas\DesperateDevs.Serialization.dll</HintPath>
+    </Reference>
+    <Reference Include="DesperateDevs.Utils">
+      <HintPath>Assets\Entitas\DesperateDevs.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
       <HintPath>Assets\Entitas\Entitas.CodeGeneration.Attributes.dll</HintPath>
@@ -85,14 +96,8 @@
     <Reference Include="Entitas.Unity">
       <HintPath>Assets\Entitas\Entitas.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="Entitas.Utils">
-      <HintPath>Assets\Entitas\Entitas.Utils.dll</HintPath>
-    </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
       <HintPath>Assets\Entitas\Entitas.VisualDebugging.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="fabl">
-      <HintPath>Assets\Entitas\fabl.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

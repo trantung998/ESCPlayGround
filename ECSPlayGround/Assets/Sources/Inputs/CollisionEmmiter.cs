@@ -11,18 +11,14 @@ namespace Assets.Sources.Inputs
             if (other.tag == "Enemy")
             {
                 var bulletEntityLink = GetComponent<EntityLink>();
+                var gameContext = bulletEntityLink.context as GameContext;
+                
                 var otherEntityLink = other.gameObject.GetComponent<EntityLink>();
                 if (otherEntityLink != null)
                 {
-                    //if(otherEntityLink.entity.AddComponent())
-                    var otherEntity = otherEntityLink.entity as GameEntity;
-
-                    if (otherEntity != null)
-                    {
-                        if (!otherEntity.hasHit)
-                            otherEntity.AddHit(10);
-                        else otherEntity.ReplaceHit(120);
-                    }
+                    var collision = gameContext.CreateEntity();
+                    
+                    collision.AddCollision(bulletEntityLink.entity, otherEntityLink.entity);
                 }
             }
         }

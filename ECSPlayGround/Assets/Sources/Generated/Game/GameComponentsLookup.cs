@@ -8,25 +8,31 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Bullet = 0;
-    public const int Damage = 1;
-    public const int Destroyed = 2;
-    public const int EnemyConfig = 3;
-    public const int Hit = 4;
-    public const int PlayerData = 5;
-    public const int PlayerId = 6;
-    public const int Position = 7;
-    public const int Tick = 8;
-    public const int Velocity = 9;
-    public const int View = 10;
+    public const int Armor = 0;
+    public const int Bullet = 1;
+    public const int Collision = 2;
+    public const int Damage = 3;
+    public const int Destroyed = 4;
+    public const int EnemyConfig = 5;
+    public const int Health = 6;
+    public const int Hit = 7;
+    public const int PlayerData = 8;
+    public const int PlayerId = 9;
+    public const int Position = 10;
+    public const int Tick = 11;
+    public const int Velocity = 12;
+    public const int View = 13;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
+        "Armor",
         "Bullet",
+        "Collision",
         "Damage",
         "Destroyed",
         "EnemyConfig",
+        "Health",
         "Hit",
         "PlayerData",
         "PlayerId",
@@ -37,10 +43,13 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ArmorComponent),
         typeof(BulletComponent),
+        typeof(CollisionComponent),
         typeof(DamageComponent),
         typeof(DestroyedComponent),
         typeof(EnemyConfigComponent),
+        typeof(HealthComponent),
         typeof(HitComponent),
         typeof(PlayerDataComponent),
         typeof(PlayerIdComponent),

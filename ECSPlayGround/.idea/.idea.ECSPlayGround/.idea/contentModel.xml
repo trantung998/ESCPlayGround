@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\melod\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ECSPlayGround.-326923112.00" t="ExcludeRecursive" />
-    <e p="E:\Unity\Projects\ESCPlayGround\ECSPlayGround" t="IncludeRecursive">
+    <e p="C:\Users\melod\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ECSPlayGround.-407802857.00" t="ExcludeRecursive" />
+    <e p="E:\Unity\Projects\ESCPlayGround1\ECSPlayGround" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
         <e p="Entitas" t="Include">
           <e p="Compile.cs" t="Include" />
@@ -295,20 +299,31 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="BulletPool" t="Include">
+            <e p="BulletPool.cs" t="Include" />
+          </e>
           <e p="Components" t="Include">
             <e p="Bullet" t="Include">
               <e p="BulletComponent.cs" t="Include" />
               <e p="BulletDestroyComponent.cs" t="Include" />
               <e p="CoolddownComponent.cs" t="Include" />
               <e p="DamageComponent.cs" t="Include" />
+              <e p="HitComponent.cs" t="Include" />
+            </e>
+            <e p="Config" t="Include">
+              <e p="EnemyConfigComponent.cs" t="Include" />
+              <e p="PlayerDataComponent.cs" t="Include" />
             </e>
             <e p="DestroyedComponent.cs" t="Include" />
+            <e p="Health" t="Include">
+              <e p="ArmorComponent.cs" t="Include" />
+              <e p="HeathComponent.cs" t="Include" />
+            </e>
             <e p="Input" t="Include">
               <e p="MoveInputComponent.cs" t="Include" />
               <e p="PlayerAttackInputComponent.cs" t="Include" />
               <e p="PlayerIdComponent.cs" t="Include" />
             </e>
-            <e p="PlayerDataComponent.cs" t="Include" />
             <e p="Position" t="Include">
               <e p="PositionComponent.cs" t="Include" />
             </e>
@@ -321,13 +336,19 @@
             <e p="ViewComponent.cs" t="Include" />
           </e>
           <e p="DataStructs" t="Include">
+            <e p="EnemyData.cs" t="Include" />
             <e p="PlayerDataModel.cs" t="Include" />
           </e>
           <e p="GameControler.cs" t="Include" />
           <e p="Systems" t="Include">
-            <e p="AddViewBulletSystem.cs" t="Include" />
             <e p="Bullet" t="Include">
+              <e p="AddViewBulletSystem.cs" t="Include" />
+              <e p="DestroyBulletSystem.cs" t="Include" />
               <e p="GenerateBulletSystems.cs" t="Include" />
+            </e>
+            <e p="Collision" t="Include">
+              <e p="CollisionComponent.cs" t="Include" />
+              <e p="CollisionProcessSystem.cs" t="Include" />
             </e>
             <e p="CooldownSystem" t="Include">
               <e p="DecreaseCooldownTimeSystem.cs" t="Include" />
@@ -346,6 +367,9 @@
           </e>
         </e>
         <e p="Sources" t="Include">
+          <e p="Formular" t="Include">
+            <e p="CharacterFormulars.cs" t="Include" />
+          </e>
           <e p="Generated" t="Include">
             <e p="Components" t="Include">
               <e p="Interfaces" t="Include">
@@ -357,9 +381,14 @@
             <e p="Feature.cs" t="Include" />
             <e p="Game" t="Include">
               <e p="Components" t="Include">
+                <e p="GameArmorComponent.cs" t="Include" />
                 <e p="GameBulletComponent.cs" t="Include" />
+                <e p="GameCollisionComponent.cs" t="Include" />
                 <e p="GameDamageComponent.cs" t="Include" />
                 <e p="GameDestroyedComponent.cs" t="Include" />
+                <e p="GameEnemyConfigComponent.cs" t="Include" />
+                <e p="GameHealthComponent.cs" t="Include" />
+                <e p="GameHitComponent.cs" t="Include" />
                 <e p="GamePlayerDataComponent.cs" t="Include" />
                 <e p="GamePlayerIdComponent.cs" t="Include" />
                 <e p="GamePositionComponent.cs" t="Include" />
@@ -387,6 +416,9 @@
               <e p="InputEntity.cs" t="Include" />
               <e p="InputMatcher.cs" t="Include" />
             </e>
+          </e>
+          <e p="Inputs" t="Include">
+            <e p="CollisionEmmiter.cs" t="Include" />
           </e>
         </e>
         <e p="SpaceShooterAsset" t="Include">
@@ -417,14 +449,13 @@
           </e>
         </e>
       </e>
-      <e p="ECSPlayGround.CSharp.csproj" t="IncludeRecursive" />
-      <e p="ECSPlayGround.CSharp.Editor.csproj" t="IncludeRecursive" />
-      <e p="ECSPlayGround.CSharp.Editor.Plugins.csproj" t="IncludeRecursive" />
-      <e p="ECSPlayGround.CSharp.Plugins.csproj" t="IncludeRecursive" />
       <e p="ECSPlayGround.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
-      <e p="Temp\UnityVS_bin\Debug" t="ExcludeRecursive" />
-      <e p="Temp\UnityVS_obj\Debug" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
     </e>
   </component>
 </project>
