@@ -8,6 +8,17 @@
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="Core" t="Include">
+          <e p="Scripts" t="Include">
+            <e p="ObjectPooling" t="Include">
+              <e p="Editor" t="Include">
+                <e p="PooolingEditor.cs" t="Include" />
+              </e>
+              <e p="ObjectPool.cs" t="Include" />
+              <e p="ObjectRecycleBin.cs" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Entitas" t="Include">
           <e p="Compile.cs" t="Include" />
         </e>
@@ -301,6 +312,8 @@
         <e p="Scripts" t="Include">
           <e p="BulletPool" t="Include">
             <e p="BulletPool.cs" t="Include" />
+            <e p="PoolManager.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
           </e>
           <e p="Components" t="Include">
             <e p="Bullet" t="Include">

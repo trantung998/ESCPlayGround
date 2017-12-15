@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Entitas;
 using Entitas.Unity;
+using UnityCode.Core.Scripts.ObjectPooling;
 using UnityEngine;
 
 namespace Assets.Scripts.Systems
@@ -32,7 +33,7 @@ namespace Assets.Scripts.Systems
             var bulletPrefab = gameContext.playerData.value.bulletMoldel;
             foreach (var entity in entities)
             {
-                var bulletObj = GameObject.Instantiate(bulletPrefab);
+                var bulletObj = ObjectPool.spawn(bulletPrefab);
                 bulletObj.transform.localScale = Vector3.one;
                 bulletObj.transform.localPosition = entity.position.value;
 

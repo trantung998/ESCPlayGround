@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
+using DesperateDevs.Utils;
 using Entitas;
 using Entitas.Unity;
+using UnityCode.Core.Scripts.ObjectPooling;
 using UnityEngine;
 
 namespace Assets.Scripts.Systems
@@ -51,7 +53,28 @@ namespace Assets.Scripts.Systems
             enemyObjTransform.localScale = Vector3.one;
             enemyObj.Link(enemyEntity, contexts.game);
             enemyEntity.AddView(enemyObj);
-
+            enemyEntity.AddArmor(10);
+            enemyEntity.AddHealth(1000);
+            
+            InitPools();
+        }
+        
+        private void InitPools()
+        {
+            var bulletPrefab = contexts.game.playerData.value.bulletMoldel;
+            ObjectPool.manageRecycleBin(new ObjectRecycleBin()
+            {
+                instancesToPreallocate = 5,
+                prefab = bulletPrefab
+            });
+            
+            var hitPrefab = contexts.game.playerData.value.hitEffect;
+            ObjectPool.manageRecycleBin(new ObjectRecycleBin()
+            {
+                instancesToPreallocate = 5,
+                prefab = hitPrefab,
+                automaticallyRecycleParticleSystems = true
+            });
         }
     }
 }

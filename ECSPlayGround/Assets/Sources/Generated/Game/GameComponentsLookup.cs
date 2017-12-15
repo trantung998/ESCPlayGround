@@ -16,14 +16,15 @@ public static class GameComponentsLookup {
     public const int EnemyConfig = 5;
     public const int Health = 6;
     public const int Hit = 7;
-    public const int PlayerData = 8;
-    public const int PlayerId = 9;
-    public const int Position = 10;
-    public const int Tick = 11;
-    public const int Velocity = 12;
-    public const int View = 13;
+    public const int OnDestroyEffect = 8;
+    public const int PlayerData = 9;
+    public const int PlayerId = 10;
+    public const int Position = 11;
+    public const int Tick = 12;
+    public const int Velocity = 13;
+    public const int View = 14;
 
-    public const int TotalComponents = 14;
+    public const int TotalComponents = 15;
 
     public static readonly string[] componentNames = {
         "Armor",
@@ -34,6 +35,7 @@ public static class GameComponentsLookup {
         "EnemyConfig",
         "Health",
         "Hit",
+        "OnDestroyEffect",
         "PlayerData",
         "PlayerId",
         "Position",
@@ -51,6 +53,7 @@ public static class GameComponentsLookup {
         typeof(EnemyConfigComponent),
         typeof(HealthComponent),
         typeof(HitComponent),
+        typeof(OnDestroyEffect),
         typeof(PlayerDataComponent),
         typeof(PlayerIdComponent),
         typeof(PositionComponent),

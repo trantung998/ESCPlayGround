@@ -2,145 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="212530cb-4e2f-424a-bb1c-0866ce532ae7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs.meta" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs.meta" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs.meta" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Blueprints.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Blueprints.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Utils.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Utils.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/fabl.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Assets/Entitas/fabl.dll.meta" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/EditorInstance.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/05/0523dd915ca054a45af57b75ceccaa39" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/05/0523dd915ca054a45af57b75ceccaa39.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/62/628fd246d5cde7a4ea59cdab63a1990a" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/62/628fd246d5cde7a4ea59cdab63a1990a.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/7f/7fe07977a10e27044acd217668eaecfa" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/7f/7fe07977a10e27044acd217668eaecfa.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/90/90e2b55dd7efa7b4ebfa202370c46e26" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/90/90e2b55dd7efa7b4ebfa202370c46e26.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/c3/c356aef891bc2a84a815a6c35844148d" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/c3/c356aef891bc2a84a815a6c35844148d.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/f5/f547e492133eeac45b31005ba92396a5" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Library/metadata/f5/f547e492133eeac45b31005ba92396a5.info" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/UnityVS_obj/Debug/Assembly-CSharp-firstpass.dll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/UnityVS_obj/Debug/Assembly-CSharp-firstpass.pdb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/UnityVS_obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/UnityVS_obj/Debug/ECSPlayGround.CSharp.Plugins.csproj.FileListAbsolute.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/UnityVS_obj/Debug/ECSPlayGround.CSharp.Plugins.csprojResolveAssemblyReference.cache" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.vs/ECSPlayGround/v14/.suo" afterPath="$PROJECT_DIR$/.vs/ECSPlayGround/v14/.suo" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.Unity.Editor.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.Unity.Editor.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Unity.Editor.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Unity.Editor.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Unity.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.Unity.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.VisualDebugging.Unity.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.VisualDebugging.Unity.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.dll" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/AssetServerCacheV3" afterPath="$PROJECT_DIR$/Library/AssetServerCacheV3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" afterPath="$PROJECT_DIR$/Library/CurrentLayout.dwlt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll.mdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/expandedItems" afterPath="$PROJECT_DIR$/Library/expandedItems" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/00/00c9e8305560d384abb9caf44cbceebe" afterPath="$PROJECT_DIR$/Library/metadata/00/00c9e8305560d384abb9caf44cbceebe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/06/06bc0e5b0b5124fca8f5d7dde1d012b0" afterPath="$PROJECT_DIR$/Library/metadata/06/06bc0e5b0b5124fca8f5d7dde1d012b0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/06/06bc0e5b0b5124fca8f5d7dde1d012b0.info" afterPath="$PROJECT_DIR$/Library/metadata/06/06bc0e5b0b5124fca8f5d7dde1d012b0.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/08/080a266feb31ac54ca89c11c7f8be420" afterPath="$PROJECT_DIR$/Library/metadata/08/080a266feb31ac54ca89c11c7f8be420" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/0b/0b67f5fba5801c54dacc765ebfdc4a0b" afterPath="$PROJECT_DIR$/Library/metadata/0b/0b67f5fba5801c54dacc765ebfdc4a0b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/0e/0ee737a83aa9b4b56b2058b2b651ff0a" afterPath="$PROJECT_DIR$/Library/metadata/0e/0ee737a83aa9b4b56b2058b2b651ff0a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/0e/0ee737a83aa9b4b56b2058b2b651ff0a.info" afterPath="$PROJECT_DIR$/Library/metadata/0e/0ee737a83aa9b4b56b2058b2b651ff0a.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/19/19e09e15fa0f9364799c3a4ffdca3742" afterPath="$PROJECT_DIR$/Library/metadata/19/19e09e15fa0f9364799c3a4ffdca3742" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/1d/1d5c0f886b34f954288cb8723c612d8d" afterPath="$PROJECT_DIR$/Library/metadata/1d/1d5c0f886b34f954288cb8723c612d8d" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/21/21d4739c026373b4c8be2c6b5a4b333e" afterPath="$PROJECT_DIR$/Library/metadata/21/21d4739c026373b4c8be2c6b5a4b333e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/27/27b806265ee874b86aa2d28aba93ace2" afterPath="$PROJECT_DIR$/Library/metadata/27/27b806265ee874b86aa2d28aba93ace2" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/27/27b806265ee874b86aa2d28aba93ace2.info" afterPath="$PROJECT_DIR$/Library/metadata/27/27b806265ee874b86aa2d28aba93ace2.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/35/35e2fad360fea426684933179da777df" afterPath="$PROJECT_DIR$/Library/metadata/35/35e2fad360fea426684933179da777df" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/35/35e2fad360fea426684933179da777df.info" afterPath="$PROJECT_DIR$/Library/metadata/35/35e2fad360fea426684933179da777df.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/36/36c79b157ab1ab54e98392ddad7b7fa5" afterPath="$PROJECT_DIR$/Library/metadata/36/36c79b157ab1ab54e98392ddad7b7fa5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/3d/3df4cda870e17994b8b1ce2062146d04" afterPath="$PROJECT_DIR$/Library/metadata/3d/3df4cda870e17994b8b1ce2062146d04" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/41/41977eeb81982bd4cb48245ac7e9174b" afterPath="$PROJECT_DIR$/Library/metadata/41/41977eeb81982bd4cb48245ac7e9174b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/45/4550a7f02a849c34286b67f537e15954" afterPath="$PROJECT_DIR$/Library/metadata/45/4550a7f02a849c34286b67f537e15954" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/46/4602cc7d74382d143ac24b113b68c128" afterPath="$PROJECT_DIR$/Library/metadata/46/4602cc7d74382d143ac24b113b68c128" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/63/631271e2f02d27d42867222a7e566730" afterPath="$PROJECT_DIR$/Library/metadata/63/631271e2f02d27d42867222a7e566730" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/65/65fb57b88da1f40c59682763366ab260" afterPath="$PROJECT_DIR$/Library/metadata/65/65fb57b88da1f40c59682763366ab260" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/65/65fb57b88da1f40c59682763366ab260.info" afterPath="$PROJECT_DIR$/Library/metadata/65/65fb57b88da1f40c59682763366ab260.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/82/82fd4e30bda73ba4eba382c9b67d5361" afterPath="$PROJECT_DIR$/Library/metadata/82/82fd4e30bda73ba4eba382c9b67d5361" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/82/82fd4e30bda73ba4eba382c9b67d5361.info" afterPath="$PROJECT_DIR$/Library/metadata/82/82fd4e30bda73ba4eba382c9b67d5361.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8a/8a7c15cccb24dc547b3507956fd059c7" afterPath="$PROJECT_DIR$/Library/metadata/8a/8a7c15cccb24dc547b3507956fd059c7" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8f/8fecc08fe51ec4ba990bfd58e4ed14b5" afterPath="$PROJECT_DIR$/Library/metadata/8f/8fecc08fe51ec4ba990bfd58e4ed14b5" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/8f/8fecc08fe51ec4ba990bfd58e4ed14b5.info" afterPath="$PROJECT_DIR$/Library/metadata/8f/8fecc08fe51ec4ba990bfd58e4ed14b5.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/9b/9b5d2042dba489b499847fba1b087409" afterPath="$PROJECT_DIR$/Library/metadata/9b/9b5d2042dba489b499847fba1b087409" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/a2/a24165071f8afed4ea8c483076400a28" afterPath="$PROJECT_DIR$/Library/metadata/a2/a24165071f8afed4ea8c483076400a28" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/a7/a7ea215e00865e84884098df471f291a" afterPath="$PROJECT_DIR$/Library/metadata/a7/a7ea215e00865e84884098df471f291a" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/ad/adbc6a8d31eb8c84ebaf4c87e11e1166" afterPath="$PROJECT_DIR$/Library/metadata/ad/adbc6a8d31eb8c84ebaf4c87e11e1166" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/b1/b1238174e69984449807003e3dae287c" afterPath="$PROJECT_DIR$/Library/metadata/b1/b1238174e69984449807003e3dae287c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/bf/bf83ca658a7d4bb44a06e678eb29f79c" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf83ca658a7d4bb44a06e678eb29f79c" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/bf/bf83ca658a7d4bb44a06e678eb29f79c.info" afterPath="$PROJECT_DIR$/Library/metadata/bf/bf83ca658a7d4bb44a06e678eb29f79c.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/c5/c57c23a7095d04449991ba146ed87032" afterPath="$PROJECT_DIR$/Library/metadata/c5/c57c23a7095d04449991ba146ed87032" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/c8/c8c6956b37873a34fbe205ba9384213e" afterPath="$PROJECT_DIR$/Library/metadata/c8/c8c6956b37873a34fbe205ba9384213e" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/cb/cbb8e45eb8b29a94fb3729d0cec244d0" afterPath="$PROJECT_DIR$/Library/metadata/cb/cbb8e45eb8b29a94fb3729d0cec244d0" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/de/ded3a97ec95ca2d46b451039718af4e3" afterPath="$PROJECT_DIR$/Library/metadata/de/ded3a97ec95ca2d46b451039718af4e3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e2/e23ad41464ef945d784cdb90d844e6c4" afterPath="$PROJECT_DIR$/Library/metadata/e2/e23ad41464ef945d784cdb90d844e6c4" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e2/e23ad41464ef945d784cdb90d844e6c4.info" afterPath="$PROJECT_DIR$/Library/metadata/e2/e23ad41464ef945d784cdb90d844e6c4.info" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e5/e5548d552b4222142a6afb0ec7e07105" afterPath="$PROJECT_DIR$/Library/metadata/e5/e5548d552b4222142a6afb0ec7e07105" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e5/e5f7fbf8f958b254795148c23b9d795b" afterPath="$PROJECT_DIR$/Library/metadata/e5/e5f7fbf8f958b254795148c23b9d795b" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/f0/f080ad9fd3cfd0b40b17725a61bd37d3" afterPath="$PROJECT_DIR$/Library/metadata/f0/f080ad9fd3cfd0b40b17725a61bd37d3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor-firstpass.csprojResolveAssemblyReference.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool/Singleton.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool/PoolManager.cs" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool/PoolManager.cs.meta" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool/Singleton.cs.meta" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp-firstpass.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e4/e4b40da9cd63bfa4dbf2d0903fd79e88" afterPath="$PROJECT_DIR$/Library/metadata/e4/e4b40da9cd63bfa4dbf2d0903fd79e88" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll.mdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/2d/2dd685454b8600940a1d29e86a2198cb" afterPath="$PROJECT_DIR$/Library/metadata/2d/2dd685454b8600940a1d29e86a2198cb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll.mdb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.ECSPlayGround/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.ECSPlayGround/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/AddViewBulletSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/AddViewBulletSystem.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas.meta" afterPath="$PROJECT_DIR$/Assets/Entitas.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Compile.cs" afterPath="$PROJECT_DIR$/Assets/Entitas/Compile.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Compile.cs.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Compile.cs.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.Unity.Editor.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.Unity.Editor.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Migration.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Unity.Editor.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.Unity.Editor.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Editor/Images.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Editor/Images.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.Unity.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.Unity.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.VisualDebugging.Unity.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.VisualDebugging.Unity.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Entitas/Entitas.dll.meta" afterPath="$PROJECT_DIR$/Assets/Entitas/Entitas.dll.meta" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Bullet/HitComponent.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Bullet/HitComponent.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/DestroyBulletSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/DestroyBulletSystem.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/36/36c79b157ab1ab54e98392ddad7b7fa5" afterPath="$PROJECT_DIR$/Library/metadata/36/36c79b157ab1ab54e98392ddad7b7fa5" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/72/72247824addc8924e9c8039006ea8be9" afterPath="$PROJECT_DIR$/Library/metadata/72/72247824addc8924e9c8039006ea8be9" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/c8/c8c6956b37873a34fbe205ba9384213e" afterPath="$PROJECT_DIR$/Library/metadata/c8/c8c6956b37873a34fbe205ba9384213e" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/assetDatabase3" afterPath="$PROJECT_DIR$/Library/assetDatabase3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/e5/e5548d552b4222142a6afb0ec7e07105" afterPath="$PROJECT_DIR$/Library/metadata/e5/e5548d552b4222142a6afb0ec7e07105" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/GameControler.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/GameControler.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Feature.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Feature.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameBulletComponent.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameBulletComponent.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameDestroyedComponent.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameDestroyedComponent.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameTickComponent.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameTickComponent.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputDestroyedComponent.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputDestroyedComponent.cs" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputPlayerAttackInputComponent.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputPlayerAttackInputComponent.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs" afterPath="$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ECSPlayGround.CSharp.Editor.Plugins.csproj" afterPath="$PROJECT_DIR$/ECSPlayGround.CSharp.Editor.Plugins.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ECSPlayGround.CSharp.Editor.csproj" afterPath="$PROJECT_DIR$/ECSPlayGround.CSharp.Editor.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ECSPlayGround.CSharp.Plugins.csproj" afterPath="$PROJECT_DIR$/ECSPlayGround.CSharp.Plugins.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ECSPlayGround.CSharp.csproj" afterPath="$PROJECT_DIR$/ECSPlayGround.CSharp.csproj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ECSPlayGround.sln" afterPath="$PROJECT_DIR$/ECSPlayGround.sln" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Entitas.properties" afterPath="$PROJECT_DIR$/Entitas.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" afterPath="$PROJECT_DIR$/Library/shadercompiler-UnityShaderCompiler.exe0.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/BulletPool/BulletPool.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/BulletPool/BulletPool.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/82/826b1d2897f44e139a75033627532032" afterPath="$PROJECT_DIR$/Library/metadata/82/826b1d2897f44e139a75033627532032" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" afterPath="$PROJECT_DIR$/Assembly-CSharp-Editor-firstpass.csproj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/1d/1d5c0f886b34f954288cb8723c612d8d" afterPath="$PROJECT_DIR$/Library/metadata/1d/1d5c0f886b34f954288cb8723c612d8d" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerAttackInputComponent.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerAttackInputComponent.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Library/metadata/1a/1a7db4fdc6b262247bda9a7a1c064fc1" afterPath="$PROJECT_DIR$/Library/metadata/1a/1a7db4fdc6b262247bda9a7a1c064fc1" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -149,210 +43,77 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="GameCollisionComponent.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCollisionComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <marker date="1513241388829" expanded="true" signature="0:405" ph="/* ------------------------------------------------------------------------------ ... */" />
-                <marker date="1513241388829" expanded="true" signature="438:1419" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="743:984" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="1072:1317" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="1353:1417" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="1421:1827" ph="/* ------------------------------------------------------------------------------ ... */" />
-                <marker date="1513241388829" expanded="true" signature="1868:2368" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="1988:2366" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="2002:2360" ph="{...}" />
-                <marker date="1513241388829" expanded="true" signature="2047:2311" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionProcessSystem.cs" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-              <folding>
-                <marker date="1513245900593" expanded="true" signature="6:124" ph="..." />
-                <marker date="1513245900593" expanded="true" signature="153:1970" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="242:1968" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="418:557" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="658:745" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="804:864" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="932:1783" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="987:1773" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="1105:1759" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="1232:1741" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="1350:1719" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="1814:1962" ph="{...}" />
-                <marker date="1513245900593" expanded="true" signature="1888:1952" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GameControler.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-              <folding>
-                <marker date="1513238602987" expanded="false" signature="6:219" ph="..." />
-                <marker date="1513238602987" expanded="true" signature="263:1488" ph="{...}" />
-                <marker date="1513238602987" expanded="true" signature="459:683" ph="{...}" />
-                <marker date="1513238602987" expanded="true" signature="738:790" ph="{...}" />
-                <marker date="1513238602987" expanded="true" signature="812:852" ph="{...}" />
-                <marker date="1513238602987" expanded="true" signature="913:1486" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharacterFormulars.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="63" />
-              <folding>
-                <marker date="1513243215858" expanded="true" signature="26:260" ph="{...}" />
-                <marker date="1513243215858" expanded="true" signature="71:258" ph="{...}" />
-                <marker date="1513243215858" expanded="true" signature="182:252" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ArmorComponent.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-              <folding>
-                <marker date="1513241126831" expanded="true" signature="56:82" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HeathComponent.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-              <folding>
-                <marker date="1513240593663" expanded="true" signature="63:89" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionComponent.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionComponent.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="18" />
-              <folding>
-                <marker date="1513239701845" expanded="true" signature="68:125" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CollisionEmmiter.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="20" column="90" lean-forward="false" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="90" />
-              <folding>
-                <marker date="1513239736603" expanded="false" signature="6:54" ph="..." />
-                <marker date="1513239736603" expanded="true" signature="87:792" ph="{...}" />
-                <marker date="1513239736603" expanded="true" signature="139:790" ph="{...}" />
-                <marker date="1513239736603" expanded="true" signature="197:784" ph="{...}" />
-                <marker date="1513239736603" expanded="true" signature="245:774" ph="{...}" />
-                <marker date="1513239736603" expanded="true" signature="546:760" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IContext.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/ce/3abd26d5/IContext.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PlayerInitialSystem.cs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-              <folding>
-                <marker date="1513245780642" expanded="false" signature="6:178" ph="..." />
-                <marker date="1513245780642" expanded="true" signature="212:1817" ph="{...}" />
-                <marker date="1513245780642" expanded="true" signature="271:1815" ph="{...}" />
-                <marker date="1513245780642" expanded="true" signature="353:401" ph="{...}" />
-                <marker date="1513245780642" expanded="true" signature="435:1809" ph="{...}" />
-                <marker date="1513245780642" expanded="true" signature="842:1211" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletPool/PoolManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Bullet/DamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCollisionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletPool/Singleton.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceShooterAsset/_Completed-Assets/Scripts/Done_GameController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameHealthComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceShooterAsset/_Completed-Assets/Scripts/Done_PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/f2/df833cd4/EntityLink.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BulletPool/BulletPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameControler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/ce/3abd26d5/IContext.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Core/Scripts/ObjectPooling/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3E81C8E5-ADD1-4A31-A1EE-16A1013AD787/ce/6cd5494e/ObjectPool`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/UniRx/Scripts/UnityEngineBridge/Toolkit/ObjectPool.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IDestroyed.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/07/d80a7d3b/Context`1.cs" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionComponent.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceShooterAsset/_Completed-Assets/Scripts/Done_Mover.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/28/cfd98414/EntityLinkExtension.cs" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Assets/SpaceShooterAsset/_Completed-Assets/Scripts/Done_EvasiveManeuver.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Bullet/CoolddownComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Bullet/BulletDestroyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameArmorComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Bullet/DamageComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/AddViewBulletSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCollisionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/DestroyBulletSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Bullet/BulletComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/f2/df833cd4/EntityLink.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Input/MoveInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerAttackInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerIdComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/ce/3abd26d5/IContext.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IDestroyed.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/07/d80a7d3b/Context`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Input/ProcessMoveInputSystems.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/ff/57154fc5/IEntityIndex.cs" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Bullet/DamageComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionCleanupSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameControler.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/f2/df833cd4/EntityLink.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCollisionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Health/AmorComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerAttackInputComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Input/InputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Input/PlayerIdComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/GenerateBulletSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletPool/BulletPool.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletPool/PoolManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BulletPool/Singleton.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/AddViewBulletSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Bullet/DestroyBulletSystem.cs" />
+        <option value="$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/28/cfd98414/EntityLinkExtension.cs" />
       </list>
     </option>
   </component>
@@ -384,7 +145,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -408,7 +168,48 @@
               <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Core" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="ObjectPooling" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Systems" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (4 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Scripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Systems" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Bullet" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
             <path>
               <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
@@ -416,7 +217,6 @@
               <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
               <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
-              <item name="Formular" type="977d5f41:SolutionExplorerNodeRider" />
             </path>
           </expand>
           <select />
@@ -424,6 +224,7 @@
         <option name="show-file-system" value="false" />
         <option name="show-all-items" value="false" />
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,11 +263,12 @@
       <workItem from="1512281378374" duration="620000" />
       <workItem from="1512283925159" duration="68000" />
       <workItem from="1513237907189" duration="6892000" />
+      <workItem from="1513304428705" duration="8549000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10439000" />
+    <option name="totallyTimeSpent" value="18988000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -489,12 +291,12 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21072797" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24028462" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21566632" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2563581" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -510,181 +312,62 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs</url>
+          <line>34</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
+            <startOffsets>
+              <startOffset value="1086" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1786" />
+            </endOffsets>
+          </properties>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs</url>
+          <line>40</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
+            <startOffsets>
+              <startOffset value="1329" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1746" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs</url>
+          <line>37</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
+            <startOffsets>
+              <startOffset value="1213" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1768" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs</url>
+          <line>46</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
+            <startOffsets>
+              <startOffset value="1688" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1720" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="5" />
+    </breakpoint-manager>
     <watches-manager />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionCleanupSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1513241388842" expanded="true" signature="0:397" ph="/* ------------------------------------------------------------------------------ ... */" />
-            <marker date="1513241388842" expanded="true" signature="468:932" ph="{...}" />
-            <marker date="1513241388842" expanded="true" signature="923:930" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/C02E076B-CDC3-4909-9E3A-57FAB30467CC/f2/df833cd4/EntityLink.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/07/d80a7d3b/Context`1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-135">
-          <caret line="13" column="92" lean-forward="false" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="92" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6EB0F415-921D-4F53-9E66-433DC1147FE2/ce/3abd26d5/IContext.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="27" column="0" lean-forward="false" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="18" />
-          <folding>
-            <marker date="1513239701845" expanded="true" signature="68:125" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCollisionComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="18" column="39" lean-forward="false" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding>
-            <marker date="1513241388829" expanded="true" signature="0:405" ph="/* ------------------------------------------------------------------------------ ... */" />
-            <marker date="1513241388829" expanded="true" signature="438:1419" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="743:984" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="1072:1317" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="1353:1417" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="1421:1827" ph="/* ------------------------------------------------------------------------------ ... */" />
-            <marker date="1513241388829" expanded="true" signature="1868:2368" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="1988:2366" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="2002:2360" ph="{...}" />
-            <marker date="1513241388829" expanded="true" signature="2047:2311" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Sources/Inputs/CollisionEmmiter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="20" column="90" lean-forward="false" selection-start-line="20" selection-start-column="90" selection-end-line="20" selection-end-column="90" />
-          <folding>
-            <marker date="1513239736603" expanded="false" signature="6:54" ph="..." />
-            <marker date="1513239736603" expanded="true" signature="87:792" ph="{...}" />
-            <marker date="1513239736603" expanded="true" signature="139:790" ph="{...}" />
-            <marker date="1513239736603" expanded="true" signature="197:784" ph="{...}" />
-            <marker date="1513239736603" expanded="true" signature="245:774" ph="{...}" />
-            <marker date="1513239736603" expanded="true" signature="546:760" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/HeathComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1513240593663" expanded="true" signature="63:89" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Components/Health/ArmorComponent.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
-          <folding>
-            <marker date="1513241126831" expanded="true" signature="56:82" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Sources/Formular/CharacterFormulars.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="63" />
-          <folding>
-            <marker date="1513243215858" expanded="true" signature="26:260" ph="{...}" />
-            <marker date="1513243215858" expanded="true" signature="71:258" ph="{...}" />
-            <marker date="1513243215858" expanded="true" signature="182:252" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/GameControler.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
-          <folding>
-            <marker date="1513238602987" expanded="false" signature="6:219" ph="..." />
-            <marker date="1513238602987" expanded="true" signature="263:1488" ph="{...}" />
-            <marker date="1513238602987" expanded="true" signature="459:683" ph="{...}" />
-            <marker date="1513238602987" expanded="true" signature="738:790" ph="{...}" />
-            <marker date="1513238602987" expanded="true" signature="812:852" ph="{...}" />
-            <marker date="1513238602987" expanded="true" signature="913:1486" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/PlayerInitialSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="25" column="33" lean-forward="false" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-          <folding>
-            <marker date="1513245780642" expanded="false" signature="6:178" ph="..." />
-            <marker date="1513245780642" expanded="true" signature="212:1817" ph="{...}" />
-            <marker date="1513245780642" expanded="true" signature="271:1815" ph="{...}" />
-            <marker date="1513245780642" expanded="true" signature="353:401" ph="{...}" />
-            <marker date="1513245780642" expanded="true" signature="435:1809" ph="{...}" />
-            <marker date="1513245780642" expanded="true" signature="842:1211" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Systems/Collision/CollisionProcessSystem.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="57" column="13" lean-forward="false" selection-start-line="57" selection-start-column="13" selection-end-line="57" selection-end-column="13" />
-          <folding>
-            <marker date="1513245900593" expanded="true" signature="6:124" ph="..." />
-            <marker date="1513245900593" expanded="true" signature="153:1970" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="242:1968" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="418:557" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="658:745" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="804:864" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="932:1783" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="987:1773" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="1105:1759" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="1232:1741" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="1350:1719" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="1814:1962" ph="{...}" />
-            <marker date="1513245900593" expanded="true" signature="1888:1952" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>

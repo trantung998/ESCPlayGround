@@ -50,13 +50,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Core\Scripts\ObjectPooling\ObjectPool.cs" />
+    <Compile Include="Assets\Core\Scripts\ObjectPooling\ObjectRecycleBin.cs" />
     <Compile Include="Assets\Entitas\Compile.cs" />
     <Compile Include="Assets\Scripts\BulletPool\BulletPool.cs" />
+    <Compile Include="Assets\Scripts\BulletPool\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\BulletPool\Singleton.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\BulletComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\BulletDestroyComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\CoolddownComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\DamageComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Bullet\HitComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Bullet\OnDestroyEffect.cs" />
     <Compile Include="Assets\Scripts\Components\Config\EnemyConfigComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Config\PlayerDataComponent.cs" />
     <Compile Include="Assets\Scripts\Components\DestroyedComponent.cs" />
@@ -96,6 +101,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameEnemyConfigComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameHealthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameHitComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameOnDestroyEffectComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerDataComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerIdComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePositionComponent.cs" />

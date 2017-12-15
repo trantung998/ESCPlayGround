@@ -41,20 +41,22 @@ namespace Systems.Collision
                         if (target.hasHealth)
                         {
                             var armor = target.hasArmor ? target.armor.value : 0;
+                            
                             var newHealth = target.health.value -
-                                            CharacterFormulars.CalculateDamage(target.health.value, armor);
+                                            CharacterFormulars.CalculateDamage(self.damage.value, armor);
                             target.ReplaceHealth(newHealth);
                         }
                     }
+                    self.isDestroyed = true;
                 }
             }
         }
-
+        
         public void Cleanup()
         {
             foreach (var entity in cleanupEntity.GetEntities())
             {
-//                entity.Destroy();
+                entity.Destroy();
             }
         }
     }

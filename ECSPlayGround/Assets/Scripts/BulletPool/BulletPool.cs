@@ -7,8 +7,7 @@ namespace BulletPool
     {
         readonly Transform prefab;
         readonly Transform hierarchyParent;
-
-
+        
         public BulletPool(Transform prefab, Transform hierarchyParent)
         {
             this.prefab = prefab;

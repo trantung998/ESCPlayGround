@@ -34,7 +34,7 @@ public class InputSystem : IExecuteSystem, ICleanupSystem
             {
                 var bulletCooldown = _dataModel.fireRate;
                 var atkInput = contexts.input.CreateEntity();
-                atkInput.isPlayerAttackInput = true;
+                atkInput.AddPlayerAttackInput("Player1");
                 atkInput.AddCoolddown("Fire1", bulletCooldown);           
             }
         }

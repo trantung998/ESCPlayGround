@@ -4,6 +4,7 @@ using Systems.Bullet;
 using Systems.Collision;
 using Assets.Scripts.Systems;
 using Systems.CooldownSystem;
+using Assets.Scripts.Systems.Bullet;
 using DataStructs;
 using Entitas;
 using UnityEngine;
@@ -26,30 +27,34 @@ public class GameControler : MonoBehaviour
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update()
+	{
 		systems.Execute();
-        systems.Cleanup();
+		systems.Cleanup();
 	}
 
-    void OnDestroy()
+	void OnDestroy()
     {
         systems.TearDown();
     }
 
     private Entitas.Systems CreateSystem(Contexts contexts)
     {
-        return new Feature("Systems")
-            .Add(new InputSystem(contexts))
-            .Add(new PlayerInitialSystem(contexts))
+	    return new Feature("Systems")
+		    .Add(new InputSystem(contexts))
+		    .Add(new PlayerInitialSystem(contexts))
 
-            //update
-            .Add(new VelocityHandlerSystem(contexts))
-            .Add(new DecreaseCooldownTimeSystem(contexts))
-            //reactive
-            .Add(new GenerateBulletSystems(contexts))
-            .Add(new AddViewBulletSystem(contexts))
-            .Add(new PositionHandlerSystem(contexts))
-	        .Add(new CollisionProcessSystem(contexts))
-            .Add(new ProcessMoveInputSystems(contexts));
+		    //update
+		    .Add(new VelocityHandlerSystem(contexts))
+		    .Add(new DecreaseCooldownTimeSystem(contexts))
+		    //reactive
+		    .Add(new GenerateBulletSystems(contexts))
+		    .Add(new AddViewBulletSystem(contexts))
+		    .Add(new PositionHandlerSystem(contexts))
+		    .Add(new CollisionProcessSystem(contexts))
+		    .Add(new ProcessMoveInputSystems(contexts))
+			//clean up
+		    .Add(new DestroyBulletSystem(contexts));
+		    ;
     }
 }

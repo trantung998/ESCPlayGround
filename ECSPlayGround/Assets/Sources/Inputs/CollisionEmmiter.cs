@@ -17,7 +17,6 @@ namespace Assets.Sources.Inputs
                 if (otherEntityLink != null)
                 {
                     var collision = gameContext.CreateEntity();
-                    
                     collision.AddCollision(bulletEntityLink.entity, otherEntityLink.entity);
                 }
             }

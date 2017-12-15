@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class InputEntity {
 
-    static readonly PlayerAttackInputComponent playerAttackInputComponent = new PlayerAttackInputComponent();
+    public PlayerAttackInputComponent playerAttackInput { get { return (PlayerAttackInputComponent)GetComponent(InputComponentsLookup.PlayerAttackInput); } }
+    public bool hasPlayerAttackInput { get { return HasComponent(InputComponentsLookup.PlayerAttackInput); } }
 
-    public bool isPlayerAttackInput {
-        get { return HasComponent(InputComponentsLookup.PlayerAttackInput); }
-        set {
-            if (value != isPlayerAttackInput) {
-                var index = InputComponentsLookup.PlayerAttackInput;
-                if (value) {
-                    var componentPool = GetComponentPool(index);
-                    var component = componentPool.Count > 0
-                            ? componentPool.Pop()
-                            : playerAttackInputComponent;
+    public void AddPlayerAttackInput(string newPlayerId) {
+        var index = InputComponentsLookup.PlayerAttackInput;
+        var component = CreateComponent<PlayerAttackInputComponent>(index);
+        component.playerId = newPlayerId;
+        AddComponent(index, component);
+    }
 
-                    AddComponent(index, component);
-                } else {
-                    RemoveComponent(index);
-                }
-            }
-        }
+    public void ReplacePlayerAttackInput(string newPlayerId) {
+        var index = InputComponentsLookup.PlayerAttackInput;
+        var component = CreateComponent<PlayerAttackInputComponent>(index);
+        component.playerId = newPlayerId;
+        ReplaceComponent(index, component);
+    }
+
+    public void RemovePlayerAttackInput() {
+        RemoveComponent(InputComponentsLookup.PlayerAttackInput);
     }
 }
 
