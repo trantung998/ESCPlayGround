@@ -8,7 +8,7 @@ namespace Assets.Sources.Inputs
     {
         private void OnTriggerEnter(Collider other)
         {
-            if (other.tag == "Enemy")
+            if (other.tag == "Enemy" || other.tag == "Bound")
             {
                 var bulletEntityLink = GetComponent<EntityLink>();
                 var gameContext = bulletEntityLink.context as GameContext;
