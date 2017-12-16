@@ -19,7 +19,7 @@ namespace Systems.Collision
          
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            return context.CreateCollector(GameMatcher.Collision);
+            return context.CreateCollector(GameMatcher.Collision.Added());
         }
 
         protected override bool Filter(GameEntity entity)
@@ -32,9 +32,9 @@ namespace Systems.Collision
             foreach (var entity in entities)
             {
                 var target = entity.collision.target as GameEntity;
+                var self = entity.collision.selft as GameEntity;
                 if (target != null)
                 {
-                    var self = entity.collision.selft as GameEntity;
                     if (self.hasDamage)
                     {
                         //todo : Logic gây damage
@@ -47,8 +47,8 @@ namespace Systems.Collision
                             target.ReplaceHealth(newHealth);
                         }
                     }
-                    self.isDestroyed = true;
                 }
+                self.isDestroyed = true;
             }
         }
         

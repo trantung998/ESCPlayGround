@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-public sealed class ArmorComponent : IComponent
+public class ArmorComponent : IComponent
 {
     public int value;
 }

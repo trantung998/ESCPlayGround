@@ -9,32 +9,38 @@
 public static class GameComponentsLookup {
 
     public const int Armor = 0;
-    public const int Bullet = 1;
-    public const int Collision = 2;
-    public const int Damage = 3;
-    public const int Destroyed = 4;
-    public const int EnemyConfig = 5;
-    public const int Health = 6;
-    public const int Hit = 7;
-    public const int OnDestroyEffect = 8;
-    public const int PlayerData = 9;
-    public const int PlayerId = 10;
-    public const int Position = 11;
-    public const int Tick = 12;
-    public const int Velocity = 13;
-    public const int View = 14;
+    public const int AutoHorizontalMove = 1;
+    public const int Bullet = 2;
+    public const int Collision = 3;
+    public const int Damage = 4;
+    public const int Destroyed = 5;
+    public const int EnemyConfig = 6;
+    public const int Health = 7;
+    public const int HitBound = 8;
+    public const int Hit = 9;
+    public const int MapConfigs = 10;
+    public const int OnDestroyEffect = 11;
+    public const int PlayerData = 12;
+    public const int PlayerId = 13;
+    public const int Position = 14;
+    public const int Tick = 15;
+    public const int Velocity = 16;
+    public const int View = 17;
 
-    public const int TotalComponents = 15;
+    public const int TotalComponents = 18;
 
     public static readonly string[] componentNames = {
         "Armor",
+        "AutoHorizontalMove",
         "Bullet",
         "Collision",
         "Damage",
         "Destroyed",
         "EnemyConfig",
         "Health",
+        "HitBound",
         "Hit",
+        "MapConfigs",
         "OnDestroyEffect",
         "PlayerData",
         "PlayerId",
@@ -46,13 +52,16 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(ArmorComponent),
+        typeof(AutoHorizontalMoveComponent),
         typeof(BulletComponent),
         typeof(CollisionComponent),
         typeof(DamageComponent),
         typeof(DestroyedComponent),
         typeof(EnemyConfigComponent),
         typeof(HealthComponent),
+        typeof(HitBoundComponent),
         typeof(HitComponent),
+        typeof(MapConfigsComponent),
         typeof(OnDestroyEffect),
         typeof(PlayerDataComponent),
         typeof(PlayerIdComponent),

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Entitas;
 using Entitas.Unity;
+using UniRx;
 using UnityCode.Core.Scripts.ObjectPooling;
 
 namespace Assets.Scripts.Systems.Bullet
@@ -33,6 +34,7 @@ namespace Assets.Scripts.Systems.Bullet
                     effect.transform.localPosition = position;
                 }
                 entity.Destroy();
+                MessageBroker.Default.Publish(new BulletDestroyEvent());
             }
         }
     }

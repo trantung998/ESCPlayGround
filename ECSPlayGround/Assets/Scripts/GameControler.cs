@@ -13,6 +13,7 @@ public class GameControler : MonoBehaviour
 {
     [SerializeField] private PlayerDataModel playerData;
     [SerializeField] private EnemyData enemyData;
+	[SerializeField] private MapConfigs mapConfigs;
 
     private Entitas.Systems systems;
 
@@ -21,6 +22,7 @@ public class GameControler : MonoBehaviour
 		Contexts contexts = Contexts.sharedInstance;
 	    contexts.game.ReplacePlayerData(playerData);
         contexts.game.ReplaceEnemyConfig(enemyData);
+		contexts.game.ReplaceMapConfigs(mapConfigs);
 	    systems = CreateSystem(contexts);
 
         systems.Initialize();
@@ -42,6 +44,7 @@ public class GameControler : MonoBehaviour
     {
 	    return new Feature("Systems")
 		    .Add(new InputSystem(contexts))
+		    .Add(new MapInitialSystem(contexts))
 		    .Add(new PlayerInitialSystem(contexts))
 
 		    //update

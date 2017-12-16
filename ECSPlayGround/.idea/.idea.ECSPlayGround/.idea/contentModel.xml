@@ -322,12 +322,18 @@
               <e p="CoolddownComponent.cs" t="Include" />
               <e p="DamageComponent.cs" t="Include" />
               <e p="HitComponent.cs" t="Include" />
+              <e p="OnDestroyEffect.cs" t="Include" />
             </e>
             <e p="Config" t="Include">
               <e p="EnemyConfigComponent.cs" t="Include" />
+              <e p="MapConfigsComponent.cs" t="Include" />
               <e p="PlayerDataComponent.cs" t="Include" />
             </e>
             <e p="DestroyedComponent.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="AutoHorizontalMoveComponent.cs" t="Include" />
+              <e p="HitBoundComponent.cs" t="Include" />
+            </e>
             <e p="Health" t="Include">
               <e p="ArmorComponent.cs" t="Include" />
               <e p="HeathComponent.cs" t="Include" />
@@ -350,6 +356,7 @@
           </e>
           <e p="DataStructs" t="Include">
             <e p="EnemyData.cs" t="Include" />
+            <e p="MapConfigs.cs" t="Include" />
             <e p="PlayerDataModel.cs" t="Include" />
           </e>
           <e p="GameControler.cs" t="Include" />
@@ -366,10 +373,14 @@
             <e p="CooldownSystem" t="Include">
               <e p="DecreaseCooldownTimeSystem.cs" t="Include" />
             </e>
+            <e p="Enemy" t="Include">
+              <e p="AutoTurnSystem.cs" t="Include" />
+            </e>
             <e p="Input" t="Include">
               <e p="InputSystem.cs" t="Include" />
               <e p="ProcessMoveInputSystems.cs" t="Include" />
             </e>
+            <e p="MapInitialSystem.cs" t="Include" />
             <e p="PlayerInitialSystem.cs" t="Include" />
             <e p="Position" t="Include">
               <e p="PositionHandlerSystem.cs" t="Include" />
@@ -377,6 +388,9 @@
             <e p="Velocity" t="Include">
               <e p="VelocityHandlerSystem.cs" t="Include" />
             </e>
+          </e>
+          <e p="Ui" t="Include">
+            <e p="CountHit.cs" t="Include" />
           </e>
         </e>
         <e p="Sources" t="Include">
@@ -395,13 +409,17 @@
             <e p="Game" t="Include">
               <e p="Components" t="Include">
                 <e p="GameArmorComponent.cs" t="Include" />
+                <e p="GameAutoHorizontalMoveComponent.cs" t="Include" />
                 <e p="GameBulletComponent.cs" t="Include" />
                 <e p="GameCollisionComponent.cs" t="Include" />
                 <e p="GameDamageComponent.cs" t="Include" />
                 <e p="GameDestroyedComponent.cs" t="Include" />
                 <e p="GameEnemyConfigComponent.cs" t="Include" />
                 <e p="GameHealthComponent.cs" t="Include" />
+                <e p="GameHitBoundComponent.cs" t="Include" />
                 <e p="GameHitComponent.cs" t="Include" />
+                <e p="GameMapConfigsComponent.cs" t="Include" />
+                <e p="GameOnDestroyEffectComponent.cs" t="Include" />
                 <e p="GamePlayerDataComponent.cs" t="Include" />
                 <e p="GamePlayerIdComponent.cs" t="Include" />
                 <e p="GamePositionComponent.cs" t="Include" />
