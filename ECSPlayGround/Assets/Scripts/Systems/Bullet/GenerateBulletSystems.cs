@@ -20,7 +20,7 @@ namespace Systems.Bullet
             bullet.isBullet = true;
             bullet.isDestroyed = false;
             bullet.isOnDestroyEffect = true;
-            bullet.AddDamage(10);
+            bullet.AddDamage(10, DamageType.Physic);
             bullet.AddPosition(playerPos);
             bullet.AddVelocity(Vector3.forward);
             

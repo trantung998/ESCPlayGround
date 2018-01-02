@@ -14,20 +14,25 @@ public static class GameComponentsLookup {
     public const int Collision = 3;
     public const int Damage = 4;
     public const int Destroyed = 5;
-    public const int EnemyConfig = 6;
-    public const int Health = 7;
-    public const int HitBound = 8;
-    public const int Hit = 9;
-    public const int MapConfigs = 10;
-    public const int OnDestroyEffect = 11;
-    public const int PlayerData = 12;
-    public const int PlayerId = 13;
-    public const int Position = 14;
-    public const int Tick = 15;
-    public const int Velocity = 16;
-    public const int View = 17;
+    public const int Effect = 6;
+    public const int EffectImmunity = 7;
+    public const int EffectSlow = 8;
+    public const int EnemyConfig = 9;
+    public const int Health = 10;
+    public const int HitBound = 11;
+    public const int Hit = 12;
+    public const int IsSlowing = 13;
+    public const int MapConfigs = 14;
+    public const int OnDestroyEffect = 15;
+    public const int OnTakeDamage = 16;
+    public const int PlayerData = 17;
+    public const int PlayerId = 18;
+    public const int Position = 19;
+    public const int Tick = 20;
+    public const int Velocity = 21;
+    public const int View = 22;
 
-    public const int TotalComponents = 18;
+    public const int TotalComponents = 23;
 
     public static readonly string[] componentNames = {
         "Armor",
@@ -36,12 +41,17 @@ public static class GameComponentsLookup {
         "Collision",
         "Damage",
         "Destroyed",
+        "Effect",
+        "EffectImmunity",
+        "EffectSlow",
         "EnemyConfig",
         "Health",
         "HitBound",
         "Hit",
+        "IsSlowing",
         "MapConfigs",
         "OnDestroyEffect",
+        "OnTakeDamage",
         "PlayerData",
         "PlayerId",
         "Position",
@@ -57,12 +67,17 @@ public static class GameComponentsLookup {
         typeof(CollisionComponent),
         typeof(DamageComponent),
         typeof(DestroyedComponent),
+        typeof(EffectComponent),
+        typeof(EffectImmunityComponent),
+        typeof(EffectSlowComponent),
         typeof(EnemyConfigComponent),
         typeof(HealthComponent),
         typeof(HitBoundComponent),
         typeof(HitComponent),
+        typeof(IsSlowing),
         typeof(MapConfigsComponent),
         typeof(OnDestroyEffect),
+        typeof(OnTakeDamageComponent),
         typeof(PlayerDataComponent),
         typeof(PlayerIdComponent),
         typeof(PositionComponent),

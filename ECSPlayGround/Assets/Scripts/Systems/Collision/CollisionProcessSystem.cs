@@ -37,6 +37,8 @@ namespace Systems.Collision
                 {
                     if (self.hasDamage)
                     {
+                        target.AddOnTakeDamage(self.damage);
+                        
                         //todo : Logic gây damage
                         if (target.hasHealth)
                         {

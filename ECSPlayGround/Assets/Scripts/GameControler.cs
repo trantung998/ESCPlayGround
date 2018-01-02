@@ -56,6 +56,7 @@ public class GameControler : MonoBehaviour
 		    .Add(new PositionHandlerSystem(contexts))
 		    .Add(new CollisionProcessSystem(contexts))
 		    .Add(new ProcessMoveInputSystems(contexts))
+		    .Add(new AutoTurnSystem(contexts))
 			//clean up
 		    .Add(new DestroyBulletSystem(contexts));
 		    ;

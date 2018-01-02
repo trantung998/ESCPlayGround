@@ -3,26 +3,32 @@ using Entitas;
 
 public class AutoTurnSystem : ReactiveSystem<GameEntity>
 {
-    public AutoTurnSystem(IContext<GameEntity> context) : base(context)
+    public AutoTurnSystem(Contexts context) : base(context.game)
     {
+        
     }
 
-    public AutoTurnSystem(ICollector<GameEntity> collector) : base(collector)
-    {
-    }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.HitBound, GameMatcher.Position, GameMatcher.Velocity));
+        return context.CreateCollector(GameMatcher.AllOf(
+            GameMatcher.AutoHorizontalMove,
+            GameMatcher.HitBound, 
+            GameMatcher.Position, 
+            GameMatcher.Velocity));
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        throw new System.NotImplementedException();
+        return entity.hasVelocity && entity.isHitBound;
     }
 
     protected override void Execute(List<GameEntity> entities)
     {
-        throw new System.NotImplementedException();
+        foreach (var entity in entities)
+        {
+            entity.ReplaceVelocity(entity.velocity.value * -1);
+            entity.isHitBound = false;
+        }
     }
 }

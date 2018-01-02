@@ -45,7 +45,6 @@ namespace Assets.Scripts.Systems
             var enemyConfig = contexts.game.enemyConfig;
             var enemyEntity = contexts.game.CreateEntity();
             enemyEntity.AddPosition(enemyConfig.value.spawnPosition);
-            enemyEntity.AddVelocity(Vector3.zero);
 
             var enemyObj = GameObject.Instantiate(enemyConfig.value.prefab);
             var enemyObjTransform = enemyObj.transform;
@@ -55,6 +54,8 @@ namespace Assets.Scripts.Systems
             enemyEntity.AddView(enemyObj);
             enemyEntity.AddArmor(10);
             enemyEntity.AddHealth(1000);
+            enemyEntity.isAutoHorizontalMove = true;
+            enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
             
             InitPools();
         }
