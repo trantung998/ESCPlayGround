@@ -33,7 +33,7 @@ namespace Systems.CooldownSystem
                 if (cooldown <= 0)
                 {
                     entity.isDestroyed = true;
-                    Debug.Log("entity cooldown pass: " + cooldownComponent.id); 
+//                    Debug.Log("entity cooldown pass: " + cooldownComponent.id); 
                 }
             }
         }

@@ -38,16 +38,6 @@ namespace Systems.Collision
                     if (self.hasDamage)
                     {
                         target.AddOnTakeDamage(self.damage);
-                        
-                        //todo : Logic gây damage
-                        if (target.hasHealth)
-                        {
-                            var armor = target.hasArmor ? target.armor.value : 0;
-                            
-                            var newHealth = target.health.value -
-                                            CharacterFormulars.CalculateDamage(self.damage.value, armor);
-                            target.ReplaceHealth(newHealth);
-                        }
                     }
                 }
                 self.isDestroyed = true;
