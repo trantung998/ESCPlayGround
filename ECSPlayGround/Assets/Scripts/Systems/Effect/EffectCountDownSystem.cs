@@ -20,8 +20,10 @@ public class EffectCountDownSystem : IExecuteSystem
             {
                 effect.duration -= Time.deltaTime;
             }
+            
             //Remove effect
             entity.effect.effects.RemoveAll(effect => effect.duration <= 0);
+            
         }
     }
 }

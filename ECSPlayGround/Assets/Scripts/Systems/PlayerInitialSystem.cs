@@ -56,6 +56,7 @@ namespace Assets.Scripts.Systems
             enemyEntity.AddHealth(1000);
             enemyEntity.isAutoHorizontalMove = true;
             enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
+            enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
             
             InitPools();
         }

@@ -23,7 +23,8 @@ namespace Systems.Bullet
             bullet.AddDamage(10, DamageType.Physic);
             bullet.AddPosition(playerPos);
             bullet.AddVelocity(Vector3.forward);
-            
+            bullet.AddEffectSlow(new EffectData(){type = EffectType.Slow, duration = 5.0f, value = 0.5f});
+            bullet.AddLifetime(3.0f);
         }
 
         protected override bool Filter(InputEntity entity)

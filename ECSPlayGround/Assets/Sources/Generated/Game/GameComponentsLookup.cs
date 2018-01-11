@@ -16,23 +16,26 @@ public static class GameComponentsLookup {
     public const int Destroyed = 5;
     public const int Effect = 6;
     public const int EffectImmunity = 7;
-    public const int EffectSlow = 8;
-    public const int EnemyConfig = 9;
-    public const int Health = 10;
-    public const int HitBound = 11;
-    public const int Hit = 12;
-    public const int IsSlowing = 13;
-    public const int MapConfigs = 14;
-    public const int OnDestroyEffect = 15;
-    public const int OnTakeDamage = 16;
-    public const int PlayerData = 17;
-    public const int PlayerId = 18;
-    public const int Position = 19;
-    public const int Tick = 20;
-    public const int Velocity = 21;
-    public const int View = 22;
+    public const int EffectiveVelocity = 8;
+    public const int EffectSlow = 9;
+    public const int EnemyConfig = 10;
+    public const int Health = 11;
+    public const int HitBound = 12;
+    public const int Hit = 13;
+    public const int IsSlowing = 14;
+    public const int Lifetime = 15;
+    public const int MapConfigs = 16;
+    public const int OnDestroyEffect = 17;
+    public const int OnTakeDamage = 18;
+    public const int PlayerData = 19;
+    public const int PlayerId = 20;
+    public const int Position = 21;
+    public const int Tick = 22;
+    public const int UpdateEffect = 23;
+    public const int Velocity = 24;
+    public const int View = 25;
 
-    public const int TotalComponents = 23;
+    public const int TotalComponents = 26;
 
     public static readonly string[] componentNames = {
         "Armor",
@@ -43,12 +46,14 @@ public static class GameComponentsLookup {
         "Destroyed",
         "Effect",
         "EffectImmunity",
+        "EffectiveVelocity",
         "EffectSlow",
         "EnemyConfig",
         "Health",
         "HitBound",
         "Hit",
         "IsSlowing",
+        "Lifetime",
         "MapConfigs",
         "OnDestroyEffect",
         "OnTakeDamage",
@@ -56,6 +61,7 @@ public static class GameComponentsLookup {
         "PlayerId",
         "Position",
         "Tick",
+        "UpdateEffect",
         "Velocity",
         "View"
     };
@@ -69,12 +75,14 @@ public static class GameComponentsLookup {
         typeof(DestroyedComponent),
         typeof(EffectComponent),
         typeof(EffectImmunityComponent),
+        typeof(EffectiveVelocityComponent),
         typeof(EffectSlowComponent),
         typeof(EnemyConfigComponent),
         typeof(HealthComponent),
         typeof(HitBoundComponent),
         typeof(HitComponent),
         typeof(IsSlowing),
+        typeof(LifetimeComponent),
         typeof(MapConfigsComponent),
         typeof(OnDestroyEffect),
         typeof(OnTakeDamageComponent),
@@ -82,6 +90,7 @@ public static class GameComponentsLookup {
         typeof(PlayerIdComponent),
         typeof(PositionComponent),
         typeof(TickComponent),
+        typeof(UpdateEffectComponent),
         typeof(VelocityComponent),
         typeof(ViewComponent)
     };
