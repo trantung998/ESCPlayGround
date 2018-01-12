@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\melod\.Rider2017.2\system\resharper-host\local\Transient\ReSharperHost\v10\SolutionCaches\_ECSPlayGround.-407802857.00" t="ExcludeRecursive" />
+    <e p="C:\Users\melod\.Rider2017.3\system\resharper-host\local\Transient\ReSharperHost\v11\SolutionCaches\_ECSPlayGround.-407802857.00" t="ExcludeRecursive" />
     <e p="E:\Unity\Projects\ESCPlayGround1\ECSPlayGround" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
@@ -322,6 +322,7 @@
               <e p="CoolddownComponent.cs" t="Include" />
               <e p="DamageComponent.cs" t="Include" />
               <e p="HitComponent.cs" t="Include" />
+              <e p="LifetimeComponent.cs" t="Include" />
               <e p="OnDestroyEffect.cs" t="Include" />
             </e>
             <e p="Config" t="Include">
@@ -330,6 +331,17 @@
               <e p="PlayerDataComponent.cs" t="Include" />
             </e>
             <e p="DestroyedComponent.cs" t="Include" />
+            <e p="Effects" t="Include">
+              <e p="EffectComponent.cs" t="Include" />
+              <e p="EffectData.cs" t="Include" />
+              <e p="EffectImmunityComponent.cs" t="Include" />
+              <e p="SlowEffect" t="Include">
+                <e p="EffectSlowComponent.cs" t="Include" />
+                <e p="IsSlowing.cs" t="Include" />
+                <e p="SlowListComponnet.cs" t="Include" />
+              </e>
+              <e p="UpdateEffectComponent.cs" t="Include" />
+            </e>
             <e p="Enemy" t="Include">
               <e p="AutoHorizontalMoveComponent.cs" t="Include" />
               <e p="HitBoundComponent.cs" t="Include" />
@@ -346,10 +358,15 @@
             <e p="Position" t="Include">
               <e p="PositionComponent.cs" t="Include" />
             </e>
+            <e p="Skills" t="Include">
+              <e p="OnTakeDamageComponent.cs" t="Include" />
+            </e>
             <e p="Tick" t="Include">
               <e p="TickComponent.cs" t="Include" />
             </e>
             <e p="Velocity" t="Include">
+              <e p="EffectiveVelocityComponent.cs" t="Include" />
+              <e p="MoveSpeedComponent.cs" t="Include" />
               <e p="VelocityComponent.cs" t="Include" />
             </e>
             <e p="ViewComponent.cs" t="Include" />
@@ -369,9 +386,15 @@
             <e p="Collision" t="Include">
               <e p="CollisionComponent.cs" t="Include" />
               <e p="CollisionProcessSystem.cs" t="Include" />
+              <e p="DamageProcessSystem.cs" t="Include" />
             </e>
             <e p="CooldownSystem" t="Include">
               <e p="DecreaseCooldownTimeSystem.cs" t="Include" />
+            </e>
+            <e p="Effect" t="Include">
+              <e p="GetSlowEffectReactiveSystem.cs" t="Include" />
+              <e p="Skill1GenerateSystem.cs" t="Include" />
+              <e p="SlowEffectCountDownSystem.cs" t="Include" />
             </e>
             <e p="Enemy" t="Include">
               <e p="AutoTurnSystem.cs" t="Include" />
@@ -414,16 +437,25 @@
                 <e p="GameCollisionComponent.cs" t="Include" />
                 <e p="GameDamageComponent.cs" t="Include" />
                 <e p="GameDestroyedComponent.cs" t="Include" />
+                <e p="GameEffectComponent.cs" t="Include" />
+                <e p="GameEffectImmunityComponent.cs" t="Include" />
+                <e p="GameEffectiveVelocityComponent.cs" t="Include" />
+                <e p="GameEffectSlowComponent.cs" t="Include" />
                 <e p="GameEnemyConfigComponent.cs" t="Include" />
                 <e p="GameHealthComponent.cs" t="Include" />
                 <e p="GameHitBoundComponent.cs" t="Include" />
                 <e p="GameHitComponent.cs" t="Include" />
+                <e p="GameIsSlowingComponent.cs" t="Include" />
+                <e p="GameLifetimeComponent.cs" t="Include" />
                 <e p="GameMapConfigsComponent.cs" t="Include" />
                 <e p="GameOnDestroyEffectComponent.cs" t="Include" />
+                <e p="GameOnTakeDamageComponent.cs" t="Include" />
                 <e p="GamePlayerDataComponent.cs" t="Include" />
                 <e p="GamePlayerIdComponent.cs" t="Include" />
                 <e p="GamePositionComponent.cs" t="Include" />
+                <e p="GameSlowListComponnetComponent.cs" t="Include" />
                 <e p="GameTickComponent.cs" t="Include" />
+                <e p="GameUpdateEffectComponent.cs" t="Include" />
                 <e p="GameVelocityComponent.cs" t="Include" />
                 <e p="GameViewComponent.cs" t="Include" />
               </e>

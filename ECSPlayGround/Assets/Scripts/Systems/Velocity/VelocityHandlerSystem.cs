@@ -20,7 +20,7 @@ public class VelocityHandlerSystem : IExecuteSystem
         foreach (var entity in moveableEntities.GetEntities())
         {
             var pos = entity.position.value;
-            entity.ReplacePosition(pos + entity.velocity.value);
+            entity.ReplacePosition(pos + entity.effectiveVelocity.value);
         }
     }
 }

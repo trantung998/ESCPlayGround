@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
 namespace Assets.Scripts.Systems.Effect
 {
@@ -14,19 +15,36 @@ namespace Assets.Scripts.Systems.Effect
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            return context.CreateCollector(GameMatcher.AllOf(GameMatcher.EffectSlow, GameMatcher.Position));
+            return context.CreateCollector(
+                GameMatcher.AllOf(
+                    GameMatcher.SlowListComponnet, 
+//                    GameMatcher.Position, 
+                    GameMatcher.UpdateEffect));
         }
 
         protected override bool Filter(GameEntity entity)
         {
-            return entity.hasEffectSlow && entity.hasPosition;
+            return entity.hasSlowListComponnet && entity.hasPosition;
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
+            Debug.Log("GetSlowEffectReactiveSystem trigger");
             entities.ForEach(entity =>
             {
-                
+                if (entity.hasSlowListComponnet)
+                {
+                    if (entity.slowListComponnet.listEffect.Count > 0)
+                    {
+                        var slowActive = entity.slowListComponnet.GetActiveEffect();
+                        var vel = entity.effectiveVelocity.value * slowActive.value;
+                        entity.ReplaceEffectiveVelocity(vel);
+                    }
+                    else
+                    {
+                        entity.ReplaceEffectiveVelocity(entity.velocity.value);
+                    }
+                }
             });
         }
     }

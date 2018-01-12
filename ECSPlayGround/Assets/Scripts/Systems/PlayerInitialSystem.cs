@@ -27,6 +27,7 @@ namespace Assets.Scripts.Systems
             player.AddArmor(10);
             player.AddHealth(1000);
             player.AddPlayerId("Player1");
+            
             player.isDestroyed = false;
 
             var playerData = contexts.game.playerData.value;
@@ -56,7 +57,7 @@ namespace Assets.Scripts.Systems
             enemyEntity.AddHealth(1000);
             enemyEntity.isAutoHorizontalMove = true;
             enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
-            enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
+            enemyEntity.AddEffectiveVelocity(new Vector3(0.2f, 0, 0));
             
             InitPools();
         }

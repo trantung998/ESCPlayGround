@@ -30,12 +30,13 @@ public static class GameComponentsLookup {
     public const int PlayerData = 19;
     public const int PlayerId = 20;
     public const int Position = 21;
-    public const int Tick = 22;
-    public const int UpdateEffect = 23;
-    public const int Velocity = 24;
-    public const int View = 25;
+    public const int SlowListComponnet = 22;
+    public const int Tick = 23;
+    public const int UpdateEffect = 24;
+    public const int Velocity = 25;
+    public const int View = 26;
 
-    public const int TotalComponents = 26;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
         "Armor",
@@ -60,6 +61,7 @@ public static class GameComponentsLookup {
         "PlayerData",
         "PlayerId",
         "Position",
+        "SlowListComponnet",
         "Tick",
         "UpdateEffect",
         "Velocity",
@@ -89,6 +91,7 @@ public static class GameComponentsLookup {
         typeof(PlayerDataComponent),
         typeof(PlayerIdComponent),
         typeof(PositionComponent),
+        typeof(SlowListComponnet),
         typeof(TickComponent),
         typeof(UpdateEffectComponent),
         typeof(VelocityComponent),

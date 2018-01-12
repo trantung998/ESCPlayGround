@@ -10,4 +10,5 @@ public class EffectData
     public EffectType type;
     public float duration;
     public float value;
+    
 }

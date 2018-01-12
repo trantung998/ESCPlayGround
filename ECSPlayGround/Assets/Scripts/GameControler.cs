@@ -5,6 +5,7 @@ using Systems.Collision;
 using Assets.Scripts.Systems;
 using Systems.CooldownSystem;
 using Assets.Scripts.Systems.Bullet;
+using Assets.Scripts.Systems.Effect;
 using DataStructs;
 using Entitas;
 using UnityEngine;
@@ -50,6 +51,7 @@ public class GameControler : MonoBehaviour
 		    //update
 		    .Add(new VelocityHandlerSystem(contexts))
 		    .Add(new DecreaseCooldownTimeSystem(contexts))
+		    .Add(new SlowEffectCountDownSystem(contexts))
 		    //reactive
 		    .Add(new GenerateBulletSystems(contexts))
 		    .Add(new AddViewBulletSystem(contexts))
@@ -58,6 +60,8 @@ public class GameControler : MonoBehaviour
 		    .Add(new ProcessMoveInputSystems(contexts))
 		    .Add(new AutoTurnSystem(contexts))
 		    .Add(new DamageProcessSystem(contexts))
+		    .Add(new GetSlowEffectReactiveSystem(contexts))
+
 			//clean up
 		    .Add(new DestroyBulletSystem(contexts));
     }

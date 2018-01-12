@@ -39,6 +39,29 @@ namespace Systems.Collision
                     {
                         target.AddOnTakeDamage(self.damage);
                     }
+
+                    if (self.hasEffect)
+                    {
+                        var effectList = self.effect.effects;
+                        target.isUpdateEffect = false;
+                        effectList.ForEach(data =>
+                        {
+                            switch (data.type)
+                            {
+                                case EffectType.Slow:
+                                    if (!target.hasSlowListComponnet)
+                                    {
+                                        target.AddSlowListComponnet(new List<EffectData>());
+                                    }
+                                    target.slowListComponnet.listEffect.Add(data);
+                                    
+                                    break;
+                                case EffectType.Stun:
+                                    break;
+                            }
+                        });
+                        target.isUpdateEffect = true;
+                    }
                 }
                 self.isDestroyed = true;
             }
