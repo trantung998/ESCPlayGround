@@ -11,16 +11,18 @@ public partial class GameEntity {
     public EffectSlowComponent effectSlow { get { return (EffectSlowComponent)GetComponent(GameComponentsLookup.EffectSlow); } }
     public bool hasEffectSlow { get { return HasComponent(GameComponentsLookup.EffectSlow); } }
 
-    public void AddEffectSlow(EffectData newEffectData) {
+    public void AddEffectSlow(string newId, EffectData newEffectData) {
         var index = GameComponentsLookup.EffectSlow;
         var component = CreateComponent<EffectSlowComponent>(index);
+        component.id = newId;
         component.effectData = newEffectData;
         AddComponent(index, component);
     }
 
-    public void ReplaceEffectSlow(EffectData newEffectData) {
+    public void ReplaceEffectSlow(string newId, EffectData newEffectData) {
         var index = GameComponentsLookup.EffectSlow;
         var component = CreateComponent<EffectSlowComponent>(index);
+        component.id = newId;
         component.effectData = newEffectData;
         ReplaceComponent(index, component);
     }

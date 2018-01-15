@@ -53,7 +53,7 @@ namespace Systems.Collision
                                     {
                                         target.AddSlowListComponnet(new List<EffectData>());
                                     }
-                                    target.slowListComponnet.listEffect.Add(data);
+                                    target.slowListComponnet.AddEffectData(data);
                                     
                                     break;
                                 case EffectType.Stun:

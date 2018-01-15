@@ -7,6 +7,19 @@ public class SlowListComponnet : IComponent
 {
     public List<EffectData> listEffect;
 
+    public void AddEffectData(EffectData data)
+    {
+        var index = listEffect.FindIndex(effectData => effectData.id == data.id);
+        if (index >= 0)
+        {
+            listEffect[index].duration = data.duration;
+        }
+        else
+        {
+            listEffect.Add(data);
+        }
+    }
+    
     public EffectData GetActiveEffect()
     {
         int maxIndex = 0;

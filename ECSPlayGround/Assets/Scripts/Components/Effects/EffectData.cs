@@ -7,6 +7,7 @@
 
 public class EffectData
 {
+    public string id;
     public EffectType type;
     public float duration;
     public float value;

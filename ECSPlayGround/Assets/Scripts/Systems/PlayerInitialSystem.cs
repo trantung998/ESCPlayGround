@@ -24,6 +24,7 @@ namespace Assets.Scripts.Systems
             var player = contexts.game.CreateEntity();
             player.AddPosition(Vector3.zero);
             player.AddVelocity(Vector3.zero);
+            player.AddMoveSpeed(0.2f, 0.2f);
             player.AddArmor(10);
             player.AddHealth(1000);
             player.AddPlayerId("Player1");
@@ -57,7 +58,7 @@ namespace Assets.Scripts.Systems
             enemyEntity.AddHealth(1000);
             enemyEntity.isAutoHorizontalMove = true;
             enemyEntity.AddVelocity(new Vector3(0.2f, 0, 0));
-            enemyEntity.AddEffectiveVelocity(new Vector3(0.2f, 0, 0));
+            enemyEntity.AddMoveSpeed(0.2f,0.2f);
             
             InitPools();
         }

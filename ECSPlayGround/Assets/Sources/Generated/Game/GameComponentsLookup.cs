@@ -25,18 +25,19 @@ public static class GameComponentsLookup {
     public const int IsSlowing = 14;
     public const int Lifetime = 15;
     public const int MapConfigs = 16;
-    public const int OnDestroyEffect = 17;
-    public const int OnTakeDamage = 18;
-    public const int PlayerData = 19;
-    public const int PlayerId = 20;
-    public const int Position = 21;
-    public const int SlowListComponnet = 22;
-    public const int Tick = 23;
-    public const int UpdateEffect = 24;
-    public const int Velocity = 25;
-    public const int View = 26;
+    public const int MoveSpeed = 17;
+    public const int OnDestroyEffect = 18;
+    public const int OnTakeDamage = 19;
+    public const int PlayerData = 20;
+    public const int PlayerId = 21;
+    public const int Position = 22;
+    public const int SlowListComponnet = 23;
+    public const int Tick = 24;
+    public const int UpdateEffect = 25;
+    public const int Velocity = 26;
+    public const int View = 27;
 
-    public const int TotalComponents = 27;
+    public const int TotalComponents = 28;
 
     public static readonly string[] componentNames = {
         "Armor",
@@ -56,6 +57,7 @@ public static class GameComponentsLookup {
         "IsSlowing",
         "Lifetime",
         "MapConfigs",
+        "MoveSpeed",
         "OnDestroyEffect",
         "OnTakeDamage",
         "PlayerData",
@@ -86,6 +88,7 @@ public static class GameComponentsLookup {
         typeof(IsSlowing),
         typeof(LifetimeComponent),
         typeof(MapConfigsComponent),
+        typeof(MoveSpeedComponent),
         typeof(OnDestroyEffect),
         typeof(OnTakeDamageComponent),
         typeof(PlayerDataComponent),

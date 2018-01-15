@@ -19,12 +19,13 @@ namespace Assets.Scripts.Systems.Effect
                 GameMatcher.AllOf(
                     GameMatcher.SlowListComponnet, 
 //                    GameMatcher.Position, 
+                    GameMatcher.MoveSpeed,
                     GameMatcher.UpdateEffect));
         }
 
         protected override bool Filter(GameEntity entity)
         {
-            return entity.hasSlowListComponnet && entity.hasPosition;
+            return entity.hasSlowListComponnet && entity.hasPosition && entity.hasMoveSpeed;
         }
 
         protected override void Execute(List<GameEntity> entities)
@@ -37,13 +38,15 @@ namespace Assets.Scripts.Systems.Effect
                     if (entity.slowListComponnet.listEffect.Count > 0)
                     {
                         var slowActive = entity.slowListComponnet.GetActiveEffect();
-                        var vel = entity.effectiveVelocity.value * slowActive.value;
-                        entity.ReplaceEffectiveVelocity(vel);
+                        entity.moveSpeed.effectiveValue = entity.moveSpeed.value * slowActive.value;
+                        entity.isIsSlowing = true;
                     }
                     else
                     {
-                        entity.ReplaceEffectiveVelocity(entity.velocity.value);
+                        entity.moveSpeed.ReturnBaseValue();
+                        entity.isIsSlowing = false;
                     }
+                    entity.ReplaceVelocity(entity.velocity.value.normalized * entity.moveSpeed.effectiveValue);
                 }
             });
         }

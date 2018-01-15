@@ -29,7 +29,13 @@ namespace Systems.Bullet
 
         private List<EffectData> GetEffectList()
         {
-            return new List<EffectData>(){new EffectData(){type = EffectType.Slow, duration = 5, value = 0.4f}};
+            return new List<EffectData>(){new EffectData()
+            {
+                id = "slow1",
+                type = EffectType.Slow, 
+                duration = 5, 
+                value = 0.4f
+            }};
         }
 
         protected override bool Filter(InputEntity entity)
