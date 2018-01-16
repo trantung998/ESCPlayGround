@@ -54,7 +54,6 @@ namespace Systems.Collision
                                         target.AddSlowListComponnet(new List<EffectData>());
                                     }
                                     target.slowListComponnet.AddEffectData(data);
-                                    
                                     break;
                                 case EffectType.Stun:
                                     break;
