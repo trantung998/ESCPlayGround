@@ -1,11 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{1221727B-A05D-D44D-15AB-06C06708F791}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -34,7 +38,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
@@ -46,135 +50,173 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Entitas\Compile.cs" />
-     <Compile Include="Assets\Scripts\GameControler.cs" />
-     <Compile Include="Assets\Scripts\ScoreLabelControler.cs" />
-     <Compile Include="Assets\Sources\Components\BlueprintsComponent.cs" />
-     <Compile Include="Assets\Sources\Components\Components.cs" />
-     <Compile Include="Assets\Sources\Components\DebugMessage\DebugMessageComponent.cs" />
-     <Compile Include="Assets\Sources\Components\DestroyedComponent.cs" />
-     <Compile Include="Assets\Sources\Components\GameBoard\GameBoardComponents.cs" />
-     <Compile Include="Assets\Sources\Components\Input\BurstModeComponent.cs" />
-     <Compile Include="Assets\Sources\Components\Input\InputComponent.cs" />
-     <Compile Include="Assets\Sources\Components\Input\InteractiveComponent.cs" />
-     <Compile Include="Assets\Sources\Components\ScoreComponent.cs" />
-     <Compile Include="Assets\Sources\Components\View\ViewComponents.cs" />
-     <Compile Include="Assets\Sources\Extensions\BlueprintsExtensions.cs" />
-     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
-     <Compile Include="Assets\Sources\Generated\Feature.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameAssetComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameBlueprintsComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameDebugMessageComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameDestroyedComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameDirectionComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameGameBoardComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameGameBoardElementComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameInteractiveComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameMovableComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameMoveCompleteComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameMoveComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GamePositionComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpriteComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameViewComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\Components\GameStateScoreComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\GameStateAttribute.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\GameStateComponentsLookup.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\GameStateContext.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\GameStateEntity.cs" />
-     <Compile Include="Assets\Sources\Generated\GameState\GameStateMatcher.cs" />
-     <Compile Include="Assets\Sources\Generated\GeneratedBlueprints.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputBurstModeComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputInputComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputLeftMouseComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputMouseDownComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputMousePositionComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputMouseUpComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\Components\InputRightMouseComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
-     <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
-     <Compile Include="Assets\Sources\Logic\Debug\DebugSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\DestroySystem.cs" />
-     <Compile Include="Assets\Sources\Logic\GameBoard\GameBoardLogic.cs" />
-     <Compile Include="Assets\Sources\Logic\GameBoard\GameBoardSystems.cs" />
-     <Compile Include="Assets\Sources\Logic\GameBoard\Systems\FallSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\GameBoard\Systems\FillSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\GameBoard\Systems\GameBoardSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\GameState\ScoreSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\Input\InputSystems.cs" />
-     <Compile Include="Assets\Sources\Logic\Input\Systems\EmitInputSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\Input\Systems\ProcessInputSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\View\Systems\AddViewSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\View\Systems\DestroyPieceSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\View\Systems\MovePieceSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\View\Systems\SetViewSystem.cs" />
-     <Compile Include="Assets\Sources\Logic\View\ViewSystems.cs" />
-     <Compile Include="Assets\Sources\Utility\IntVector2.cs" />
-     <None Include="Assets\DOTween\DOTween50.xml" />
-     <None Include="Assets\DOTween\DOTween46.xml" />
-     <None Include="Assets\DOTween\DOTween43.xml" />
-     <None Include="Assets\DOTween\readme.txt" />
- <Reference Include="UnityEngine.UI">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Networking">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.PlaymodeTestsRunner">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.HoloLens">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
- </Reference>
- <Reference Include="DOTween">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/DOTween/DOTween.dll</HintPath>
- </Reference>
- <Reference Include="DOTween43">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/DOTween/DOTween43.dll</HintPath>
- </Reference>
- <Reference Include="DOTween46">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/DOTween/DOTween46.dll</HintPath>
- </Reference>
- <Reference Include="DOTween50">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/DOTween/DOTween50.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.Blueprints">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Blueprints.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.Blueprints.Unity">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Blueprints.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.CodeGeneration.Attributes">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
- </Reference>
- <Reference Include="Entitas">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.Unity">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Unity.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.Utils">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Utils.dll</HintPath>
- </Reference>
- <Reference Include="Entitas.VisualDebugging.Unity">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
- </Reference>
- <Reference Include="fabl">
- <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/fabl.dll</HintPath>
- </Reference>
+    <Compile Include="Assets\Entitas\Compile.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\BasicPlatformerController.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\ConstrainedCamera.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\Raptor.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\SpineBeginnerTwo.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\SpineBlinkPlayer.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\SpineboyBeginnerInput.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\SpineboyBeginnerModel.cs" />
+    <Compile Include="Assets\Examples\Getting Started\Scripts\SpineboyBeginnerView.cs" />
+    <Compile Include="Assets\Examples\Scripts\Chimera.cs" />
+    <Compile Include="Assets\Examples\Scripts\FootSoldierExample.cs" />
+    <Compile Include="Assets\Examples\Scripts\Goblins.cs" />
+    <Compile Include="Assets\Examples\Scripts\RaggedySpineboy.cs" />
+    <Compile Include="Assets\Examples\Scripts\SpineGauge.cs" />
+    <Compile Include="Assets\Examples\Scripts\Spineboy.cs" />
+    <Compile Include="Assets\Examples\Scripts\SpineboyPole.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\InputData.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\MoveInputComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Contexts.cs" />
+    <Compile Include="Assets\Sources\Generated\Feature.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\spine-csharp\Animation.cs" />
+    <Compile Include="Assets\spine-csharp\AnimationState.cs" />
+    <Compile Include="Assets\spine-csharp\AnimationStateData.cs" />
+    <Compile Include="Assets\spine-csharp\Atlas.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\AtlasAttachmentLoader.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\Attachment.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\AttachmentLoader.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\AttachmentType.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\BoundingBoxAttachment.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\MeshAttachment.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\PathAttachment.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\RegionAttachment.cs" />
+    <Compile Include="Assets\spine-csharp\Attachments\VertexAttachment.cs" />
+    <Compile Include="Assets\spine-csharp\BlendMode.cs" />
+    <Compile Include="Assets\spine-csharp\Bone.cs" />
+    <Compile Include="Assets\spine-csharp\BoneData.cs" />
+    <Compile Include="Assets\spine-csharp\Event.cs" />
+    <Compile Include="Assets\spine-csharp\EventData.cs" />
+    <Compile Include="Assets\spine-csharp\ExposedList.cs" />
+    <Compile Include="Assets\spine-csharp\IUpdatable.cs" />
+    <Compile Include="Assets\spine-csharp\IkConstraint.cs" />
+    <Compile Include="Assets\spine-csharp\IkConstraintData.cs" />
+    <Compile Include="Assets\spine-csharp\Json.cs" />
+    <Compile Include="Assets\spine-csharp\MathUtils.cs" />
+    <Compile Include="Assets\spine-csharp\PathConstraint.cs" />
+    <Compile Include="Assets\spine-csharp\PathConstraintData.cs" />
+    <Compile Include="Assets\spine-csharp\Skeleton.cs" />
+    <Compile Include="Assets\spine-csharp\SkeletonBinary.cs" />
+    <Compile Include="Assets\spine-csharp\SkeletonBounds.cs" />
+    <Compile Include="Assets\spine-csharp\SkeletonData.cs" />
+    <Compile Include="Assets\spine-csharp\SkeletonJson.cs" />
+    <Compile Include="Assets\spine-csharp\Skin.cs" />
+    <Compile Include="Assets\spine-csharp\Slot.cs" />
+    <Compile Include="Assets\spine-csharp\SlotData.cs" />
+    <Compile Include="Assets\spine-csharp\TransformConstraint.cs" />
+    <Compile Include="Assets\spine-csharp\TransformConstraintData.cs" />
+    <Compile Include="Assets\spine-unity\Asset Types\AtlasAsset.cs" />
+    <Compile Include="Assets\spine-unity\Asset Types\SkeletonDataAsset.cs" />
+    <Compile Include="Assets\spine-unity\BoneFollower.cs" />
+    <Compile Include="Assets\spine-unity\ISkeletonAnimation.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\Arrays\ArraysMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\Arrays\ArraysSimpleMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\Arrays\ArraysSubmeshSetMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\Arrays\ArraysSubmeshedMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\DoubleBuffered.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\DoubleBufferedMesh.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\ISimpleMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\ISubmeshedMeshGenerator.cs" />
+    <Compile Include="Assets\spine-unity\Mesh Generation\SpineMesh.cs" />
+    <Compile Include="Assets\spine-unity\Modules\AtlasRegionAttacher.cs" />
+    <Compile Include="Assets\spine-unity\Modules\BoundingBoxFollower\BoundingBoxFollower.cs" />
+    <Compile Include="Assets\spine-unity\Modules\CustomMaterials\SkeletonRendererCustomMaterials.cs" />
+    <Compile Include="Assets\spine-unity\Modules\CustomSkin.cs" />
+    <Compile Include="Assets\spine-unity\Modules\Ghost\SkeletonGhost.cs" />
+    <Compile Include="Assets\spine-unity\Modules\Ghost\SkeletonGhostRenderer.cs" />
+    <Compile Include="Assets\spine-unity\Modules\Ragdoll\SkeletonRagdoll.cs" />
+    <Compile Include="Assets\spine-unity\Modules\Ragdoll\SkeletonRagdoll2D.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonGraphic\SkeletonGraphic.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonPartsRenderer.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonUtility Modules\SkeletonUtilityEyeConstraint.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonUtility Modules\SkeletonUtilityGroundConstraint.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SkeletonUtility Modules\SkeletonUtilityKinematicShadow.cs" />
+    <Compile Include="Assets\spine-unity\Modules\SpriteAttacher.cs" />
+    <Compile Include="Assets\spine-unity\Modules\TK2D\SpriteCollectionAttachmentLoader.cs" />
+    <Compile Include="Assets\spine-unity\Modules\YieldInstructions\WaitForSpineAnimationComplete.cs" />
+    <Compile Include="Assets\spine-unity\Modules\YieldInstructions\WaitForSpineEvent.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonAnimation.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonAnimator.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonExtensions.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonRenderer.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtility.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilityBone.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilityConstraint.cs" />
+    <Compile Include="Assets\spine-unity\SkeletonUtility\SkeletonUtilitySubmeshRenderer.cs" />
+    <Compile Include="Assets\spine-unity\SpineAttributes.cs" />
+    <None Include="Assets\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
+    <None Include="Assets\Spine Models\Jugger\Spine_Jugger 1024\skeleton.atlas.txt" />
+    <None Include="Assets\Examples\Spine\Eyes\eyes.atlas.txt" />
+    <None Include="Assets\spine-unity\Shaders\HiddenPass.shader" />
+    <None Include="Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
+    <None Include="Assets\Examples\Spine\FootSoldier\FS_White.atlas.txt" />
+    <None Include="Assets\spine-unity\Modules\CustomMaterials\readme.txt" />
+    <None Include="Assets\Examples\Spine\Hero\hero-mesh.atlas.txt" />
+    <None Include="Assets\Examples\Spine\Dragon\license.txt" />
+    <None Include="Assets\Examples\Spine\Hero\license.txt" />
+    <None Include="Assets\Examples\Spine\Goblins\goblins.atlas.txt" />
+    <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
+    <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+    <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
+    <None Include="Assets\Spine Models\Jugger\Totem\Spine_Totem\skeleton.atlas.txt" />
+    <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
+    <None Include="Assets\spine-unity\Shaders\Bones.shader" />
+    <None Include="Assets\spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
+    <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
+    <None Include="Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
+    <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
+    <None Include="Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
+    <None Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
+    <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
+    <None Include="Assets\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
+    <Reference Include="UnityEngine.UI">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PlaymodeTestsRunner">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VR">
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.VisualDebugging.Unity">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="DesperateDevs.Utils">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/DesperateDevs.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.CodeGeneration.Attributes">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+    </Reference>
+    <Reference Include="DesperateDevs.Logging">
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/DesperateDevs.Logging.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -184,5 +226,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-  
 </Project>
