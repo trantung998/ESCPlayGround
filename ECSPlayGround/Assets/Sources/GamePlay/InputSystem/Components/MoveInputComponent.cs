@@ -1,8 +1,8 @@
 ﻿using Entitas;
 
 [Input]
-public class InputComponent : IComponent
+public class MoveInputComponent : IComponent
 {
-    public string id;
-    public InputData InputData;
+    public string Id;
+    public MoveDirection Direction;
 }
