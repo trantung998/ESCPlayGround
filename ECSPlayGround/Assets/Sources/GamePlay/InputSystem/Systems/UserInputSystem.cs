@@ -15,5 +15,9 @@ public class UserInputSystem : IExecuteSystem
 	public void Execute()
 	{
 		var moveInput = Input.GetAxis(InputParam.Horizontal);
+		if (moveInput != 0)
+		{
+			Debug.Log("Horizontal value : " + moveInput);
+		}
 	}
 }
