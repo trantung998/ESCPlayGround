@@ -5,6 +5,13 @@
     Atk,
 }
 
+public enum CharacterDirection
+{
+    None,
+    Left,
+    Right
+}
+
 public enum MoveDirection
 {
     None,

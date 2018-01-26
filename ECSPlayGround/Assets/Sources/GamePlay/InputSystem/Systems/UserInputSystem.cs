@@ -18,6 +18,8 @@ public class UserInputSystem : IExecuteSystem
 		if (moveInput != 0)
 		{
 			Debug.Log("Horizontal value : " + moveInput);
+			var moveInputEntity = inputContext.CreateEntity();
+			moveInputEntity.AddMoveInput("", moveInput > 0 ? MoveDirection.Right : MoveDirection.Left);
 		}
 	}
 }

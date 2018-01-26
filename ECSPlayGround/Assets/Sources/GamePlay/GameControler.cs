@@ -5,7 +5,14 @@ namespace Sources.GamePlay
     public class GameControler : MonoBehaviour
     {
         private Entitas.Systems systems;
-        
+
+        private void Start()
+        {
+            Contexts contexts = Contexts.sharedInstance;
+            systems = CreateSystem(contexts);
+            systems.Initialize();
+        }
+
         // Update is called once per frame
         void Update()
         {

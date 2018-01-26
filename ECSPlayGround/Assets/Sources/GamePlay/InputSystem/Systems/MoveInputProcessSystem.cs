@@ -1,10 +1,21 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entitas;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
     public class MoveInputProcessSystem : ReactiveSystem<InputEntity>, ICleanupSystem
     {
+        private IGroup<InputEntity> moveInputs;
+        private GameContext gameContext;
+
+        private string currentPlayerId;
+        
+        public MoveInputProcessSystem(Contexts contexts) : base(contexts.input)
+        {
+            gameContext = contexts.game;
+            moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
+        }
         public MoveInputProcessSystem(IContext<InputEntity> context) : base(context)
         {
         }
@@ -25,12 +36,15 @@ namespace Sources.GamePlay.InputSystem.Systems
 
         protected override void Execute(List<InputEntity> entities)
         {
-            throw new System.NotImplementedException();
+            var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId("").ToArray()[0];
         }
 
         public void Cleanup()
         {
-            throw new System.NotImplementedException();
+            foreach (var inputEntity in moveInputs)
+            {
+                inputEntity.Destroy();
+            }
         }
     }
 }
