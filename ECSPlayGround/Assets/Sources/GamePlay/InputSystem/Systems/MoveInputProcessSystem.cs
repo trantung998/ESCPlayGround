@@ -1,27 +1,27 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Entitas;
+using GamePlay.GameEvents;
+using UniRx;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
-    public class MoveInputProcessSystem : ReactiveSystem<InputEntity>, ICleanupSystem
+    public class MoveInputProcessSystem : 
+        ReactiveSystem<InputEntity>,
+        IInitializeSystem,
+        ICleanupSystem, 
+        ITearDownSystem
     {
         private IGroup<InputEntity> moveInputs;
         private GameContext gameContext;
-
+        private CompositeDisposable disposable;
         private string currentPlayerId;
         
         public MoveInputProcessSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
             moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
-        }
-        public MoveInputProcessSystem(IContext<InputEntity> context) : base(context)
-        {
-        }
-
-        public MoveInputProcessSystem(ICollector<InputEntity> collector) : base(collector)
-        {
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
@@ -31,12 +31,12 @@ namespace Sources.GamePlay.InputSystem.Systems
 
         protected override bool Filter(InputEntity entity)
         {
-            throw new System.NotImplementedException();
+            return entity.hasMoveInput;
         }
 
         protected override void Execute(List<InputEntity> entities)
         {
-            var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId("").ToArray()[0];
+            var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
         }
 
         public void Cleanup()
@@ -45,6 +45,19 @@ namespace Sources.GamePlay.InputSystem.Systems
             {
                 inputEntity.Destroy();
             }
+        }
+
+        public void TearDown()
+        {
+            disposable.Clear();
+        }
+
+        public void Initialize()
+        {
+            disposable = new CompositeDisposable();
+            MessageBroker.Default.Receive<SetPlayerIdEvent>()
+                .Subscribe(@event => currentPlayerId = @event.playerId)
+                .AddTo(disposable);
         }
     }
 }
