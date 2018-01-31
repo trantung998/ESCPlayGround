@@ -37,6 +37,10 @@ namespace Sources.GamePlay.InputSystem.Systems
         protected override void Execute(List<InputEntity> entities)
         {
             var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
+            if (currentPlayerEntity.hasCharacterControl)
+            {
+                
+            }
         }
 
         public void Cleanup()

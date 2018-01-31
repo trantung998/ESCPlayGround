@@ -5,7 +5,7 @@
     Atk,
 }
 
-public enum CharacterDirection
+public enum FacingDirection
 {
     None,
     Left,

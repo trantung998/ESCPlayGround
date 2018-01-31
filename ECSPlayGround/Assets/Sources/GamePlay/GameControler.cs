@@ -18,7 +18,7 @@ namespace Sources.GamePlay
 
         private void Init()
         {
-            MessageBroker.Default.Publish(new SetPlayerIdEvent("Player1"));
+            
         }
 
         // Update is called once per frame
