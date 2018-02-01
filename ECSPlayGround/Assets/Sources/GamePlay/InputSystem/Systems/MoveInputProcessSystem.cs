@@ -39,7 +39,30 @@ namespace Sources.GamePlay.InputSystem.Systems
             var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
             if (currentPlayerEntity.hasCharacterControl)
             {
+                var inputEntity = entities[0];
+                //facing right
+                if (inputEntity.moveInput.Direction == MoveDirection.Right)
+                {
+                    if (currentPlayerEntity.facingDirection.value == FacingDirection.Left)
+                    {
+                        //flip
+                        currentPlayerEntity.facingDirection.value = FacingDirection.Right;
+                    }
+                }
+                else if(inputEntity.moveInput.Direction == MoveDirection.Left)
+                {
+                    if (currentPlayerEntity.facingDirection.value == FacingDirection.Right)
+                    {
+                        //flip
+                        currentPlayerEntity.facingDirection.value = FacingDirection.Left;
+                    }
+                }
+
+                var rigibody = currentPlayerEntity.characterControl.value.Rigidbody;
+
+                var newPosition = rigibody.transform.right;
                 
+
             }
         }
 

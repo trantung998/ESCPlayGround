@@ -9,18 +9,20 @@
 public static class GameComponentsLookup {
 
     public const int CharacterControl = 0;
-    public const int Direction = 1;
-    public const int GameplayData = 2;
-    public const int Moveable = 3;
-    public const int PlayerId = 4;
-    public const int SkeletonAnimation = 5;
-    public const int Speed = 6;
+    public const int CharacterState = 1;
+    public const int FacingDirection = 2;
+    public const int GameplayData = 3;
+    public const int Moveable = 4;
+    public const int PlayerId = 5;
+    public const int SkeletonAnimation = 6;
+    public const int Speed = 7;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 8;
 
     public static readonly string[] componentNames = {
         "CharacterControl",
-        "Direction",
+        "CharacterState",
+        "FacingDirection",
         "GameplayData",
         "Moveable",
         "PlayerId",
@@ -30,7 +32,8 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(CharacterControlComponent),
-        typeof(DirectionComponent),
+        typeof(CharacterStateComponent),
+        typeof(FacingDirectionComponent),
         typeof(GameplayDataComponent),
         typeof(MoveableComponent),
         typeof(PlayerIdComponent),
