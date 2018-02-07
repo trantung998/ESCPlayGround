@@ -6,9 +6,9 @@ namespace Sources.GamePlay.Player.MonoScripts
     public class BaseCharacterControler : MonoBehaviour
     {
         [SerializeField] private SkeletonAnimation skeletonAnimation;
-        [SerializeField] private Rigidbody2D rigidbody;
+        [SerializeField] private Rigidbody rigidbody;
 
-        public Rigidbody2D Rigidbody
+        public Rigidbody Rigidbody
         {
             get { return rigidbody; }
         }

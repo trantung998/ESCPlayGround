@@ -11,21 +11,23 @@ public partial class InputEntity {
     public MoveInputComponent moveInput { get { return (MoveInputComponent)GetComponent(InputComponentsLookup.MoveInput); } }
     public bool hasMoveInput { get { return HasComponent(InputComponentsLookup.MoveInput); } }
 
-    public void AddMoveInput(string newId, float newValue, MoveDirection newDirection) {
+    public void AddMoveInput(string newId, float newValue, MoveDirection newDirection, float newDeltaTime) {
         var index = InputComponentsLookup.MoveInput;
         var component = CreateComponent<MoveInputComponent>(index);
         component.Id = newId;
         component.value = newValue;
         component.Direction = newDirection;
+        component.deltaTime = newDeltaTime;
         AddComponent(index, component);
     }
 
-    public void ReplaceMoveInput(string newId, float newValue, MoveDirection newDirection) {
+    public void ReplaceMoveInput(string newId, float newValue, MoveDirection newDirection, float newDeltaTime) {
         var index = InputComponentsLookup.MoveInput;
         var component = CreateComponent<MoveInputComponent>(index);
         component.Id = newId;
         component.value = newValue;
         component.Direction = newDirection;
+        component.deltaTime = newDeltaTime;
         ReplaceComponent(index, component);
     }
 

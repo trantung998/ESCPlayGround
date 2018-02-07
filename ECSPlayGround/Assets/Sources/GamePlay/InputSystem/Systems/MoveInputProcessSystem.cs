@@ -60,9 +60,9 @@ namespace Sources.GamePlay.InputSystem.Systems
 
                 var rigibody = currentPlayerEntity.characterControl.value.Rigidbody;
 
-                var newPosition = rigibody.transform.right;
-                
+                var newPosition = rigibody.position + rigibody.transform.right * inputEntity.moveInput.deltaTime * currentPlayerEntity.speed.effectiveValue;
 
+                rigibody.MovePosition(newPosition);                
             }
         }
 

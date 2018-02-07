@@ -23,7 +23,8 @@ public class UserInputSystem : IExecuteSystem
 			moveInputEntity.AddMoveInput(
 				playerId,
 				moveInput, 
-				moveInput > 0 ? MoveDirection.Right : MoveDirection.Left);
+				moveInput > 0 ? MoveDirection.Right : MoveDirection.Left,
+                Time.deltaTime);
 		}
 	}
 }
