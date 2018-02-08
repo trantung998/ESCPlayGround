@@ -7,7 +7,7 @@ public class UserInputSystem : IExecuteSystem
 {
 	private InputContext inputContext;
 
-	private string playerId = "PLayer1";
+	private string playerId = "Player1";
 	public UserInputSystem(Contexts contexts)
 	{
 		inputContext = contexts.input;
@@ -18,7 +18,7 @@ public class UserInputSystem : IExecuteSystem
 		var moveInput = Input.GetAxis(InputParam.Horizontal);
 		if (moveInput != 0)
 		{
-			Debug.Log("Horizontal value : " + moveInput);
+//			Debug.Log("Horizontal value : " + moveInput);
 			var moveInputEntity = inputContext.CreateEntity();
 			moveInputEntity.AddMoveInput(
 				playerId,

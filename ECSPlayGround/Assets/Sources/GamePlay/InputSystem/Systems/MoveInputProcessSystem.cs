@@ -17,7 +17,8 @@ namespace Sources.GamePlay.InputSystem.Systems
         private GameContext gameContext;
         private CompositeDisposable disposable;
         private string currentPlayerId;
-        
+
+        private GameEntity playerEntity;
         public MoveInputProcessSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
@@ -36,42 +37,91 @@ namespace Sources.GamePlay.InputSystem.Systems
 
         protected override void Execute(List<InputEntity> entities)
         {
-            var currentPlayerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
-            if (currentPlayerEntity.hasCharacterControl)
+            if (playerEntity.hasCharacterControl)
             {
                 var inputEntity = entities[0];
+                var facingComponent = playerEntity.facingDirection;
                 //facing right
                 if (inputEntity.moveInput.Direction == MoveDirection.Right)
                 {
-                    if (currentPlayerEntity.facingDirection.value == FacingDirection.Left)
+                    if (facingComponent.value == FacingDirection.Left)
                     {
-                        //flip
-                        currentPlayerEntity.facingDirection.value = FacingDirection.Right;
+                        facingComponent.value = FacingDirection.Right;
                     }
                 }
                 else if(inputEntity.moveInput.Direction == MoveDirection.Left)
                 {
-                    if (currentPlayerEntity.facingDirection.value == FacingDirection.Right)
+                    if (playerEntity.facingDirection.value == FacingDirection.Right)
                     {
-                        //flip
-                        currentPlayerEntity.facingDirection.value = FacingDirection.Left;
+                        facingComponent.value = FacingDirection.Left;
                     }
                 }
+                
+                //flip
+                playerEntity.ReplaceFacingDirection(facingComponent.id, facingComponent.value);
+                
+                var rigibody = playerEntity.characterControl.value.Rigidbody;
 
-                var rigibody = currentPlayerEntity.characterControl.value.Rigidbody;
+                var newPosition = 
+                    rigibody.position +
+                    
+                    rigibody.transform.right * 
+                    inputEntity.moveInput.deltaTime *
+                    inputEntity.moveInput.value * 
+                    playerEntity.speed.effectiveValue;
 
-                var newPosition = rigibody.position + rigibody.transform.right * inputEntity.moveInput.deltaTime * currentPlayerEntity.speed.effectiveValue;
-
-                rigibody.MovePosition(newPosition);                
+                rigibody.MovePosition(newPosition);
+                inputEntity.isInputDestroy = true;
             }
+            
+            
+//            foreach (var entity in entities)
+//            {
+//                var playerId = entity.moveInput.Id;
+//                var hashSet = gameContext.GetEntitiesWithPlayerId(playerId);
+//                if (hashSet != null && hashSet.Any())
+//                {
+//                    var currentPlayerEntity = hashSet.ToArray()[0];
+//                    if (currentPlayerEntity.hasCharacterControl)
+//                    {
+////                    var inputEntity = entities[0];
+//                        //facing right
+//                        if (entity.moveInput.Direction == MoveDirection.Right)
+//                        {
+//                            if (currentPlayerEntity.facingDirection.value == FacingDirection.Left)
+//                            {
+//                                //flip
+//                                currentPlayerEntity.facingDirection.value = FacingDirection.Right;
+//                            }
+//                        }
+//                        else if(entity.moveInput.Direction == MoveDirection.Left)
+//                        {
+//                            if (currentPlayerEntity.facingDirection.value == FacingDirection.Right)
+//                            {
+//                                //flip
+//                                currentPlayerEntity.facingDirection.value = FacingDirection.Left;
+//                            }
+//                        }
+//
+//                        var rigibody = currentPlayerEntity.characterControl.value.Rigidbody;
+//
+//                        var newPosition = 
+//                            rigibody.position +
+//                    
+//                            rigibody.transform.right * 
+//                            entity.moveInput.deltaTime *
+//                            entity.moveInput.value * 
+//                            currentPlayerEntity.speed.effectiveValue;
+//
+//                        rigibody.MovePosition(newPosition);
+//                    }
+//                }  
+//                entity.isInputDestroy = true;
+//            }
         }
 
         public void Cleanup()
         {
-            foreach (var inputEntity in moveInputs)
-            {
-                inputEntity.Destroy();
-            }
         }
 
         public void TearDown()
@@ -83,7 +133,11 @@ namespace Sources.GamePlay.InputSystem.Systems
         {
             disposable = new CompositeDisposable();
             MessageBroker.Default.Receive<SetPlayerIdEvent>()
-                .Subscribe(@event => currentPlayerId = @event.playerId)
+                .Subscribe(@event =>
+                {
+                    currentPlayerId = @event.playerId;
+                    playerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
+                })
                 .AddTo(disposable);
         }
     }

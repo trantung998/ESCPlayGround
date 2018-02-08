@@ -15,16 +15,16 @@ namespace Sources.GamePlay
         private Entitas.Systems systems;
         private void Start()
         {
-            Init();
             Contexts contexts = Contexts.sharedInstance;
-            contexts.game.gameplayData.value = gameplayData;
+            contexts.game.SetGameplayData(gameplayData);
             systems = CreateSystem(contexts);
             systems.Initialize();
+            Init();
         }
 
         private void Init()
         {
-            
+            MessageBroker.Default.Publish(new SetPlayerIdEvent("Player1"));
         }
 
         // Update is called once per frame
@@ -42,9 +42,13 @@ namespace Sources.GamePlay
         private Entitas.Systems CreateSystem(Contexts contexts)
         {
             return new Feature("Systems")
+                
+                //inti
                 .Add(new InitPlayerSystem(contexts))
                 .Add(new UserInputSystem(contexts))
-                .Add(new MoveInputProcessSystem(contexts));
+                .Add(new DestroyInputSystem(contexts))
+                .Add(new MoveInputProcessSystem(contexts))
+                .Add(new FacingReactiveSystem(contexts));
         }
     }
 }

@@ -21,13 +21,14 @@ namespace Sources.GamePlay.Player.System
             var playerPrefab = gameContext.gameplayData.value.heroPrefab;
             var playerObject = GameObject.Instantiate(playerPrefab);
             
+            playerObject.transform.localPosition = Vector3.zero;
             var player = gameContext.CreateEntity();
             player.AddPlayerId("Player1");
-            player.AddSpeed(100,100);
+            player.AddSpeed(10,10);
             player.AddCharacterControl(playerObject.GetComponent<BaseCharacterControler>());
-            playerObject.Link(player, gameContext);
+            player.AddFacingDirection("Player1", FacingDirection.Right);
             
-            MessageBroker.Default.Publish(new SetPlayerIdEvent("Player1"));
+            playerObject.Link(player, gameContext);
         }
     }
 }
