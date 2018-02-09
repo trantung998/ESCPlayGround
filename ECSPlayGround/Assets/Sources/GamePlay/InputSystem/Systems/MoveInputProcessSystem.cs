@@ -40,6 +40,8 @@ namespace Sources.GamePlay.InputSystem.Systems
             if (playerEntity.hasCharacterControl)
             {
                 var inputEntity = entities[0];
+                var moveValue = inputEntity.moveInput.value;
+                
                 var facingComponent = playerEntity.facingDirection;
                 //facing right
                 if (inputEntity.moveInput.Direction == MoveDirection.Right)
@@ -51,12 +53,13 @@ namespace Sources.GamePlay.InputSystem.Systems
                 }
                 else if(inputEntity.moveInput.Direction == MoveDirection.Left)
                 {
+                    moveValue *= -1;
                     if (playerEntity.facingDirection.value == FacingDirection.Right)
                     {
                         facingComponent.value = FacingDirection.Left;
                     }
                 }
-                
+
                 //flip
                 playerEntity.ReplaceFacingDirection(facingComponent.id, facingComponent.value);
                 
@@ -67,7 +70,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                     
                     rigibody.transform.right * 
                     inputEntity.moveInput.deltaTime *
-                    inputEntity.moveInput.value * 
+                    moveValue * 
                     playerEntity.speed.effectiveValue;
 
                 rigibody.MovePosition(newPosition);

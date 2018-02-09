@@ -25,6 +25,7 @@ namespace Sources.GamePlay.Player.System
             var player = gameContext.CreateEntity();
             player.AddPlayerId("Player1");
             player.AddSpeed(10,10);
+            player.AddCharacterState(PlayerState.Idle);
             player.AddCharacterControl(playerObject.GetComponent<BaseCharacterControler>());
             player.AddFacingDirection("Player1", FacingDirection.Right);
             
