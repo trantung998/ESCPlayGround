@@ -1,5 +1,5 @@
 ﻿using Entitas;
 public class CharacterStateComponent : IComponent
 {
-    public PlayerState value;
+    public PlayerAnimationState value;
 }

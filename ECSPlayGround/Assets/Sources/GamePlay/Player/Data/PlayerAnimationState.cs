@@ -1,5 +1,5 @@
 ﻿
-public enum PlayerState
+public enum PlayerAnimationState
 {
     None,
     Idle,

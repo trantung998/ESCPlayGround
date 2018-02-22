@@ -39,7 +39,20 @@ namespace Sources.GamePlay.InputSystem.Systems
         {
             if (playerEntity.hasCharacterControl)
             {
+                if(!playerEntity.isMoveable) return;
+                
                 var inputEntity = entities[0];
+                if (inputEntity.moveInput.Direction == MoveDirection.None)
+                {
+                    if (playerEntity.characterState.value != PlayerAnimationState.Idle)
+                    {
+                        playerEntity.ReplaceCharacterState(PlayerAnimationState.Idle);
+                        EmmitChangeAnimationEntity(PlayerAnimationState.Move);
+                    }
+     
+                    return;
+                }
+                
                 var moveValue = inputEntity.moveInput.value;
                 
                 var facingComponent = playerEntity.facingDirection;
@@ -59,7 +72,8 @@ namespace Sources.GamePlay.InputSystem.Systems
                         facingComponent.value = FacingDirection.Left;
                     }
                 }
-
+                playerEntity.ReplaceCharacterState(PlayerAnimationState.Move);
+                EmmitChangeAnimationEntity(PlayerAnimationState.Move);
                 //flip
                 playerEntity.ReplaceFacingDirection(facingComponent.id, facingComponent.value);
                 
@@ -121,6 +135,16 @@ namespace Sources.GamePlay.InputSystem.Systems
 //                }  
 //                entity.isInputDestroy = true;
 //            }
+        }
+
+        private void EmmitChangeAnimationEntity(PlayerAnimationState state)
+        {
+            if (playerEntity != null && playerEntity.hasPlayerId)
+            {
+                var changeAnimationEntity = gameContext.CreateEntity();
+                changeAnimationEntity.AddPlayerId(playerEntity.playerId.value);
+                changeAnimationEntity.AddCharacterState(state);  
+            }
         }
 
         public void Cleanup()

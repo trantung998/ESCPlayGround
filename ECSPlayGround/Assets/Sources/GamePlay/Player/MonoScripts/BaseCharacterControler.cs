@@ -28,25 +28,25 @@ namespace Sources.GamePlay.Player.MonoScripts
             get { return skeletonAnimation; }
         }
 
-        public void PlayAnimation(PlayerState state)
+        public void PlayAnimation(PlayerAnimationState animationState)
         {
-            switch (state)
+            switch (animationState)
             {
-                case PlayerState.None:
+                case PlayerAnimationState.None:
                     break;
-                case PlayerState.Idle:
+                case PlayerAnimationState.Idle:
                     SetAnimation(GamePlayStatic.ANIMATION_IDLE);
                     break;
-                case PlayerState.Move:
+                case PlayerAnimationState.Move:
                     SetAnimation(GamePlayStatic.ANIMATION_WALK);
                     break;
-                case PlayerState.Jump:
+                case PlayerAnimationState.Jump:
                     break;
-                case PlayerState.Atk:
+                case PlayerAnimationState.Atk:
                     SetAnimation(GamePlayStatic.ANIMATION_ATK);
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException("state", state, null);
+                    throw new ArgumentOutOfRangeException("animationState", animationState, null);
             }
         }
         
