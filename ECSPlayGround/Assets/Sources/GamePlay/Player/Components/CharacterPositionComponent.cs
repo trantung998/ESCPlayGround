@@ -7,4 +7,3 @@ public class CharacterPositionComponent : IComponent
     public Vector3 value;
     
 }
-

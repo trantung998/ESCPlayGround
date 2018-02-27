@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.5.5f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion Condition=" '$(VisualStudioVersion)' != '10.0' ">4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -43,7 +45,7 @@
   <ItemGroup>
     <Reference Include="mscorlib" />
     <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Boo.Lang" />
     <Reference Include="UnityScript.Lang" />
@@ -117,6 +119,7 @@
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\MoveInputProcessSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\UserInputSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterControlComponent.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\FacingDirectionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\GameplayDataComponent.cs" />

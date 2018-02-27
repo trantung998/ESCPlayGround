@@ -43,10 +43,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>I:/unity 5.5.5/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/Managed/UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
-      <HintPath>I:/unity 5.5.5/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -69,11 +69,14 @@
     <Compile Include="Assets\Sources\GamePlay\GameControler.cs" />
     <Compile Include="Assets\Sources\GamePlay\GameEvents\GameEvents.cs" />
     <Compile Include="Assets\Sources\GamePlay\InitSystem.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\InputDestroyComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\MoveInputComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\MoveInputData.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\DestroyInputSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\MoveInputProcessSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\UserInputSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterControlComponent.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\FacingDirectionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\GameplayDataComponent.cs" />
@@ -84,10 +87,13 @@
     <Compile Include="Assets\Sources\GamePlay\Player\Data\GameplayData.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Data\PlayerState.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\MonoScripts\BaseCharacterControler.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\System\CharacterAnimationSystem.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\System\FacingReactiveSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\InitPlayerSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterControlComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameFacingDirectionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameGameplayDataComponent.cs" />
@@ -100,6 +106,7 @@
     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputInputDestroyComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputMoveInputComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
@@ -438,40 +445,40 @@
     <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
     <None Include="Assets\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
     <Reference Include="UnityEngine.UI">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Networking">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.PlaymodeTestsRunner">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.HoloLens">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VR">
-      <HintPath>I:/unity 5.5.5/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
+      <HintPath>E:/Unity 5.5.5f/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
     </Reference>
     <Reference Include="DesperateDevs.Logging">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/DesperateDevs.Logging.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/DesperateDevs.Logging.dll</HintPath>
     </Reference>
     <Reference Include="DesperateDevs.Utils">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/DesperateDevs.Utils.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/DesperateDevs.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/Entitas.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/Entitas.Unity.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-      <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+      <HintPath>E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
