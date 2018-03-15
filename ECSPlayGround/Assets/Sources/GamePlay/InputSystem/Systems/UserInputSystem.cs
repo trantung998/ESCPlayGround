@@ -9,6 +9,7 @@ public class UserInputSystem : IExecuteSystem
 	private InputContext inputContext;
 
 	private string playerId = "PLayer1";
+	private bool flag = false;
 	public UserInputSystem(Contexts contexts)
 	{
 		inputContext = contexts.input;
@@ -16,20 +17,30 @@ public class UserInputSystem : IExecuteSystem
 
 	public void Execute()
 	{
-		var moveInput = Input.GetAxis(InputParam.Horizontal);
-		var moveInputEntity = inputContext.CreateEntity();
-		if (moveInput != 0.0f)
+		var isFire = Input.GetKeyDown("mouse 0");
+		if (isFire)
 		{
+			var atkInputEntity = inputContext.CreateEntity();
+		    atkInputEntity.AddAtkInput(playerId, AtkId.Normal);
+        }
+		
+		var moveInput = Input.GetAxis(InputParam.Horizontal);
+		if (moveInput <= -0.1f  || moveInput >= 0.1f)
+		{		
+			var moveInputEntity = inputContext.CreateEntity();
 //			Debug.Log("Horizontal value : " + moveInput);
 			moveInputEntity.AddMoveInput(
 				playerId,
 				moveInput,
 				moveInput > 0 ? MoveDirection.Right : MoveDirection.Left,
 				Time.deltaTime);
+			flag = false;
 		}
-		else
-		{
+		else if(flag == false && moveInput == 0)
+		{	
+			var moveInputEntity = inputContext.CreateEntity();
 			moveInputEntity.AddMoveInput(playerId, moveInput, MoveDirection.None, 0);
+			flag = true;
 		}
 	}
 }

@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly MoveableComponent moveableComponent = new MoveableComponent();
+    static readonly AnimationControlComponent animationControlComponent = new AnimationControlComponent();
 
-    public bool isMoveable {
-        get { return HasComponent(GameComponentsLookup.Moveable); }
+    public bool isAnimationControl {
+        get { return HasComponent(GameComponentsLookup.AnimationControl); }
         set {
-            if (value != isMoveable) {
-                var index = GameComponentsLookup.Moveable;
+            if (value != isAnimationControl) {
+                var index = GameComponentsLookup.AnimationControl;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : moveableComponent;
+                            : animationControlComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherMoveable;
+    static Entitas.IMatcher<GameEntity> _matcherAnimationControl;
 
-    public static Entitas.IMatcher<GameEntity> Moveable {
+    public static Entitas.IMatcher<GameEntity> AnimationControl {
         get {
-            if (_matcherMoveable == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Moveable);
+            if (_matcherAnimationControl == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.AnimationControl);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherMoveable = matcher;
+                _matcherAnimationControl = matcher;
             }
 
-            return _matcherMoveable;
+            return _matcherAnimationControl;
         }
     }
 }

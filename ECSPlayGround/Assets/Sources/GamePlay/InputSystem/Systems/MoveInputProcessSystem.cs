@@ -4,6 +4,7 @@ using System.Linq;
 using Entitas;
 using GamePlay.GameEvents;
 using UniRx;
+using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
@@ -47,16 +48,17 @@ namespace Sources.GamePlay.InputSystem.Systems
                     if (playerEntity.characterState.value != PlayerAnimationState.Idle)
                     {
                         playerEntity.ReplaceCharacterState(PlayerAnimationState.Idle);
-                        EmmitChangeAnimationEntity(PlayerAnimationState.Move);
+                        EmmitChangeAnimationEntity(PlayerAnimationState.Idle);
+                        Debug.Log("Change State to" + PlayerAnimationState.Idle );
                     }
-     
+                    inputEntity.isInputDestroy = true;
                     return;
                 }
                 
                 var moveValue = inputEntity.moveInput.value;
                 
                 var facingComponent = playerEntity.facingDirection;
-                //facing right
+                //facing
                 if (inputEntity.moveInput.Direction == MoveDirection.Right)
                 {
                     if (facingComponent.value == FacingDirection.Left)
@@ -72,8 +74,14 @@ namespace Sources.GamePlay.InputSystem.Systems
                         facingComponent.value = FacingDirection.Left;
                     }
                 }
-                playerEntity.ReplaceCharacterState(PlayerAnimationState.Move);
-                EmmitChangeAnimationEntity(PlayerAnimationState.Move);
+                //todo: Add logic check can move
+                if (playerEntity.characterState.value != PlayerAnimationState.Move)
+                {
+                    playerEntity.ReplaceCharacterState(PlayerAnimationState.Move);
+                    EmmitChangeAnimationEntity(PlayerAnimationState.Move);
+                    Debug.Log("Change State to" + PlayerAnimationState.Move);
+                }
+     
                 //flip
                 playerEntity.ReplaceFacingDirection(facingComponent.id, facingComponent.value);
                 
@@ -88,10 +96,9 @@ namespace Sources.GamePlay.InputSystem.Systems
                     playerEntity.speed.effectiveValue;
 
                 rigibody.MovePosition(newPosition);
+                
                 inputEntity.isInputDestroy = true;
             }
-            
-            
 //            foreach (var entity in entities)
 //            {
 //                var playerId = entity.moveInput.Id;
@@ -142,8 +149,9 @@ namespace Sources.GamePlay.InputSystem.Systems
             if (playerEntity != null && playerEntity.hasPlayerId)
             {
                 var changeAnimationEntity = gameContext.CreateEntity();
+                changeAnimationEntity.isAnimationControl = true;
                 changeAnimationEntity.AddPlayerId(playerEntity.playerId.value);
-                changeAnimationEntity.AddCharacterState(state);  
+                changeAnimationEntity.AddCharacterState(state);
             }
         }
 

@@ -8,18 +8,18 @@
 //------------------------------------------------------------------------------
 public partial class GameEntity {
 
-    static readonly MoveableComponent moveableComponent = new MoveableComponent();
+    static readonly CleanComponent cleanComponent = new CleanComponent();
 
-    public bool isMoveable {
-        get { return HasComponent(GameComponentsLookup.Moveable); }
+    public bool isClean {
+        get { return HasComponent(GameComponentsLookup.Clean); }
         set {
-            if (value != isMoveable) {
-                var index = GameComponentsLookup.Moveable;
+            if (value != isClean) {
+                var index = GameComponentsLookup.Clean;
                 if (value) {
                     var componentPool = GetComponentPool(index);
                     var component = componentPool.Count > 0
                             ? componentPool.Pop()
-                            : moveableComponent;
+                            : cleanComponent;
 
                     AddComponent(index, component);
                 } else {
@@ -40,17 +40,17 @@ public partial class GameEntity {
 //------------------------------------------------------------------------------
 public sealed partial class GameMatcher {
 
-    static Entitas.IMatcher<GameEntity> _matcherMoveable;
+    static Entitas.IMatcher<GameEntity> _matcherClean;
 
-    public static Entitas.IMatcher<GameEntity> Moveable {
+    public static Entitas.IMatcher<GameEntity> Clean {
         get {
-            if (_matcherMoveable == null) {
-                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Moveable);
+            if (_matcherClean == null) {
+                var matcher = (Entitas.Matcher<GameEntity>)Entitas.Matcher<GameEntity>.AllOf(GameComponentsLookup.Clean);
                 matcher.componentNames = GameComponentsLookup.componentNames;
-                _matcherMoveable = matcher;
+                _matcherClean = matcher;
             }
 
-            return _matcherMoveable;
+            return _matcherClean;
         }
     }
 }

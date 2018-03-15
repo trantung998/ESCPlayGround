@@ -13,7 +13,7 @@ namespace Sources.GamePlay.Player.MonoScripts
 
         private AnimationState animationState;
 
-        private void Awake()
+        private void Start()
         {
             animationState = skeletonAnimation.AnimationState;
         }
@@ -35,10 +35,10 @@ namespace Sources.GamePlay.Player.MonoScripts
                 case PlayerAnimationState.None:
                     break;
                 case PlayerAnimationState.Idle:
-                    SetAnimation(GamePlayStatic.ANIMATION_IDLE);
+                    SetAnimation(GamePlayStatic.ANIMATION_IDLE, true);
                     break;
                 case PlayerAnimationState.Move:
-                    SetAnimation(GamePlayStatic.ANIMATION_WALK);
+                    SetAnimation(GamePlayStatic.ANIMATION_WALK, true);
                     break;
                 case PlayerAnimationState.Jump:
                     break;
@@ -50,9 +50,13 @@ namespace Sources.GamePlay.Player.MonoScripts
             }
         }
         
-        public virtual TrackEntry SetAnimation(string animationName, bool isLoop = false)
-        {  
-            return animationState.SetAnimation(0, animationName, isLoop);
+        public TrackEntry SetAnimation(string animationName, bool isLoop = false)
+        {
+            if (animationState != null)
+            {
+                return animationState.SetAnimation(0, animationName, isLoop);
+            }
+            return null;
         }
     }
 }

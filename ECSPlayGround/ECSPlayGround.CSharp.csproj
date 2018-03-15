@@ -114,8 +114,10 @@
     <Compile Include="Assets\Sources\GamePlay\GameControler.cs" />
     <Compile Include="Assets\Sources\GamePlay\GameEvents\GameEvents.cs" />
     <Compile Include="Assets\Sources\GamePlay\InitSystem.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\InputDestroyComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\MoveInputComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Components\MoveInputData.cs" />
+    <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\DestroyInputSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\MoveInputProcessSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\InputSystem\Systems\UserInputSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterControlComponent.cs" />
@@ -130,10 +132,13 @@
     <Compile Include="Assets\Sources\GamePlay\Player\Data\GameplayData.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Data\PlayerState.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\MonoScripts\BaseCharacterControler.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\System\CharacterAnimationSystem.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\System\FacingReactiveSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\InitPlayerSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterControlComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameFacingDirectionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameGameplayDataComponent.cs" />
@@ -146,6 +151,7 @@
     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputInputDestroyComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputMoveInputComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />

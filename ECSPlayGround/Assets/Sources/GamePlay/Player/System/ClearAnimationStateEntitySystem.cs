@@ -10,17 +10,20 @@ namespace Sources.GamePlay.Player.System
         }        
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
         {
-            return context.CreateCollector(GameMatcher.AllOf(GameMatcher.CharacterState, GameMatcher.PlayerId));
+            return context.CreateCollector(GameMatcher.AllOf(GameMatcher.AnimationControl, GameMatcher.Clean));
         }
 
         protected override bool Filter(GameEntity entity)
         {
-            return true;
+            return entity.isAnimationControl && entity.isClean;
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
-            throw new global::System.NotImplementedException();
+            foreach (var gameEntity in entities)
+            {
+                gameEntity.Destroy();
+            }
         }
     }
 }

@@ -42,13 +42,16 @@ namespace Sources.GamePlay
         private Entitas.Systems CreateSystem(Contexts contexts)
         {
             return new Feature("Systems")
-                
+
                 //inti
                 .Add(new InitPlayerSystem(contexts))
                 .Add(new UserInputSystem(contexts))
                 .Add(new DestroyInputSystem(contexts))
                 .Add(new MoveInputProcessSystem(contexts))
-                .Add(new FacingReactiveSystem(contexts));
+                .Add(new FacingReactiveSystem(contexts))
+                .Add(new CharacterAnimationSystem(contexts))
+                .Add(new ClearAnimationStateEntitySystem(contexts))
+                ;
         }
     }
 }

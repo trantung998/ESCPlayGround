@@ -24,12 +24,13 @@ namespace Sources.GamePlay.Player.System
             playerObject.transform.localPosition = Vector3.zero;
             var player = gameContext.CreateEntity();
             player.AddPlayerId("Player1");
-            player.AddSpeed(10,10);
-            player.isMoveable = true;
+            player.AddSpeed(2,2);
+            player.isMoveable = true; 
+            
             player.AddCharacterState(PlayerAnimationState.Idle);
             player.AddCharacterControl(playerObject.GetComponent<BaseCharacterControler>());
             player.AddFacingDirection("Player1", FacingDirection.Right);
-            
+
             playerObject.Link(player, gameContext);
         }
     }
