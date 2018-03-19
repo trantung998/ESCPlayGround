@@ -47,7 +47,7 @@ namespace Sources.GamePlay
                 .Add(new InitPlayerSystem(contexts))
                 .Add(new UserInputSystem(contexts))
                 .Add(new DestroyInputSystem(contexts))
-                .Add(new MoveInputProcessSystem(contexts))
+                .Add(new CharacterInputProcessSystem(contexts))
                 .Add(new FacingReactiveSystem(contexts))
                 .Add(new CharacterAnimationSystem(contexts))
                 .Add(new ClearAnimationStateEntitySystem(contexts))

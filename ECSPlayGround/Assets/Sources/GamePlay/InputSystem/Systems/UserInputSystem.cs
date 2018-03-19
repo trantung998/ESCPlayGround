@@ -22,7 +22,8 @@ public class UserInputSystem : IExecuteSystem
 		{
 			var atkInputEntity = inputContext.CreateEntity();
 		    atkInputEntity.AddAtkInput(playerId, AtkId.Normal);
-        }
+			atkInputEntity.isCharacterInput = true;
+		}
 		
 		var moveInput = Input.GetAxis(InputParam.Horizontal);
 		if (moveInput <= -0.1f  || moveInput >= 0.1f)

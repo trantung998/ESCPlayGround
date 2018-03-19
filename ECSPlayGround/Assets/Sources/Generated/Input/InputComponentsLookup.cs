@@ -9,19 +9,22 @@
 public static class InputComponentsLookup {
 
     public const int AtkInput = 0;
-    public const int InputDestroy = 1;
-    public const int MoveInput = 2;
+    public const int CharacterInput = 1;
+    public const int InputDestroy = 2;
+    public const int MoveInput = 3;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
         "AtkInput",
+        "CharacterInput",
         "InputDestroy",
         "MoveInput"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AtkInputComponent),
+        typeof(CharacterInputComponent),
         typeof(InputDestroyComponent),
         typeof(MoveInputComponent)
     };

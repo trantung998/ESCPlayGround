@@ -8,22 +8,20 @@ using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
-    public class MoveInputProcessSystem : 
+    public class CharacterInputProcessSystem : 
         ReactiveSystem<InputEntity>,
         IInitializeSystem,
         ICleanupSystem, 
         ITearDownSystem
     {
-        private IGroup<InputEntity> moveInputs;
         private GameContext gameContext;
         private CompositeDisposable disposable;
         private string currentPlayerId;
 
         private GameEntity playerEntity;
-        public MoveInputProcessSystem(Contexts contexts) : base(contexts.input)
+        public CharacterInputProcessSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
-            moveInputs = contexts.input.GetGroup(InputMatcher.MoveInput);
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
