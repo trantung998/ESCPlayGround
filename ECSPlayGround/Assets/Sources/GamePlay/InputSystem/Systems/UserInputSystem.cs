@@ -35,6 +35,7 @@ public class UserInputSystem : IExecuteSystem
 				moveInput,
 				moveInput > 0 ? MoveDirection.Right : MoveDirection.Left,
 				Time.deltaTime);
+			moveInputEntity.isCharacterInput = true;
 			flag = false;
 		}
 		else if(flag == false && moveInput == 0)
