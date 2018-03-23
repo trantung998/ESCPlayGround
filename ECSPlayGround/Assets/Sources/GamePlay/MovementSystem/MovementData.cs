@@ -9,6 +9,13 @@
     {
         Run,
         KnockBack,
-        
+        Slow,
+        Root,
+        Freeze,
+        Pull,
+        Fly,
+        Jump,
+        Fall,
+        Dash,
     }
 }

@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
-    public class CharacterInputProcessSystem : 
+    public class CharacterMovementHandlerSystem : 
         ReactiveSystem<InputEntity>,
         IInitializeSystem,
         ICleanupSystem, 
@@ -19,7 +19,7 @@ namespace Sources.GamePlay.InputSystem.Systems
         private string currentPlayerId;
 
         private GameEntity playerEntity;
-        public CharacterInputProcessSystem(Contexts contexts) : base(contexts.input)
+        public CharacterMovementHandlerSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
         }

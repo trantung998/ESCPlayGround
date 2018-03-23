@@ -78,6 +78,7 @@
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterControlComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\CharacterStateComponent.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\Components\CleanComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\FacingDirectionComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\GameplayDataComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\MoveableComponent.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="Assets\Sources\GamePlay\Player\Data\PlayerAnimationState.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\MonoScripts\BaseCharacterControler.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\CharacterAnimationSystem.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\System\ClearAnimationStateEntitySystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\FacingReactiveSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\InitPlayerSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />

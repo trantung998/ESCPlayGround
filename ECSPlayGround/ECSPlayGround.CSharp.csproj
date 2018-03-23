@@ -130,7 +130,7 @@
     <Compile Include="Assets\Sources\GamePlay\Player\Components\SkeletonAnimationComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Components\SpeedComponent.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\Data\GameplayData.cs" />
-    <Compile Include="Assets\Sources\GamePlay\Player\Data\PlayerState.cs" />
+    <Compile Include="Assets\Sources\GamePlay\Player\Data\PlayerAnimationState.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\MonoScripts\BaseCharacterControler.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\CharacterAnimationSystem.cs" />
     <Compile Include="Assets\Sources\GamePlay\Player\System\FacingReactiveSystem.cs" />

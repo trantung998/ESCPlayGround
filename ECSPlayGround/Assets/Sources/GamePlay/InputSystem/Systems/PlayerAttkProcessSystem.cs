@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using Entitas;
+using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
@@ -15,12 +16,12 @@ namespace Sources.GamePlay.InputSystem.Systems
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
         {
-            throw new System.NotImplementedException();
+            return context.CreateCollector(InputMatcher.AtkInput);
         }
 
         protected override bool Filter(InputEntity entity)
         {
-            throw new System.NotImplementedException();
+            return entity.hasAtkInput;
         }
 
         protected override void Execute(List<InputEntity> entities)
