@@ -28,21 +28,21 @@ namespace Sources.GamePlay.Player.MonoScripts
             get { return skeletonAnimation; }
         }
 
-        public void PlayAnimation(PlayerAnimationState animationState)
+        public void PlayAnimation(CharacterFiniteState animationState)
         {
             switch (animationState)
             {
-                case PlayerAnimationState.None:
+                case CharacterFiniteState.None:
                     break;
-                case PlayerAnimationState.Idle:
+                case CharacterFiniteState.Idle:
                     SetAnimation(GamePlayStatic.ANIMATION_IDLE, true);
                     break;
-                case PlayerAnimationState.Move:
+                case CharacterFiniteState.Move:
                     SetAnimation(GamePlayStatic.ANIMATION_WALK, true);
                     break;
-                case PlayerAnimationState.Jump:
+                case CharacterFiniteState.Jump:
                     break;
-                case PlayerAnimationState.Atk:
+                case CharacterFiniteState.Atk:
                     SetAnimation(GamePlayStatic.ANIMATION_ATK);
                     break;
                 default:

@@ -15,6 +15,8 @@ namespace Sources.GamePlay
         private Entitas.Systems systems;
         private void Start()
         {
+            Application.targetFrameRate = 60;
+            
             Contexts contexts = Contexts.sharedInstance;
             contexts.game.SetGameplayData(gameplayData);
             systems = CreateSystem(contexts);
@@ -47,8 +49,8 @@ namespace Sources.GamePlay
                 .Add(new InitPlayerSystem(contexts))
                 .Add(new UserInputSystem(contexts))
                 .Add(new DestroyInputSystem(contexts))
-                .Add(new CharacterMovementHandlerSystem(contexts))
-                .Add(new )
+                .Add(new CharacterMoveInputHandlerSystem(contexts))
+                .Add(new PlayerAttkProcessSystem(contexts))
                 .Add(new FacingReactiveSystem(contexts))
                 .Add(new CharacterAnimationSystem(contexts))
                 .Add(new ClearAnimationStateEntitySystem(contexts))

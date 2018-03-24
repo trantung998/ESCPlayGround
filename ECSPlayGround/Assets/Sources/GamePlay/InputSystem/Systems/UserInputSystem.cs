@@ -8,7 +8,7 @@ public class UserInputSystem : IExecuteSystem
 {
 	private InputContext inputContext;
 
-	private string playerId = "PLayer1";
+	private string playerId = "Player1";
 	private bool flag = false;
 	public UserInputSystem(Contexts contexts)
 	{

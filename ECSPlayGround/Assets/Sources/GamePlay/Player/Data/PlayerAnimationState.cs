@@ -8,6 +8,43 @@ public enum PlayerAnimationState
     Atk,
 }
 
+public enum CharacterState
+{
+    None,
+    Normal,
+    Death,
+    MovementControled,
+}
+
+public enum CharacterMovementState
+{
+    Run,
+    KnockBack,
+    Slow,
+    Root,
+    Freeze,
+    Pull,
+    Fly,
+    Jump,
+    Fall,
+    Dash,
+}
+
+public enum CharacterFiniteState
+{
+    None,
+    Idle,
+    Move,
+    Jump,
+    Atk,
+    Die,
+    KnockBack,
+    Taunt,
+    BeHit,
+    CastSkill,
+    Stun,
+}
+
 public class GamePlayStatic
 {
     public static string ANIMATION_IDLE = "Idle";

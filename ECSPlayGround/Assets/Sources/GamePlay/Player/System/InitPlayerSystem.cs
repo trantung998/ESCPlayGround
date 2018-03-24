@@ -27,7 +27,9 @@ namespace Sources.GamePlay.Player.System
             player.AddSpeed(2,2);
             player.isMoveable = true; 
             
-            player.AddCharacterState(PlayerAnimationState.Idle);
+            player.AddCharacterFiniteState(CharacterFiniteState.Idle);
+            player.AddCharacterState(CharacterState.Normal);
+            
             player.AddCharacterControl(playerObject.GetComponent<BaseCharacterControler>());
             player.AddFacingDirection("Player1", FacingDirection.Right);
 

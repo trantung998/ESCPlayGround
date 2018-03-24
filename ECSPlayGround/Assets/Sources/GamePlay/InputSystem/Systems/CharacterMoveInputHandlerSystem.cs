@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
 {
-    public class CharacterMovementHandlerSystem : 
+    public class CharacterMoveInputHandlerSystem : 
         ReactiveSystem<InputEntity>,
         IInitializeSystem,
         ICleanupSystem, 
@@ -17,11 +17,16 @@ namespace Sources.GamePlay.InputSystem.Systems
         private GameContext gameContext;
         private CompositeDisposable disposable;
         private string currentPlayerId;
-
-        private GameEntity playerEntity;
-        public CharacterMovementHandlerSystem(Contexts contexts) : base(contexts.input)
+        private readonly IGroup<GameEntity> characterEntities;
+        
+        private GameEntity currentPlayerEntity;
+        public CharacterMoveInputHandlerSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
+            characterEntities = gameContext.GetGroup(GameMatcher.AllOf(
+                GameMatcher.CharacterFiniteState,
+                GameMatcher.CharacterControl, 
+                GameMatcher.CharacterState));
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
@@ -36,17 +41,40 @@ namespace Sources.GamePlay.InputSystem.Systems
 
         protected override void Execute(List<InputEntity> entities)
         {
-            if (playerEntity.hasCharacterControl)
+            foreach (var inputEntity in entities)
+            {
+                var playerId = inputEntity.moveInput.Id;
+                if (currentPlayerEntity.playerId.value != playerId)
+                {
+                    var characterEntity = characterEntities.GetEntities().First(gameEntity => gameEntity.playerId.value == playerId);
+                    if (characterEntity != null)
+                    {
+                        ProcessMoveInput(characterEntity, inputEntity);
+                    }
+                }
+                else
+                {
+                    ProcessMoveInput(currentPlayerEntity, inputEntity);
+                }
+            }
+        }
+        
+        private void ProcessMoveInput(GameEntity playerEntity, InputEntity inputEntity)
+        {
+            if (playerEntity.hasCharacterControl 
+                && playerEntity.hasCharacterFiniteState
+                && playerEntity.hasCharacterState)
             {
                 if(!playerEntity.isMoveable) return;
+                var playerId = playerEntity.playerId.value;
                 
-                var inputEntity = entities[0];
                 if (inputEntity.moveInput.Direction == MoveDirection.None)
                 {
-                    if (playerEntity.characterState.value != PlayerAnimationState.Idle)
+                    if (playerEntity.characterFiniteState.State != CharacterFiniteState.Idle)
                     {
-                        playerEntity.ReplaceCharacterState(PlayerAnimationState.Idle);
-                        EmmitChangeAnimationEntity(PlayerAnimationState.Idle);
+                        playerEntity.ReplaceCharacterFiniteState(CharacterFiniteState.Idle);
+                        
+                        EmmitChangeAnimationEntity(CharacterFiniteState.Idle, playerId);
                         Debug.Log("Change State to" + PlayerAnimationState.Idle );
                     }
                     inputEntity.isInputDestroy = true;
@@ -73,10 +101,10 @@ namespace Sources.GamePlay.InputSystem.Systems
                     }
                 }
                 //todo: Add logic check can move
-                if (playerEntity.characterState.value != PlayerAnimationState.Move)
+                if (playerEntity.characterFiniteState.State != CharacterFiniteState.Move)
                 {
-                    playerEntity.ReplaceCharacterState(PlayerAnimationState.Move);
-                    EmmitChangeAnimationEntity(PlayerAnimationState.Move);
+                    playerEntity.ReplaceCharacterFiniteState(CharacterFiniteState.Move);
+                    EmmitChangeAnimationEntity(CharacterFiniteState.Move, playerId);
                     Debug.Log("Change State to" + PlayerAnimationState.Move);
                 }
      
@@ -97,59 +125,16 @@ namespace Sources.GamePlay.InputSystem.Systems
                 
                 inputEntity.isInputDestroy = true;
             }
-//            foreach (var entity in entities)
-//            {
-//                var playerId = entity.moveInput.Id;
-//                var hashSet = gameContext.GetEntitiesWithPlayerId(playerId);
-//                if (hashSet != null && hashSet.Any())
-//                {
-//                    var currentPlayerEntity = hashSet.ToArray()[0];
-//                    if (currentPlayerEntity.hasCharacterControl)
-//                    {
-////                    var inputEntity = entities[0];
-//                        //facing right
-//                        if (entity.moveInput.Direction == MoveDirection.Right)
-//                        {
-//                            if (currentPlayerEntity.facingDirection.value == FacingDirection.Left)
-//                            {
-//                                //flip
-//                                currentPlayerEntity.facingDirection.value = FacingDirection.Right;
-//                            }
-//                        }
-//                        else if(entity.moveInput.Direction == MoveDirection.Left)
-//                        {
-//                            if (currentPlayerEntity.facingDirection.value == FacingDirection.Right)
-//                            {
-//                                //flip
-//                                currentPlayerEntity.facingDirection.value = FacingDirection.Left;
-//                            }
-//                        }
-//
-//                        var rigibody = currentPlayerEntity.characterControl.value.Rigidbody;
-//
-//                        var newPosition = 
-//                            rigibody.position +
-//                    
-//                            rigibody.transform.right * 
-//                            entity.moveInput.deltaTime *
-//                            entity.moveInput.value * 
-//                            currentPlayerEntity.speed.effectiveValue;
-//
-//                        rigibody.MovePosition(newPosition);
-//                    }
-//                }  
-//                entity.isInputDestroy = true;
-//            }
         }
 
-        private void EmmitChangeAnimationEntity(PlayerAnimationState state)
+        private void EmmitChangeAnimationEntity(CharacterFiniteState state, string playerId)
         {
-            if (playerEntity != null && playerEntity.hasPlayerId)
+            if (currentPlayerEntity != null && currentPlayerEntity.hasPlayerId)
             {
                 var changeAnimationEntity = gameContext.CreateEntity();
                 changeAnimationEntity.isAnimationControl = true;
-                changeAnimationEntity.AddPlayerId(playerEntity.playerId.value);
-                changeAnimationEntity.AddCharacterState(state);
+                changeAnimationEntity.AddPlayerId(playerId);
+                changeAnimationEntity.AddCharacterFiniteState(state);
             }
         }
 
@@ -169,7 +154,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                 .Subscribe(@event =>
                 {
                     currentPlayerId = @event.playerId;
-                    playerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
+                    currentPlayerEntity = gameContext.GetEntitiesWithPlayerId(currentPlayerId).ToArray()[0];
                 })
                 .AddTo(disposable);
         }

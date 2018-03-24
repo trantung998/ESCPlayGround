@@ -11,7 +11,10 @@ namespace Sources.GamePlay.InputSystem.Systems
         
         public PlayerAttkProcessSystem(Contexts contexts) : base(contexts.input)
         {
-            characters = contexts.game.GetGroup(GameMatcher.AllOf(GameMatcher.CharacterControl));
+            characters = contexts.game.GetGroup(GameMatcher.AllOf(
+                GameMatcher.CharacterFiniteState,
+                GameMatcher.CharacterState,
+                GameMatcher.CharacterControl));
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
@@ -31,7 +34,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                 var changeAnimationEntity = gameContext.CreateEntity();
                 changeAnimationEntity.isAnimationControl = true;
                 changeAnimationEntity.AddPlayerId(inputEntity.atkInput.playerId);
-                changeAnimationEntity.AddCharacterState(PlayerAnimationState.Atk);
+//                changeAnimationEntity.AddCharacterState(PlayerAnimationState.Atk);
                 //clear
                 inputEntity.isInputDestroy = true;
             }

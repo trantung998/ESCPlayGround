@@ -26,7 +26,7 @@ public class CharacterAnimationSystem : ReactiveSystem<GameEntity>
                 var playerEntity = playerEntityList.First(gameEntity => gameEntity.playerId.value == playerId.value);
                 if (playerEntity != null)
                 {
-                    playerEntity.characterControl.value.PlayAnimation(entity.characterState.value);
+                    playerEntity.characterControl.value.PlayAnimation(entity.characterFiniteState.State);
                 }  
             
             }
@@ -41,7 +41,8 @@ public class CharacterAnimationSystem : ReactiveSystem<GameEntity>
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
     {
-        return context.CreateCollector(GameMatcher.AllOf(GameMatcher.AnimationControl, GameMatcher.CharacterState));
+//        return null;
+          return context.CreateCollector(GameMatcher.AllOf(GameMatcher.AnimationControl, GameMatcher.CharacterFiniteState));
     }
 
     
