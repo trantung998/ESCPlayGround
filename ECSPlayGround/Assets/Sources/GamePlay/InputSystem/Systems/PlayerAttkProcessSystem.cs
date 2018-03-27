@@ -11,6 +11,7 @@ namespace Sources.GamePlay.InputSystem.Systems
         
         public PlayerAttkProcessSystem(Contexts contexts) : base(contexts.input)
         {
+            gameContext = contexts.game;
             characters = contexts.game.GetGroup(GameMatcher.AllOf(
                 GameMatcher.CharacterFiniteState,
                 GameMatcher.CharacterState,
@@ -34,7 +35,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                 var changeAnimationEntity = gameContext.CreateEntity();
                 changeAnimationEntity.isAnimationControl = true;
                 changeAnimationEntity.AddPlayerId(inputEntity.atkInput.playerId);
-//                changeAnimationEntity.AddCharacterState(PlayerAnimationState.Atk);
+                changeAnimationEntity.AddCharacterFiniteState(CharacterFiniteState.Atk);
                 //clear
                 inputEntity.isInputDestroy = true;
             }
