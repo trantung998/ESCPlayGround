@@ -10,7 +10,7 @@ namespace Sources.GamePlay.Player.MonoScripts
     {
         [SerializeField] private SkeletonAnimation skeletonAnimation;
         [SerializeField] private Rigidbody rigidbody;
-
+        
         private AnimationState animationState;
 
         private void Start()

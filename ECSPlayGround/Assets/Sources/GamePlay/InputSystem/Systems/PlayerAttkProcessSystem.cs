@@ -6,16 +6,11 @@ namespace Sources.GamePlay.InputSystem.Systems
 {
     public class PlayerAttkProcessSystem : ReactiveSystem<InputEntity>
     {
-        private readonly IGroup<GameEntity> characters;
         private readonly GameContext gameContext;
         
         public PlayerAttkProcessSystem(Contexts contexts) : base(contexts.input)
         {
             gameContext = contexts.game;
-            characters = contexts.game.GetGroup(GameMatcher.AllOf(
-                GameMatcher.CharacterFiniteState,
-                GameMatcher.CharacterState,
-                GameMatcher.CharacterControl));
         }
 
         protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)

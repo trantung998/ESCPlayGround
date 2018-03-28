@@ -19,17 +19,28 @@ public class CharacterAnimationSystem : ReactiveSystem<GameEntity>
     {
         foreach (var entity in entities)
         {
-            var playerId = entity.playerId;
-            var playerEntityList = characterGroup.GetEntities();
-            if (playerEntityList != null && playerEntityList.Length > 0)
+            var playerId = entity.playerId.value;
+            var playerEntityss = gameContexts.GetEntitiesWithPlayerId(playerId);
+            if (playerEntityss != null && playerEntityss.Count > 0)
             {
-                var playerEntity = playerEntityList.First(gameEntity => gameEntity.playerId.value == playerId.value);
+                var playerEntity = playerEntityss.ToList()[0];
                 if (playerEntity != null)
                 {
-                    playerEntity.characterControl.value.PlayAnimation(entity.characterFiniteState.State);
-                }  
-            
+                    var state = entity.characterFiniteState.State;
+                    playerEntity.ReplaceCharacterFiniteState(state);
+                    playerEntity.characterControl.value.PlayAnimation(state);
+                }   
             }
+//            var playerEntityList = characterGroup.GetEntities();
+//            if (playerEntityList != null && playerEntityList.Length > 0)
+//            {
+//                var playerEntity = playerEntityList.First(gameEntity => gameEntity.playerId.value == playerId);
+//                if (playerEntity != null)
+//                {
+//                    playerEntity.characterControl.value.PlayAnimation(entity.characterFiniteState.State);
+//                }  
+//            
+//            }
             entity.isClean = true;
         }
     }

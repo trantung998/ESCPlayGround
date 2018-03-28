@@ -46,9 +46,10 @@ namespace Sources.GamePlay.InputSystem.Systems
                 var playerId = inputEntity.moveInput.Id;
                 if (currentPlayerEntity.playerId.value != playerId)
                 {
-                    var characterEntity = characterEntities.GetEntities().First(gameEntity => gameEntity.playerId.value == playerId);
-                    if (characterEntity != null)
+                    var playerEntityss = gameContext.GetEntitiesWithPlayerId(playerId);
+                    if (playerEntityss != null && playerEntityss.Count > 0)
                     {
+                        var characterEntity = playerEntityss.ToArray()[0];
                         ProcessMoveInput(characterEntity, inputEntity);
                     }
                 }
