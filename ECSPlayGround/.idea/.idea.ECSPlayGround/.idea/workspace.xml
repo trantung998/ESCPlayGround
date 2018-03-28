@@ -1,0 +1,902 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="28374e11-4491-4f9e-9d73-a8d40e4425c4" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="BaseCharacterControler.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/BaseCharacterControler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="297">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding>
+                <marker date="1522205860432" expanded="false" signature="6:109" ph="..." />
+                <marker date="1522205860432" expanded="true" signature="156:1966" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="220:1964" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="521:604" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="640:698" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="750:816" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="888:1676" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="934:1666" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="1767:1958" ph="{...}" />
+                <marker date="1522205860432" expanded="true" signature="1817:1923" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterAnimationControler.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/CharacterAnimationControler.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+              <folding>
+                <marker date="1522211238451" expanded="true" signature="6:104" ph="..." />
+                <marker date="1522211238451" expanded="true" signature="151:237" ph="{...}" />
+                <marker date="1522211238451" expanded="true" signature="214:235" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CharacterMoveInputHandlerSystem.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+              <folding>
+                <marker date="1521882697244" expanded="false" signature="6:140" ph="..." />
+                <marker date="1521882697244" expanded="true" signature="355:6052" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="699:975" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1069:1157" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1217:1277" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1346:2033" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1406:2023" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1545:1880" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1746:1862" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="1901:2009" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="2130:4979" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="2297:4969" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="2516:3063" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="2628:2962" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="3327:3549" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="3416:3531" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="3628:3900" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="3768:3882" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="4039:4327" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5073:5469" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5163:5459" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5500:5520" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5552:5604" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5638:6046" ph="{...}" />
+                <marker date="1521882697244" expanded="true" signature="5799:5999" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICharacterState.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine/ICharacterState.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+              <folding>
+                <marker date="1522211408787" expanded="true" signature="58:120" ph="{...}" />
+                <marker date="1522211408787" expanded="true" signature="97:118" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlayerAttkProcessSystem.cs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/PlayerAttkProcessSystem.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+              <folding>
+                <marker date="1522121114840" expanded="false" signature="6:67" ph="..." />
+                <marker date="1522121114840" expanded="true" signature="115:1518" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="188:1516" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="390:660" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="754:841" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="901:960" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="1029:1510" ph="{...}" />
+                <marker date="1522121114840" expanded="true" signature="1089:1500" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>ReplaceCharacterFiniteState</find>
+    </findStrings>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine/ICharacterState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/7b/834d8b2b/GroupChanged`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameGameplayDataComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameSkeletonAnimationComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CleanComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/ClearAnimationStateEntitySystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/SkeletonAnimationComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InitSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DemoCorgiEngine/Assets/CorgiEngine/Common/Scripts/Agents/CharacterAbilities/CharacterDash.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameFacingDirectionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterControlComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterFiniteStateComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../DemoCorgiEngine/Assets/CorgiEngine/Common/Scripts/Agents/CharacterAbilities/CharacterHorizontalMovement.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/UserInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/e5/d6e52890/IGroup.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/GameControler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/91/697cff66/IGroup`1.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/CharacterInpitComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterPositionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/FacingDirectionComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterControlComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../epic-heroes-1_3_2018/Assets/Scripts/SaleSystem/SaleManager.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/CharacterAnimationControler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../epic-heroes-1_3_2018/Assets/Scripts/Popup/SellItemPopup.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/MoveableComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/PlayerAnimationState.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/SpeedComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputMoveInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/DestroyInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/BaseCharacterControler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/InitPlayerSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/GameplayData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameContext.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterStateComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/PlayerAttkProcessSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/AtkInputComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/CharacterAnimationSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputData.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputDestroyComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/GameEvents/GameEvents.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/PlayerIdComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterFiniteStateComponent.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/Generated/Contexts.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/49178A81-D62F-496F-9AB8-97C772281FBF/21/dc1f49b8/Quaternion.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/8b/45478041/PrimaryEntityIndex`2.cs" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/GameplayDataComponent.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InitSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputMoveInputComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Contexts.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCLASSComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/DirectionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/PlayerIdComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/SpeedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/MoveableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Plugins/UniRx/Examples/Sample11_Logger.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/GameEvents/GameEvents.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/AnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/SkeletonAnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameSkeletonAnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/SkeletonAnimationComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/CharacterControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterControlComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/PlayerState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveInputData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveInputComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/FacingDirectionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameDirectionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterPositionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputDestroyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/DestroyInputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/MoveInputProcessSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CleanComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/ClearAnimationStateEntitySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/MovementSystem/MovementData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/MovementSystem/CharacterInputProcessSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/MovementSystem/CharacterMovementHandlerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/MovementSystem/CharacterMoveInputHandlerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterStateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterFiniteStateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterFiniteStateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/CharacterAnimationSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/BaseCharacterControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/PlayerAnimationState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterStateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/InitPlayerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/UserInputSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/GameControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/PlayerAttkProcessSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/Class1.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/CharacterAnimationControler.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine/ICharacterState.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="221" />
+    <option name="y" value="40" />
+    <option name="width" value="1400" />
+    <option name="height" value="1000" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="SolutionExplorer" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="SolutionExplorer">
+        <subPane>
+          <expand>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="GamePlay" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="GamePlay" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Player" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="GamePlay" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Player" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="MonoScripts" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+            <path>
+              <item name="" type="13324e5d:SolutionExplorerViewPane$ProjectViewPaneTreeStructure$createRoot$1" />
+              <item name="ECSPlayGround (3 projects)" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assembly-CSharp" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Assets" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Sources" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="GamePlay" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="Player" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="MonoScripts" type="977d5f41:SolutionExplorerNodeRider" />
+              <item name="StateMachine" type="977d5f41:SolutionExplorerNodeRider" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+        <option name="show-file-system" value="false" />
+        <option name="show-all-items" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="SearchEverywhereHistoryKey" value="gameCon&#9;FILE&#9;file://E:/Unity/Projects/ESCPlayGround1/ECSPlayGround/Assets/Sources/GamePlay/GameControler.cs" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="28374e11-4491-4f9e-9d73-a8d40e4425c4" name="Default" comment="" />
+      <created>1516088534449</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516088534449</updated>
+      <workItem from="1516088539137" duration="4691000" />
+      <workItem from="1516156288993" duration="6654000" />
+      <workItem from="1516239265697" duration="9146000" />
+      <workItem from="1516868484022" duration="5420000" />
+      <workItem from="1516933234807" duration="2578000" />
+      <workItem from="1516947250582" duration="4621000" />
+      <workItem from="1517018717949" duration="3360000" />
+      <workItem from="1517369718648" duration="10580000" />
+      <workItem from="1517448431389" duration="9164000" />
+      <workItem from="1517983936513" duration="2097000" />
+      <workItem from="1518053578369" duration="15688000" />
+      <workItem from="1518140207916" duration="5622000" />
+      <workItem from="1519365840394" duration="598000" />
+      <workItem from="1519714486960" duration="3684000" />
+      <workItem from="1521188633626" duration="3917000" />
+      <workItem from="1521529165109" duration="4933000" />
+      <workItem from="1521596956379" duration="4407000" />
+      <workItem from="1521858463598" duration="12649000" />
+      <workItem from="1522027667711" duration="3059000" />
+      <workItem from="1522054988546" duration="1176000" />
+      <workItem from="1522057137847" duration="36000" />
+      <workItem from="1522057620135" duration="14000" />
+      <workItem from="1522120761618" duration="2162000" />
+      <workItem from="1522210952412" duration="6650000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="122906000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1843" height="1096" extended-state="6" />
+    <layout>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24958949" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1373967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs</url>
+          <line>22</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs">
+            <startOffsets>
+              <startOffset value="624" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="714" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs</url>
+          <line>29</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs">
+            <startOffsets>
+              <startOffset value="914" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1006" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs</url>
+          <line>27</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs">
+            <startOffsets>
+              <startOffset value="794" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="875" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs</url>
+          <line>48</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs" initialLine="48">
+            <startOffsets>
+              <startOffset value="1584" />
+            </startOffsets>
+            <endOffsets>
+              <endOffset value="1697" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../DemoCorgiEngine/Assets/CorgiEngine/Common/Scripts/Agents/CharacterAbilities/CharacterHorizontalMovement.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="65" column="9" lean-forward="true" selection-start-line="65" selection-start-column="9" selection-end-line="65" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameDirectionComponent.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterPositionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/49178A81-D62F-496F-9AB8-97C772281FBF/21/dc1f49b8/Quaternion.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-245">
+          <caret line="58" column="29" lean-forward="false" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameGameplayDataComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-569">
+          <caret line="11" column="97" lean-forward="false" selection-start-line="11" selection-start-column="97" selection-end-line="11" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameContext.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameFacingDirectionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/FacingReactiveSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <marker date="1518080222198" expanded="true" signature="6:67" ph="..." />
+            <marker date="1518080222198" expanded="true" signature="241:281" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="345:1054" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="392:1048" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="473:746" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="585:732" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="763:1038" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="875:1024" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="1109:1193" ph="{...}" />
+            <marker date="1518080222198" expanded="true" signature="1281:1362" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../epic-heroes-1_3_2018/Assets/Scripts/Popup/SellItemPopup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="61" column="42" lean-forward="false" selection-start-line="61" selection-start-column="42" selection-end-line="61" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/PlayerState.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CleanComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/SkeletonAnimationComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/PlayerIdComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="5" lean-forward="false" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/MoveableComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/GameplayDataComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="7" column="30" lean-forward="false" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/FacingDirectionComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveInputData.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/ClearAnimationStateEntitySystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="18" column="9" lean-forward="false" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/AtkInputComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-209">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/InputDestroyComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/DestroyInputSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="27" column="66" lean-forward="false" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterControlComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/MoveInputProcessSystem.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Input/Components/InputMoveInputComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/e5/d6e52890/IGroup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/7b/834d8b2b/GroupChanged`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="23" lean-forward="false" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterStateComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="16" column="35" lean-forward="false" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="713">
+          <caret line="503" column="11" lean-forward="false" selection-start-line="503" selection-start-column="11" selection-end-line="503" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../DemoCorgiEngine/Assets/CorgiEngine/Common/Scripts/Agents/CharacterAbilities/CharacterDash.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-162">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/MovementSystem/MovementData.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/CharacterInpitComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Components/MoveInputComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterStateComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/CharacterAnimationSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="621">
+          <caret line="25" column="35" lean-forward="false" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/8C13027C-34E7-41CA-9B42-FC8273E8A305/91/697cff66/IGroup`1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/System/InitPlayerSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="30" column="60" lean-forward="false" selection-start-line="30" selection-start-column="60" selection-end-line="30" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/UserInputSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="10" column="33" lean-forward="false" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/GameplayData.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Data/PlayerAnimationState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="32" column="32" lean-forward="false" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/Components/CharacterFiniteStateComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="3" column="38" lean-forward="false" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterControlComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="94" lean-forward="false" selection-start-line="11" selection-start-column="94" selection-end-line="11" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameCharacterFiniteStateComponent.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="11" column="89" lean-forward="false" selection-start-line="11" selection-start-column="89" selection-end-line="11" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/GameControler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1269">
+          <caret line="52" column="42" lean-forward="false" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/CharacterMoveInputHandlerSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="50" column="21" lean-forward="false" selection-start-line="50" selection-start-column="21" selection-end-line="50" selection-end-column="21" />
+          <folding>
+            <marker date="1521882697244" expanded="false" signature="6:140" ph="..." />
+            <marker date="1521882697244" expanded="true" signature="355:6052" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="699:975" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1069:1157" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1217:1277" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1346:2033" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1406:2023" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1545:1880" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1746:1862" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="1901:2009" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="2130:4979" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="2297:4969" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="2516:3063" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="2628:2962" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="3327:3549" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="3416:3531" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="3628:3900" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="3768:3882" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="4039:4327" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5073:5469" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5163:5459" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5500:5520" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5552:5604" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5638:6046" ph="{...}" />
+            <marker date="1521882697244" expanded="true" signature="5799:5999" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/CharacterAnimationControler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="8" lean-forward="false" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
+          <folding>
+            <marker date="1522211238451" expanded="true" signature="6:104" ph="..." />
+            <marker date="1522211238451" expanded="true" signature="151:237" ph="{...}" />
+            <marker date="1522211238451" expanded="true" signature="214:235" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="29" lean-forward="false" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/InputSystem/Systems/PlayerAttkProcessSystem.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
+          <folding>
+            <marker date="1522121114840" expanded="false" signature="6:67" ph="..." />
+            <marker date="1522121114840" expanded="true" signature="115:1518" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="188:1516" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="390:660" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="754:841" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="901:960" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="1029:1510" ph="{...}" />
+            <marker date="1522121114840" expanded="true" signature="1089:1500" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/StateMachine/ICharacterState.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
+          <folding>
+            <marker date="1522211408787" expanded="true" signature="58:120" ph="{...}" />
+            <marker date="1522211408787" expanded="true" signature="97:118" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Sources/GamePlay/Player/MonoScripts/BaseCharacterControler.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <marker date="1522205860432" expanded="false" signature="6:109" ph="..." />
+            <marker date="1522205860432" expanded="true" signature="156:1966" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="220:1964" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="521:604" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="640:698" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="750:816" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="888:1676" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="934:1666" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="1767:1958" ph="{...}" />
+            <marker date="1522205860432" expanded="true" signature="1817:1923" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
