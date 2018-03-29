@@ -1,5 +1,5 @@
 ﻿using Entitas;
-using Sources.GamePlay.Player.MonoScripts;
+using Sources.GamePlay.Player.Scripts;
 
 [Game]
 public class CharacterControlComponent : IComponent

@@ -4,7 +4,7 @@ using Spine.Unity;
 using UnityEngine;
 using AnimationState = Spine.AnimationState;
 
-namespace Sources.GamePlay.Player.MonoScripts
+namespace Sources.GamePlay.Player.Scripts
 {      
     public class BaseCharacterControler : MonoBehaviour
     {

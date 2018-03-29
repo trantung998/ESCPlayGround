@@ -1,7 +1,7 @@
 ﻿using Entitas;
 using Entitas.Unity;
 using GamePlay.GameEvents;
-using Sources.GamePlay.Player.MonoScripts;
+using Sources.GamePlay.Player.Scripts;
 using UniRx;
 using UnityEngine;
 

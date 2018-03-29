@@ -11,14 +11,14 @@ public partial class GameEntity {
     public CharacterControlComponent characterControl { get { return (CharacterControlComponent)GetComponent(GameComponentsLookup.CharacterControl); } }
     public bool hasCharacterControl { get { return HasComponent(GameComponentsLookup.CharacterControl); } }
 
-    public void AddCharacterControl(Sources.GamePlay.Player.MonoScripts.BaseCharacterControler newValue) {
+    public void AddCharacterControl(Sources.GamePlay.Player.Scripts.BaseCharacterControler newValue) {
         var index = GameComponentsLookup.CharacterControl;
         var component = CreateComponent<CharacterControlComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceCharacterControl(Sources.GamePlay.Player.MonoScripts.BaseCharacterControler newValue) {
+    public void ReplaceCharacterControl(Sources.GamePlay.Player.Scripts.BaseCharacterControler newValue) {
         var index = GameComponentsLookup.CharacterControl;
         var component = CreateComponent<CharacterControlComponent>(index);
         component.value = newValue;
