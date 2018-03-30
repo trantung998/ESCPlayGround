@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entitas;
+using Sources.GamePlay.Player.Scripts;
 using UnityEngine;
 
 namespace Sources.GamePlay.InputSystem.Systems
@@ -27,10 +29,25 @@ namespace Sources.GamePlay.InputSystem.Systems
         {
             foreach (var inputEntity in entities)
             {
-                var changeAnimationEntity = gameContext.CreateEntity();
-                changeAnimationEntity.isAnimationControl = true;
-                changeAnimationEntity.AddPlayerId(inputEntity.atkInput.playerId);
-                changeAnimationEntity.AddCharacterFiniteState(CharacterFiniteState.Atk);
+                var character = inputEntity.atkInput.playerId;
+                var skillId = inputEntity.atkInput.id;
+                var characterEntitySet = gameContext.GetEntitiesWithPlayerId(character);
+                if (characterEntitySet != null && characterEntitySet.Count > 0)
+                {
+                    var characterEntity = characterEntitySet.ToList()[0];
+                    var skillCooldownList = characterEntity.cooldown.SkillCooldownList;
+                    if (!characterEntity.cooldown.IsContain(skillId))
+                    {                        
+                        var changeAnimationEntity = gameContext.CreateEntity();
+                        changeAnimationEntity.isAnimationControl = true;
+                        changeAnimationEntity.AddPlayerId(inputEntity.atkInput.playerId);
+                        //TODO : KHI CAST SKILL NAO THI SET DUNG STATE CỦA SKILL DO
+                        changeAnimationEntity.AddCharacterFiniteState(CharacterFiniteState.Atk);
+                        
+                        skillCooldownList.Add(new SkillCooldownElement(){id = skillId, time = .1f});
+                        characterEntity.ReplaceCooldown(skillCooldownList);
+                    }
+                }
                 //clear
                 inputEntity.isInputDestroy = true;
             }

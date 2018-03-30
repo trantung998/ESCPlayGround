@@ -4,5 +4,10 @@ using Sources.GamePlay.Player.Scripts;
 
 public class CooldownComponent : IComponent
 {
-    public List<CooldownElement> CooldownList;
+    public List<SkillCooldownElement> SkillCooldownList;
+
+    public bool IsContain(AtkId id)
+    {
+        return SkillCooldownList.Exists(element => element.id == id);
+    }
 }

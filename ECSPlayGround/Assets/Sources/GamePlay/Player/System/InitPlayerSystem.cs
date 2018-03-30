@@ -1,4 +1,5 @@
-﻿using Entitas;
+﻿using System.Collections.Generic;
+using Entitas;
 using Entitas.Unity;
 using GamePlay.GameEvents;
 using Sources.GamePlay.Player.Scripts;
@@ -29,7 +30,7 @@ namespace Sources.GamePlay.Player.System
             
             player.AddCharacterFiniteState(CharacterFiniteState.Idle);
             player.AddCharacterState(CharacterState.Normal);
-            
+            player.AddCooldown(new List<SkillCooldownElement>());
             player.AddCharacterControl(playerObject.GetComponent<BaseCharacterControler>());
             player.AddFacingDirection("Player1", FacingDirection.Right);
 

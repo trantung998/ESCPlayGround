@@ -1,8 +1,7 @@
 ﻿namespace Sources.GamePlay.Player.Scripts
 {
-    public class CooldownElement
+    public class BaseCooldownElement
     {
-        public string id;
         public float time;
     }
 }

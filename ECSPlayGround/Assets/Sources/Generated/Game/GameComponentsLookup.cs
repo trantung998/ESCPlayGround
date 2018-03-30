@@ -14,14 +14,18 @@ public static class GameComponentsLookup {
     public const int CharacterPosition = 3;
     public const int CharacterState = 4;
     public const int Clean = 5;
-    public const int FacingDirection = 6;
-    public const int GameplayData = 7;
-    public const int Moveable = 8;
-    public const int PlayerId = 9;
-    public const int SkeletonAnimation = 10;
-    public const int Speed = 11;
+    public const int Cooldown = 6;
+    public const int DeltaTime = 7;
+    public const int FacingDirection = 8;
+    public const int GameplayData = 9;
+    public const int Moveable = 10;
+    public const int PlayerId = 11;
+    public const int SkeletonAnimation = 12;
+    public const int Speed = 13;
+    public const int Tick = 14;
+    public const int TickTime = 15;
 
-    public const int TotalComponents = 12;
+    public const int TotalComponents = 16;
 
     public static readonly string[] componentNames = {
         "AnimationControl",
@@ -30,12 +34,16 @@ public static class GameComponentsLookup {
         "CharacterPosition",
         "CharacterState",
         "Clean",
+        "Cooldown",
+        "DeltaTime",
         "FacingDirection",
         "GameplayData",
         "Moveable",
         "PlayerId",
         "SkeletonAnimation",
-        "Speed"
+        "Speed",
+        "Tick",
+        "TickTime"
     };
 
     public static readonly System.Type[] componentTypes = {
@@ -45,11 +53,15 @@ public static class GameComponentsLookup {
         typeof(CharacterPositionComponent),
         typeof(CharacterStateComponent),
         typeof(CleanComponent),
+        typeof(CooldownComponent),
+        typeof(DeltaTimeComponent),
         typeof(FacingDirectionComponent),
         typeof(GameplayDataComponent),
         typeof(MoveableComponent),
         typeof(PlayerIdComponent),
         typeof(SkeletonAnimationComponent),
-        typeof(SpeedComponent)
+        typeof(SpeedComponent),
+        typeof(TickComponent),
+        typeof(TickTimeComponent)
     };
 }
