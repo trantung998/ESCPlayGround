@@ -2,6 +2,7 @@
 using Sources.GamePlay.InputSystem.Systems;
 using Sources.GamePlay.Player.Data;
 using Sources.GamePlay.Player.System;
+using Sources.GamePlay.TickSystem;
 using UniRx;
 using UnityEngine;
 
@@ -19,6 +20,9 @@ namespace Sources.GamePlay
             
             Contexts contexts = Contexts.sharedInstance;
             contexts.game.SetGameplayData(gameplayData);
+            contexts.game.SetDeltaTime(0);
+            contexts.game.SetTickTime(0);
+            
             systems = CreateSystem(contexts);
             systems.Initialize();
             Init();
@@ -48,6 +52,9 @@ namespace Sources.GamePlay
                 //inti
                 .Add(new InitPlayerSystem(contexts))
                 .Add(new UserInputSystem(contexts))
+                .Add(new ChangeDetatimeSystem(contexts))
+                .Add(new TickTimeIncreasementSystem(contexts))
+                .Add(new CooldownControlSystem(contexts))
                 .Add(new DestroyInputSystem(contexts))
                 .Add(new CharacterMoveInputHandlerSystem(contexts))
                 .Add(new PlayerAttkProcessSystem(contexts))

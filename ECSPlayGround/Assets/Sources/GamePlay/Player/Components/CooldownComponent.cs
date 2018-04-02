@@ -10,4 +10,5 @@ public class CooldownComponent : IComponent
     {
         return SkillCooldownList.Exists(element => element.id == id);
     }
+
 }

@@ -44,7 +44,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                         //TODO : KHI CAST SKILL NAO THI SET DUNG STATE CỦA SKILL DO
                         changeAnimationEntity.AddCharacterFiniteState(CharacterFiniteState.Atk);
                         
-                        skillCooldownList.Add(new SkillCooldownElement(){id = skillId, time = .1f});
+                        skillCooldownList.Add(new SkillCooldownElement(){id = skillId, time = 1.1f});
                         characterEntity.ReplaceCooldown(skillCooldownList);
                     }
                 }

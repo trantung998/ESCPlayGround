@@ -76,7 +76,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                         playerEntity.ReplaceCharacterFiniteState(CharacterFiniteState.Idle);
                         
                         EmmitChangeAnimationEntity(CharacterFiniteState.Idle, playerId);
-                        Debug.Log("Change State to" + PlayerAnimationState.Idle );
+//                        Debug.Log("Change State to" + PlayerAnimationState.Idle );
                     }
                     inputEntity.isInputDestroy = true;
                     return;

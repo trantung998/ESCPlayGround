@@ -17,12 +17,19 @@ public class TickTimeIncreasementSystem : ReactiveSystem<GameEntity>
         var detatime = entities.SingleEntity().deltaTime.value;
         var tickTime = gameContext.tickTime.currentTick;
         tickTime += detatime;
+        if (tickTime >= gameContext.gameplayData.value.tickInverter)
+        {
+            tickTime = 0;
+            gameContext.isTick = false;
+            gameContext.isTick = true;
+        }
+        gameContext.tickTime.currentTick = tickTime;
         
     }
 
     protected override bool Filter(GameEntity entity)
     {
-        return true;
+        return entity.hasDeltaTime;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

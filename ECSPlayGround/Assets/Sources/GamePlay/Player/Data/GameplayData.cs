@@ -6,5 +6,7 @@ namespace Sources.GamePlay.Player.Data
     public class GameplayData :ScriptableObject
     {
         public GameObject heroPrefab;
+
+        public float tickInverter;
     }
 }
