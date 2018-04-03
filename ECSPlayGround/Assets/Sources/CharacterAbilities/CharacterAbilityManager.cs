@@ -1,6 +1,9 @@
-﻿namespace Sources.GamePlay.Player.Scripts
+﻿using Sources.Tools;
+
+namespace Sources.GamePlay.Player.Scripts
 {
-    public class CharacterAbilityManager : Singleton<CharacterAbilityManager>
+    public class CharacterAbilityManager : 
+        Singleton<CharacterAbilityManager>
     {
         private string databasePath = "";
         private AbilityDatabase database;
@@ -9,11 +12,22 @@
         {
         }
 
-        private void InitData()
+        public void WarmUp()
         {
             
         }
+
+        private void Start()
+        {
+            InitData();
+        }
+
+        private void InitData()
+        {
+            database = Utilities.LoadScriptableObject<AbilityDatabase>(databasePath);
+            
+        }
         
-         
+        
     }
 }
