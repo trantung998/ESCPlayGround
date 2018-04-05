@@ -25,7 +25,6 @@ namespace Sources.GamePlay.Player.Scripts
         private void InitData()
         {
             database = Utilities.LoadScriptableObject<AbilityDatabase>(databasePath);
-            
         }
         
         
