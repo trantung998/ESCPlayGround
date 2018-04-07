@@ -17,7 +17,25 @@ public class UserInputSystem : IExecuteSystem
 
 	public void Execute()
 	{
-		var isFire = Input.GetKeyDown("mouse 0");
+	    if (Input.GetKeyDown(KeyCode.A))
+	    {
+	        OnPointerDownLeft();
+	    }
+	    else if (Input.GetKeyUp(KeyCode.A))
+	    {
+	        OnPointerUpLeft();
+	    }
+	    else if (Input.GetKeyDown(KeyCode.D))
+	    {
+	        OnPointerDownRight();
+	    }
+	    else if (Input.GetKeyUp(KeyCode.D))
+	    {
+	        OnPointerUpRight();
+	    }
+
+
+        var isFire = Input.GetKeyDown("mouse 0");
 		if (isFire)
 		{
 			var atkInputEntity = inputContext.CreateEntity();
@@ -26,7 +44,7 @@ public class UserInputSystem : IExecuteSystem
 		}
 		
 		var moveInput = Input.GetAxis(InputParam.Horizontal);
-		if (moveInput <= -0.1f  || moveInput >= 0.1f)
+		if (moveInput != 0)
 		{		
 			var moveInputEntity = inputContext.CreateEntity();
 //			Debug.Log("Horizontal value : " + moveInput);
@@ -36,13 +54,13 @@ public class UserInputSystem : IExecuteSystem
 				moveInput > 0 ? MoveDirection.Right : MoveDirection.Left,
 				Time.deltaTime);
 			moveInputEntity.isCharacterInput = true;
-			flag = false;
+//			flag = false;
 		}
-		else if(flag == false && moveInput == 0)
+		else if(moveInput == 0)
 		{	
 			var moveInputEntity = inputContext.CreateEntity();
 			moveInputEntity.AddMoveInput(playerId, moveInput, MoveDirection.None, 0);
-			flag = true;
+//			flag = true;
 		}
 	}
 }

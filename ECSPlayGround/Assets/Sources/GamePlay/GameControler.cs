@@ -56,7 +56,7 @@ namespace Sources.GamePlay
                 .Add(new TickTimeIncreasementSystem(contexts))
                 .Add(new CooldownControlSystem(contexts))
                 .Add(new DestroyInputSystem(contexts))
-                .Add(new CharacterMoveInputHandlerSystem(contexts))
+                .Add(new CharacterMoveHandlerSystem(contexts))
                 .Add(new PlayerAttkProcessSystem(contexts))
                 .Add(new FacingReactiveSystem(contexts))
                 .Add(new CharacterAnimationSystem(contexts))

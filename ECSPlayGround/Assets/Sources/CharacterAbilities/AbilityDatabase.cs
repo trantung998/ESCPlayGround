@@ -2,8 +2,7 @@
 using UnityEngine;
 
 namespace Sources.GamePlay.Player.Scripts
-{
-
+{    
     public class AbilityDatabase: ScriptableObject
     {
         [SerializeField] private List<CharacterAbilityData> abilityDatas;
