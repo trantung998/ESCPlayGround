@@ -46,6 +46,7 @@ namespace Sources.GamePlay.InputSystem.Systems
                         
                         skillCooldownList.Add(new SkillCooldownElement(){id = skillId, time = 1.1f});
                         characterEntity.ReplaceCooldown(skillCooldownList);
+                        characterEntity.isCastingSkill = true;
                     }
                 }
                 //clear

@@ -27,6 +27,4 @@ public class DestroyInputSystem : ReactiveSystem<InputEntity>
     {
         return context.CreateCollector(InputMatcher.InputDestroy);
     }
-
-    
 }

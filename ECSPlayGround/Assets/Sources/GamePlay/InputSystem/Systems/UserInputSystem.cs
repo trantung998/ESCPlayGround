@@ -10,6 +10,7 @@ public class UserInputSystem : IExecuteSystem
 
 	private string playerId = "Player1";
 	private bool flag = false;
+	
 	public UserInputSystem(Contexts contexts)
 	{
 		inputContext = contexts.input;
@@ -17,22 +18,22 @@ public class UserInputSystem : IExecuteSystem
 
 	public void Execute()
 	{
-	    if (Input.GetKeyDown(KeyCode.A))
-	    {
-	        OnPointerDownLeft();
-	    }
-	    else if (Input.GetKeyUp(KeyCode.A))
-	    {
-	        OnPointerUpLeft();
-	    }
-	    else if (Input.GetKeyDown(KeyCode.D))
-	    {
-	        OnPointerDownRight();
-	    }
-	    else if (Input.GetKeyUp(KeyCode.D))
-	    {
-	        OnPointerUpRight();
-	    }
+//	    if (Input.GetKeyDown(KeyCode.A))
+//	    {
+//	        OnPointerDownLeft();
+//	    }
+//	    else if (Input.GetKeyUp(KeyCode.A))
+//	    {
+//	        OnPointerUpLeft();
+//	    }
+//	    else if (Input.GetKeyDown(KeyCode.D))
+//	    {
+//	        OnPointerDownRight();
+//	    }
+//	    else if (Input.GetKeyUp(KeyCode.D))
+//	    {
+//	        OnPointerUpRight();
+//	    }
 
 
         var isFire = Input.GetKeyDown("mouse 0");

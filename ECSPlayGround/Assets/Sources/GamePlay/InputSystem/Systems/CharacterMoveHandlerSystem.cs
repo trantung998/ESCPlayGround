@@ -67,6 +67,8 @@ namespace Sources.GamePlay.InputSystem.Systems
                 && playerEntity.hasCharacterState)
             {
                 if(!playerEntity.isMoveable) return;
+                if(playerEntity.isCastingSkill) return;
+                
                 var playerId = playerEntity.playerId.value;
                 
                 if (inputEntity.moveInput.Direction == MoveDirection.None)

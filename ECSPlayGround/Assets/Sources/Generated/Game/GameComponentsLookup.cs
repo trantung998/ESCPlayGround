@@ -9,26 +9,28 @@
 public static class GameComponentsLookup {
 
     public const int AnimationControl = 0;
-    public const int CharacterControl = 1;
-    public const int CharacterFiniteState = 2;
-    public const int CharacterPosition = 3;
-    public const int CharacterState = 4;
-    public const int Clean = 5;
-    public const int Cooldown = 6;
-    public const int DeltaTime = 7;
-    public const int FacingDirection = 8;
-    public const int GameplayData = 9;
-    public const int Moveable = 10;
-    public const int PlayerId = 11;
-    public const int SkeletonAnimation = 12;
-    public const int Speed = 13;
-    public const int Tick = 14;
-    public const int TickTime = 15;
+    public const int CastingSkill = 1;
+    public const int CharacterControl = 2;
+    public const int CharacterFiniteState = 3;
+    public const int CharacterPosition = 4;
+    public const int CharacterState = 5;
+    public const int Clean = 6;
+    public const int Cooldown = 7;
+    public const int DeltaTime = 8;
+    public const int FacingDirection = 9;
+    public const int GameplayData = 10;
+    public const int Moveable = 11;
+    public const int PlayerId = 12;
+    public const int SkeletonAnimation = 13;
+    public const int Speed = 14;
+    public const int Tick = 15;
+    public const int TickTime = 16;
 
-    public const int TotalComponents = 16;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "AnimationControl",
+        "CastingSkill",
         "CharacterControl",
         "CharacterFiniteState",
         "CharacterPosition",
@@ -48,6 +50,7 @@ public static class GameComponentsLookup {
 
     public static readonly System.Type[] componentTypes = {
         typeof(AnimationControlComponent),
+        typeof(CastingSkill),
         typeof(CharacterControlComponent),
         typeof(CharacterFiniteStateComponent),
         typeof(CharacterPositionComponent),
