@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using MEC;
 using PathologicalGames;
 using UnityEngine;
 
@@ -18,16 +19,16 @@ public class Gun : MonoBehaviour
 	void Start ()
 	{
 		pool = PoolManager.Pools["Ball"];
-		Timing.RunCoroutine(Util._EmulateUpdate(MyUpdate, this));
+//		Timing.RunCoroutine(Util._EmulateUpdate(MyUpdate, this));
 	}
 	
 	// Update is called once per frame
-	IEnumerable<float> Fire ()
-	{
-		var ball = pool.Spawn("Ball", firePoint.position, firePoint.rotation);
-		ball.GetComponent<Rigidbody2D>().velocity = firePoint.up * speed;
-		
-	}
+//	IEnumerable<float> Fire ()
+//	{
+//		var ball = pool.Spawn("Ball", firePoint.position, firePoint.rotation);
+//		ball.GetComponent<Rigidbody2D>().velocity = firePoint.up * speed;
+//		
+//	}
 	
 	public IEnumerator<float> _EmulateUpdate(System.Action func, MonoBehaviour scr)
 	{
