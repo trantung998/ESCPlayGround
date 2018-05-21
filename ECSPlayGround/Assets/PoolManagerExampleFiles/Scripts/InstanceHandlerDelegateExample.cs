@@ -22,7 +22,7 @@ public class InstanceHandlerDelegateExample : MonoBehaviour
 
 	public GameObject InstantiateDelegate(GameObject prefab, Vector3 pos, Quaternion rot)
 	{
-		Debug.Log("Using my own instantiation delegate on prefab '" + prefab.name + "'!");
+		Debug.Log("Using my own instantiation delegate on Prefab '" + prefab.name + "'!");
 
 		return Object.Instantiate(prefab, pos, rot) as GameObject;
 	}
@@ -36,7 +36,7 @@ public class InstanceHandlerDelegateExample : MonoBehaviour
 
 	public GameObject InstantiateDelegateForShapesPool(GameObject prefab, Vector3 pos, Quaternion rot)
 	{
-		Debug.Log("Using my own instantiation delegate for just the 'Shapes' pool on prefab '" + prefab.name + "'!");
+		Debug.Log("Using my own instantiation delegate for just the 'Shapes' pool on Prefab '" + prefab.name + "'!");
 		
 		return Object.Instantiate(prefab, pos, rot) as GameObject;
 	}

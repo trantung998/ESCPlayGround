@@ -15,7 +15,7 @@
             Also stores the AudioMixer as the tween's target so it can be used for filtered operations.
             Note that you need to manually expose a float in an AudioMixerGroup in order to be able to tween it from an AudioMixer.</summary>
             <param name="floatName">Name given to the exposed float to set</param>
-            <param name="endValue">The end value to reach</param><param name="duration">The duration of the tween</param>
+            <param name="endValue">The end value to reach</param><param name="Duration">The Duration of the tween</param>
         </member>
         <member name="M:DG.Tweening.ShortcutExtensions50.DOComplete(UnityEngine.Audio.AudioMixer,System.Boolean)">
             <summary>
@@ -49,7 +49,7 @@
             and returns the total number of tweens involved.
             </summary>
             <param name="to">Time position to reach
-            (if higher than the whole tween duration the tween will simply reach its end)</param>
+            (if higher than the whole tween Duration the tween will simply reach its end)</param>
             <param name="andPlay">If TRUE will play the tween after reaching the given position, otherwise it will pause it</param>
         </member>
         <member name="M:DG.Tweening.ShortcutExtensions50.DOPause(UnityEngine.Audio.AudioMixer)">

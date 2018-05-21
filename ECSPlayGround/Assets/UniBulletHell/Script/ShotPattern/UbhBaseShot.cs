@@ -11,7 +11,7 @@ using UnityEngine.Serialization;
 public abstract class UbhBaseShot : UbhMonoBehaviour
 {
     [Header("===== Common Settings =====")]
-    // "Set a bullet prefab for the shot. (ex. sprite or model)"
+    // "Set a bullet Prefab for the shot. (ex. sprite or model)"
     [FormerlySerializedAs("_BulletPrefab")]
     public GameObject m_bulletPrefab;
     // "Set a bullet number of shot."

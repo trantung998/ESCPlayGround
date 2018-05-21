@@ -10,7 +10,7 @@ using PathologicalGames;
 public class SimpleSpawner : MonoBehaviour 
 {
     /// <summary>
-    /// The prefab to spawn from.
+    /// The Prefab to spawn from.
     /// </summary>
     public string poolName;
     public Transform testPrefab;

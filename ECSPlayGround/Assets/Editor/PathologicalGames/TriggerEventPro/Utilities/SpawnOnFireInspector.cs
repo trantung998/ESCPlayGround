@@ -26,7 +26,7 @@ public class SpawnOnFireInspector : Editor
 	{
 		this.altSource        = this.serializedObject.FindProperty("altSource");
 		this.poolName         = this.serializedObject.FindProperty("poolName");
-		this.prefab           = this.serializedObject.FindProperty("prefab");
+		this.prefab           = this.serializedObject.FindProperty("Prefab");
 		this.spawnAtMode      = this.serializedObject.FindProperty("spawnAtMode");
 		this.spawnAtTransform = this.serializedObject.FindProperty("spawnAtTransform");
 		this.usePooling       = this.serializedObject.FindProperty("usePooling");
@@ -44,7 +44,7 @@ public class SpawnOnFireInspector : Editor
 
 		EditorGUI.indentLevel = 0;
 		
-		content = new GUIContent("Prefab", "The prefab to spawn Instances from.");
+		content = new GUIContent("Prefab", "The Prefab to spawn Instances from.");
 		EditorGUILayout.PropertyField(this.prefab, content);
 
 		content = new GUIContent
@@ -107,7 +107,7 @@ public class SpawnOnFireInspector : Editor
 		
         serializedObject.ApplyModifiedProperties();
 			
-        // Flag Unity to save the changes to to the prefab to disk
+        // Flag Unity to save the changes to to the Prefab to disk
 		// 	 This is needed to make the gizmos update immediatly.
         if (GUI.changed)
             EditorUtility.SetDirty(target);

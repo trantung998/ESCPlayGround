@@ -167,10 +167,10 @@ namespace DG.Tweening
                 switch (targetType) {
 #if DOTWEEN_TK2D
                 case TargetType.tk2dTextMesh:
-                    tween = ((tk2dTextMesh)target).DOScale(optionalBool0 ? new Vector3(endValueFloat, endValueFloat, endValueFloat) : endValueV3, duration);
+                    tween = ((tk2dTextMesh)target).DOScale(optionalBool0 ? new Vector3(endValueFloat, endValueFloat, endValueFloat) : endValueV3, Duration);
                     break;
                 case TargetType.tk2dBaseSprite:
-                    tween = ((tk2dBaseSprite)target).DOScale(optionalBool0 ? new Vector3(endValueFloat, endValueFloat, endValueFloat) : endValueV3, duration);
+                    tween = ((tk2dBaseSprite)target).DOScale(optionalBool0 ? new Vector3(endValueFloat, endValueFloat, endValueFloat) : endValueV3, Duration);
                     break;
 #endif
                 default:
@@ -201,18 +201,18 @@ namespace DG.Tweening
                     break;
 #if DOTWEEN_TK2D
                 case TargetType.tk2dTextMesh:
-                    tween = ((tk2dTextMesh)target).DOColor(endValueColor, duration);
+                    tween = ((tk2dTextMesh)target).DOColor(endValueColor, Duration);
                     break;
                 case TargetType.tk2dBaseSprite:
-                    tween = ((tk2dBaseSprite)target).DOColor(endValueColor, duration);
+                    tween = ((tk2dBaseSprite)target).DOColor(endValueColor, Duration);
                     break;
 #endif
 #if DOTWEEN_TMP
                 case TargetType.TextMeshProUGUI:
-                    tween = ((TextMeshProUGUI)target).DOColor(endValueColor, duration);
+                    tween = ((TextMeshProUGUI)target).DOColor(endValueColor, Duration);
                     break;
                 case TargetType.TextMeshPro:
-                    tween = ((TextMeshPro)target).DOColor(endValueColor, duration);
+                    tween = ((TextMeshPro)target).DOColor(endValueColor, Duration);
                     break;
 #endif
                 }
@@ -240,18 +240,18 @@ namespace DG.Tweening
                     break;
 #if DOTWEEN_TK2D
                 case TargetType.tk2dTextMesh:
-                    tween = ((tk2dTextMesh)target).DOFade(endValueFloat, duration);
+                    tween = ((tk2dTextMesh)target).DOFade(endValueFloat, Duration);
                     break;
                 case TargetType.tk2dBaseSprite:
-                    tween = ((tk2dBaseSprite)target).DOFade(endValueFloat, duration);
+                    tween = ((tk2dBaseSprite)target).DOFade(endValueFloat, Duration);
                     break;
 #endif
 #if DOTWEEN_TMP
                 case TargetType.TextMeshProUGUI:
-                    tween = ((TextMeshProUGUI)target).DOFade(endValueFloat, duration);
+                    tween = ((TextMeshProUGUI)target).DOFade(endValueFloat, Duration);
                     break;
                 case TargetType.TextMeshPro:
-                    tween = ((TextMeshPro)target).DOFade(endValueFloat, duration);
+                    tween = ((TextMeshPro)target).DOFade(endValueFloat, Duration);
                     break;
 #endif
                 }
@@ -263,15 +263,15 @@ namespace DG.Tweening
                     break;
 #if DOTWEEN_TK2D
                 case TargetType.tk2dTextMesh:
-                    tween = ((tk2dTextMesh)target).DOText(endValueString, duration, optionalBool0, optionalScrambleMode, optionalString);
+                    tween = ((tk2dTextMesh)target).DOText(endValueString, Duration, optionalBool0, optionalScrambleMode, optionalString);
                     break;
 #endif
 #if DOTWEEN_TMP
                 case TargetType.TextMeshProUGUI:
-                    tween = ((TextMeshProUGUI)target).DOText(endValueString, duration, optionalBool0, optionalScrambleMode, optionalString);
+                    tween = ((TextMeshProUGUI)target).DOText(endValueString, Duration, optionalBool0, optionalScrambleMode, optionalString);
                     break;
                 case TargetType.TextMeshPro:
-                    tween = ((TextMeshPro)target).DOText(endValueString, duration, optionalBool0, optionalScrambleMode, optionalString);
+                    tween = ((TextMeshPro)target).DOText(endValueString, Duration, optionalBool0, optionalScrambleMode, optionalString);
                     break;
 #endif
                 }

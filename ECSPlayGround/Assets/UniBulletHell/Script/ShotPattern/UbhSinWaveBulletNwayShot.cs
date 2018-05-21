@@ -24,7 +24,7 @@ public class UbhSinWaveBulletNwayShot : UbhBaseShot
     // "Set a angle between bullet and next bullet. (0 to 360)"
     [Range(0f, 360f), FormerlySerializedAs("_BetweenAngle")]
     public float m_betweenAngle = 10f;
-    // "Set a delay time between shot and next line shot. (sec)"
+    // "Set a StartDelay time between shot and next line shot. (sec)"
     [FormerlySerializedAs("_NextLineDelay")]
     public float m_nextLineDelay = 0.1f;
 

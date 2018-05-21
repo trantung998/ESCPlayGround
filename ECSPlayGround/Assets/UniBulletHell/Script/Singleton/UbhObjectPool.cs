@@ -72,7 +72,7 @@ public class UbhObjectPool : UbhSingletonMonoBehavior<UbhObjectPool>
     }
 
     /// <summary>
-    /// Create object pool from prefab.
+    /// Create object pool from Prefab.
     /// </summary>
     public void CreatePool(GameObject goPrefab, int createNum)
     {

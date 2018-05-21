@@ -9,7 +9,7 @@ using UnityEngine.Serialization;
 public class UbhHomingShot : UbhBaseShot
 {
     [Header("===== HomingShot Settings =====")]
-    // "Set a delay time between bullet and next bullet. (sec)"
+    // "Set a StartDelay time between bullet and next bullet. (sec)"
     [FormerlySerializedAs("_BetweenDelay")]
     public float m_betweenDelay = 0.1f;
     // "Set a speed of homing angle."

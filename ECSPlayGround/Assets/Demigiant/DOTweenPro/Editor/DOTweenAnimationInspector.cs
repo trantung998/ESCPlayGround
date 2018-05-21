@@ -312,7 +312,7 @@ namespace DG.DOTweenEditor
             GUILayout.BeginHorizontal();
             _src.duration = EditorGUILayout.FloatField("Duration", _src.duration);
             if (_src.duration < 0) _src.duration = 0;
-            _src.isSpeedBased = DeGUILayout.ToggleButton(_src.isSpeedBased, new GUIContent("SpeedBased", "If selected, the duration will count as units/degree x second"), DeGUI.styles.button.tool, GUILayout.Width(75));
+            _src.isSpeedBased = DeGUILayout.ToggleButton(_src.isSpeedBased, new GUIContent("SpeedBased", "If selected, the Duration will count as units/degree x second"), DeGUI.styles.button.tool, GUILayout.Width(75));
             GUILayout.EndHorizontal();
             _src.delay = EditorGUILayout.FloatField("Delay", _src.delay);
             if (_src.delay < 0) _src.delay = 0;

@@ -8,7 +8,7 @@ namespace UniBulletHell.Example.Script.Wave
 {
     public class WaveControler : MonoBehaviour
     {        
-        [SerializeField] private List<WaveData> waveData;
+        [SerializeField] private List<MiniWaveData> waveData;
 
         private SpawnPool pool;
         
@@ -25,17 +25,18 @@ namespace UniBulletHell.Example.Script.Wave
             if (waveData != null && waveData.Count > 0)
             {
                 var wave = waveData[currentWave];
-                if (wave.delay > 0)
+                if (wave.StartDelay > 0)
                 {
-                    yield return Timing.WaitForSeconds(wave.delay);
-                    var total = wave.numberEnemy;
+                    yield return Timing.WaitForSeconds(wave.StartDelay);
+                    var total = wave.NumberEnemy;
                     for (int i = 0; i < total; i++)
                     {
-                        var enemy = pool.Spawn("Enemy", pool.transform);
+                        var enemy = pool.Spawn(wave.Prefab, pool.transform);
+                        pool.Despawn(enemy, wave.LifeTime);
                         
-                        enemy.DOPath(wave.waypoints, 10, PathType.CatmullRom, PathMode.TopDown2D)
-                            .SetLookAt(0.01f, enemy.up, enemy.forward);
-                        yield return Timing.WaitForSeconds(wave.delayEachEnemy);
+                        enemy.DOPath(wave.Waypoints, wave.Duration, PathType.CatmullRom, PathMode.TopDown2D)
+                            .SetLookAt(0.01f, enemy.forward, - enemy.right);
+                        yield return Timing.WaitForSeconds(wave.DelaySpawnEnemy);
                     }
 
                 }

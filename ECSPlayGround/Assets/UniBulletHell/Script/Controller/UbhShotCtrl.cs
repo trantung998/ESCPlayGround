@@ -17,7 +17,7 @@ public class UbhShotCtrl : UbhMonoBehaviour
         // "Set a shot pattern component (inherits UbhBaseShot)."
         [FormerlySerializedAs("_ShotObj")]
         public UbhBaseShot m_shotObj;
-        // "Set a delay time to starting next shot pattern. (sec)"
+        // "Set a StartDelay time to starting next shot pattern. (sec)"
         [FormerlySerializedAs("_AfterDelay")]
         public float m_afterDelay;
     }
@@ -28,7 +28,7 @@ public class UbhShotCtrl : UbhMonoBehaviour
     // "This flag starts a shot routine at same time as instantiate."
     [FormerlySerializedAs("_StartOnAwake")]
     public bool m_startOnAwake = true;
-    // "Set a delay time at using Start On Awake. (sec)"
+    // "Set a StartDelay time at using Start On Awake. (sec)"
     [FormerlySerializedAs("_StartOnAwakeDelay")]
     public float m_startOnAwakeDelay = 1f;
     // "This flag repeats a shot routine."

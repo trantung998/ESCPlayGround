@@ -23,13 +23,13 @@ public class UbhScore : UbhMonoBehaviour
 
     private void Update()
     {
-        if (m_highScore < m_score)
-        {
-            m_highScore = m_score;
-        }
-
-        m_scoreGUIText.text = m_score.ToString();
-        m_highScoreGUIText.text = HIGH_SCORE_TITLE + m_highScore.ToString();
+//        if (m_highScore < m_score)
+//        {
+//            m_highScore = m_score;
+//        }
+//
+//        m_scoreGUIText.text = m_score.ToString();
+//        m_highScoreGUIText.text = HIGH_SCORE_TITLE + m_highScore.ToString();
     }
 
     public void Initialize()

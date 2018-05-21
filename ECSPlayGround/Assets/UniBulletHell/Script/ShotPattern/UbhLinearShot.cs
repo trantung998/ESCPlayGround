@@ -12,7 +12,7 @@ public class UbhLinearShot : UbhBaseShot
     // "Set a angle of shot. (0 to 360)"
     [Range(0f, 360f), FormerlySerializedAs("_Angle")]
     public float m_angle = 180f;
-    // "Set a delay time between bullet and next bullet. (sec)"
+    // "Set a StartDelay time between bullet and next bullet. (sec)"
     [FormerlySerializedAs("_BetweenDelay")]
     public float m_betweenDelay = 0.1f;
 

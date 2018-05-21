@@ -1,5 +1,5 @@
 /// <Licensing>
-/// © 2011 (Copyright) Path-o-logical Games, LLC
+/// Â© 2011 (Copyright) Path-o-logical Games, LLC
 /// If purchased from the Unity Asset Store, the following license is superseded 
 /// by the Asset Store license.
 /// Licensed under the Unity Asset Package Product License (the "License");
@@ -36,7 +36,7 @@ namespace PathologicalGames
 	
 	        this.OnInspectorGUIFooter();
 	
-	        // Flag Unity to save the changes to to the prefab to disk
+	        // Flag Unity to save the changes to to the Prefab to disk
 			serializedObject.ApplyModifiedProperties();
 	        if (GUI.changed)
 	            EditorUtility.SetDirty(target);

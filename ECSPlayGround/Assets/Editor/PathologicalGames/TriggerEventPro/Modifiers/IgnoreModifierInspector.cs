@@ -120,7 +120,7 @@ public class IgnoreModifierInspector : Editor
 			
         serializedObject.ApplyModifiedProperties();
 			
-        // Flag Unity to save the changes to to the prefab to disk
+        // Flag Unity to save the changes to to the Prefab to disk
 		// 	 This is needed to make the gizmos update immediatly.
         if (GUI.changed)
             EditorUtility.SetDirty(target);

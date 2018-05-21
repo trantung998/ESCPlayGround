@@ -24,10 +24,10 @@ public class UbhRandomShot : UbhBaseShot
     // "BulletSpeed is ignored."
     [FormerlySerializedAs("_RandomSpeedMax")]
     public float m_randomSpeedMax = 3f;
-    // "Set a minimum delay time between bullet and next bullet. (sec)"
+    // "Set a minimum StartDelay time between bullet and next bullet. (sec)"
     [FormerlySerializedAs("_RandomDelayMin")]
     public float m_randomDelayMin = 0.01f;
-    // "Set a maximum delay time between bullet and next bullet. (sec)"
+    // "Set a maximum StartDelay time between bullet and next bullet. (sec)"
     [FormerlySerializedAs("_RandomDelayMax")]
     public float m_randomDelayMax = 0.1f;
     // "Evenly distribute of all bullet angle."

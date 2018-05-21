@@ -116,7 +116,7 @@ public class EventFireControllerInspector : Editor
 			(
 				"Spawn At Transform",
 				"This transform is optionally used as the position at which an EventTrigger " +
-					"prefab is spawned from. Some Utility components may also use this as a " +
+					"Prefab is spawned from. Some Utility components may also use this as a " +
 					"position reference if chosen."
 			);
 			
@@ -247,7 +247,7 @@ public class EventFireControllerInspector : Editor
 			
         serializedObject.ApplyModifiedProperties();
 			
-        // Flag Unity to save the changes to to the prefab to disk
+        // Flag Unity to save the changes to to the Prefab to disk
 		// 	 This is needed to make the gizmos update immediatly.
         if (GUI.changed)
             EditorUtility.SetDirty(target);

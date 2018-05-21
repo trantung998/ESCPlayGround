@@ -47,7 +47,7 @@ public class SpawnPoolInspector : Editor
                                 true
                             );
 
-        // Flag Unity to save the changes to to the prefab to disk
+        // Flag Unity to save the changes to to the Prefab to disk
         if (GUI.changed)
             EditorUtility.SetDirty(target);
     }

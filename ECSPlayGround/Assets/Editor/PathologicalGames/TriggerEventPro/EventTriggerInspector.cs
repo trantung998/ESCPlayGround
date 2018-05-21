@@ -43,7 +43,7 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 		this.areaShape          	 = this.serializedObject.FindProperty("_areaShape");
 		this.debugLevel              = this.serializedObject.FindProperty("debugLevel");
 		this.drawGizmo               = this.serializedObject.FindProperty("drawGizmo");
-		this.duration                = this.serializedObject.FindProperty("duration");
+		this.duration                = this.serializedObject.FindProperty("Duration");
 		this.eventInfoList           = this.serializedObject.FindProperty("_eventInfoList");
 		this.eventTriggerPoolName    = this.serializedObject.FindProperty("eventTriggerPoolName");
 		this.eventTriggerPrefab      = this.serializedObject.FindProperty("eventTriggerPrefab");
@@ -148,7 +148,7 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 		);
 		EditorGUILayout.PropertyField(this.areaHit, content);
 		
-		// To make the gizmo delay work correctly, update the GUI here.
+		// To make the gizmo StartDelay work correctly, update the GUI here.
 		serializedObject.ApplyModifiedProperties();
 
         if (this.areaHit.boolValue)
@@ -277,7 +277,7 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 			content = new GUIContent
 			(
 				"Duration (<0 = stay)", 
-				"An optional duration to control how long this EventTrigger stays active. " +
+				"An optional Duration to control how long this EventTrigger stays active. " +
 				"Each target will only be hit once with the event notification unless the " +
 				"Target leaves and then re-enters range. Set this to -1 to keep it alive " +
 				"forever."
@@ -293,8 +293,8 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 				content = new GUIContent
 				(
 					"Start Range", 
-					"When duration is greater than 0 this can be used have the range change " +
-						"over the course of the duration. This is used for things like a " +
+					"When Duration is greater than 0 this can be used have the range change " +
+						"over the course of the Duration. This is used for things like a " +
 						"chockwave from a large explosion, which grows over time. "
 				);
 				content = EditorGUI.BeginProperty(new Rect(0, 0, 0, 0), content, this.startRange);
@@ -424,7 +424,7 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 			"        be spawned. This is handy for making bombs \n" +
 			"        where only the first Target would trigger the \n" +
 			"        event and only 1 EventTrigger would be spawned\n" +
-			"        to expand over time (using duration and start\n" +
+			"        to expand over time (using Duration and start\n" +
 			"        range attributes).\n" + 
 			"    UseEventTriggerInfo\n" +
 			"        Same as PassInfoToEventTrigger but the new\n" +
@@ -449,9 +449,9 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 			content = new GUIContent
 			(
 				"EventTrigger Prefab",
-				"An optional prefab to instance another EventTrigger. This can be handy if you " +
+				"An optional Prefab to instance another EventTrigger. This can be handy if you " +
 					"want to use a 'one-shot' event trigger to then spawn one that expands over " +
-					"time using the duration and startRange to simulate a huge explosion."
+					"time using the Duration and startRange to simulate a huge explosion."
 
 			);
 			
@@ -552,7 +552,7 @@ public class EventTriggerInspector : AreaTargetTrackerInspector
 			
         serializedObject.ApplyModifiedProperties();
 			
-        // Flag Unity to save the changes to to the prefab to disk
+        // Flag Unity to save the changes to to the Prefab to disk
 		// 	 This is needed to make the gizmos update immediatly.
         if (GUI.changed)
             EditorUtility.SetDirty(target);

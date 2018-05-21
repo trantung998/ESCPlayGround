@@ -15,7 +15,7 @@ public class UbhSpiralShot : UbhBaseShot
     // "Set a shift angle of spiral. (-360 to 360)"
     [Range(-360f, 360f), FormerlySerializedAs("_ShiftAngle")]
     public float m_shiftAngle = 5f;
-    // "Set a delay time between bullet and next bullet. (sec)"
+    // "Set a StartDelay time between bullet and next bullet. (sec)"
     [FormerlySerializedAs("_BetweenDelay")]
     public float m_betweenDelay = 0.2f;
 

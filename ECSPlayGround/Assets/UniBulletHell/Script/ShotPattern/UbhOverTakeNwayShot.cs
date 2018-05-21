@@ -24,7 +24,7 @@ public class UbhOverTakeNwayShot : UbhBaseShot
     // "Set a shift angle between shot and next line shot. (-360 to 360)"
     [Range(-360f, 360f), FormerlySerializedAs("_ShiftAngle")]
     public float m_shiftAngle = 0f;
-    // "Set a delay time between shot and next line shot. (sec)"
+    // "Set a StartDelay time between shot and next line shot. (sec)"
     [FormerlySerializedAs("_NextLineDelay")]
     public float m_nextLineDelay = 0.1f;
 

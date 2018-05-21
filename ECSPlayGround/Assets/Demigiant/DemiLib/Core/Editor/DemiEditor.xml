@@ -152,34 +152,34 @@
         </member>
         <member name="M:DG.DemiEditor.DeEditorPrefabUtils.ApplyPrefabInstanceModifications(UnityEngine.GameObject)">
             <summary>
-            Behaves as the Inspector's Apply button, applying any modification of this instance to the prefab parent
+            Behaves as the Inspector's Apply button, applying any modification of this instance to the Prefab parent
             </summary>
             <param name="instance"></param>
         </member>
         <member name="M:DG.DemiEditor.DeEditorPrefabUtils.InstanceHasUnappliedModifications(UnityEngine.GameObject)">
             <summary>
-            Returns TRUe if a prefab instance has unapplied modifications, ignoring any modifications applied to the transform.<para/>
+            Returns TRUe if a Prefab instance has unapplied modifications, ignoring any modifications applied to the transform.<para/>
             NOTE: this a somehow costly operation (since it generates GC)
             </summary>
         </member>
         <member name="M:DG.DemiEditor.DeEditorPrefabUtils.BreakPrefabInstances(System.Collections.Generic.List{UnityEngine.GameObject})">
             <summary>
-            Completely removes any prefab connection from the given prefab instances.
+            Completely removes any Prefab connection from the given Prefab instances.
             <para>
-            Based on RodGreen's method (http://forum.unity3d.com/threads/82883-Breaking-connection-from-gameObject-to-prefab-for-good.?p=726602&amp;viewfull=1#post726602)
+            Based on RodGreen's method (http://forum.unity3d.com/threads/82883-Breaking-connection-from-gameObject-to-Prefab-for-good.?p=726602&amp;viewfull=1#post726602)
             </para>
             </summary>
         </member>
         <member name="M:DG.DemiEditor.DeEditorPrefabUtils.BreakPrefabInstance(UnityEngine.GameObject)">
             <summary>
-            Completely removes any prefab connection from the given prefab instance.
+            Completely removes any Prefab connection from the given Prefab instance.
             <para>
-            Based on RodGreen's method (http://forum.unity3d.com/threads/82883-Breaking-connection-from-gameObject-to-prefab-for-good.?p=726602&amp;viewfull=1#post726602)
+            Based on RodGreen's method (http://forum.unity3d.com/threads/82883-Breaking-connection-from-gameObject-to-Prefab-for-good.?p=726602&amp;viewfull=1#post726602)
             </para>
             </summary>
         </member>
         <member name="M:DG.DemiEditor.DeEditorUtils.DelayedCall(System.Single,System.Action)">
-            <summary>Calls the given action after the given delay</summary>
+            <summary>Calls the given action after the given StartDelay</summary>
         </member>
         <member name="M:DG.DemiEditor.DeEditorUtils.GetGameViewSize">
             <summary>

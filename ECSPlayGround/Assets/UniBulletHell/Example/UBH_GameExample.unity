@@ -702,7 +702,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 256914334}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9052b4e2537984beeaa80ff68480c4cf, type: 3}
@@ -1040,12 +1040,12 @@ GameObject:
   m_Component:
   - component: {fileID: 638673647}
   m_Layer: 0
-  m_Name: Wave
+  m_Name: MiniWave
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &638673647
 Transform:
   m_ObjectHideFlags: 0
@@ -1976,12 +1976,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveData:
-  - delay: 0.5
-    delayEachEnemy: 0.1
-    duration: 10
-    numberEnemy: 5
-    prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
-    waypoints:
+  - StartDelay: 1
+    DelaySpawnEnemy: 0.3
+    Duration: 5
+    LifeTime: 6
+    NumberEnemy: 10
+    Prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
+    Waypoints:
     - {x: -2.423138, y: 1.724428, z: 0}
     - {x: -2.106345, y: 1.04647, z: 0}
     - {x: -1.370572, y: 0.4896688, z: 0}

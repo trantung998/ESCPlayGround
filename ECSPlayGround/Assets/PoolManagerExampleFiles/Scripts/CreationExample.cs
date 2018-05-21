@@ -10,7 +10,7 @@ using PathologicalGames;
 public class CreationExample : MonoBehaviour 
 {
     /// <summary>
-    /// The prefab to spawn from.
+    /// The Prefab to spawn from.
     /// </summary>
     public Transform testPrefab;
     public string poolName = "Creator";
@@ -34,7 +34,7 @@ public class CreationExample : MonoBehaviour
         this.pool.group.localRotation = Quaternion.identity;
 
         
-        // Create a prefab pool, set culling options but don't need to pre-load any
+        // Create a Prefab pool, set culling options but don't need to pre-load any
         //  If no options are needed, this can be skipped entirely. Just use spawn()
         //  and a PrefabPool will be created automatically with defaults
         PrefabPool prefabPool = new PrefabPool(testPrefab);
@@ -52,8 +52,8 @@ public class CreationExample : MonoBehaviour
 
 
         // NEW EXAMPLE... Preabs[] dict
-        // In the Shapes pool, we know we have a prefab "Cube". This example uses
-        //    just this name to get a reference to the prefab and spawn an instance
+        // In the Shapes pool, we know we have a Prefab "Cube". This example uses
+        //    just this name to get a reference to the Prefab and spawn an instance
         Transform cubePrefab   = PoolManager.Pools["Shapes"].prefabs["Cube"];
         Transform cubeinstance = PoolManager.Pools["Shapes"].Spawn(cubePrefab);
         cubeinstance.name = "Cube (Spawned By CreationExample.cs)"; // So we can see it.
