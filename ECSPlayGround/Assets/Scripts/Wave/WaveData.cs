@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using DefaultNamespace;
 using DG.Tweening;
 using MEC;
 using PathologicalGames;
@@ -26,7 +27,6 @@ public class WaveData : MonoBehaviour
                 Timing.RunCoroutine(SpawnMiniwave(miniWaveList[i]));
             }
         }
-
     }
     
     private void SetupPool(SpawnPool pool)
@@ -50,11 +50,19 @@ public class WaveData : MonoBehaviour
         for (int i = 0; i < miniWaveData.NumberEnemy; i++)
         {
             var enemy = pool.Spawn(miniWaveData.Prefab, pool.transform);
-            enemy.DOPath(miniWaveData.MovePath.GetDrawPoints(), miniWaveData.Duration, PathType.CatmullRom, PathMode.TopDown2D)
+            var enemyMove = enemy.DOPath(miniWaveData.MovePath.GetDrawPoints(), miniWaveData.Duration, PathType.CatmullRom, PathMode.TopDown2D)
                 .SetLookAt(0.01f, enemy.forward, - enemy.right);
             if (miniWaveData.Type == WaveType.AutoDestroyEnenmy)
             {
                 pool.Despawn(enemy, miniWaveData.LifeTime);
+            }
+
+            if (miniWaveData.Type == WaveType.KeepEnemyOnScreen)
+            {
+                enemyMove.OnComplete(() =>
+                {
+                    enemy.GetComponent<EnemyMove>().MoveToNextPoint();
+                });
             }
             yield return Timing.WaitForSeconds(miniWaveData.DelaySpawnEnemy);
         }
