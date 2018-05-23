@@ -33,17 +33,19 @@ public class UbhPlayer : UbhMonoBehaviour
 
     private void Update()
     {
-        if (UbhUtil.IsMobilePlatform())
-        {
-            TouchMove();
-#if UNITY_EDITOR
-            KeyMove();
-#endif
-        }
-        else
-        {
-            KeyMove();
-        }
+        TouchMove();
+        
+//        if (UbhUtil.IsMobilePlatform())
+//        {
+//
+//#if UNITY_EDITOR
+//            KeyMove();
+//#endif
+//        }
+//        else
+//        {
+//            KeyMove();
+//        }
     }
 
     private void KeyMove()

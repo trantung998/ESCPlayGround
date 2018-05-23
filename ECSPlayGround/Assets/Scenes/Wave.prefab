@@ -1,0 +1,796 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1576745391053654}
+  m_IsPrefabParent: 1
+--- !u!1 &1035061632113764
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4665013501813876}
+  - component: {fileID: 114609016440017238}
+  - component: {fileID: 114987727633593274}
+  m_Layer: 0
+  m_Name: MiniWave2
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1133515895160772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4901995258441704}
+  - component: {fileID: 114614720356689222}
+  - component: {fileID: 114174821227856852}
+  m_Layer: 0
+  m_Name: MiniWave1
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1576745391053654
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4280226523906376}
+  - component: {fileID: 114443822603084894}
+  m_Layer: 0
+  m_Name: Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4280226523906376
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576745391053654}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4901995258441704}
+  - {fileID: 4665013501813876}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4665013501813876
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035061632113764}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 3.63, y: 3.04, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4280226523906376}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4901995258441704
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133515895160772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.77, y: 2.18, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4280226523906376}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114174821227856852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133515895160772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay: 0
+  duration: 15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loops: 1
+  id: 
+  loopType: 0
+  orientType: 1
+  lookAtTransform: {fileID: 0}
+  lookAtPosition: {x: 0, y: 0, z: 0}
+  lookAhead: 0.01
+  autoPlay: 0
+  autoKill: 0
+  relative: 1
+  isLocal: 0
+  isClosedPath: 0
+  pathResolution: 10
+  pathMode: 2
+  lockRotation: 0
+  assignForwardAndUp: 0
+  forwardDirection: {x: 0, y: 0, z: 1}
+  upDirection: {x: 0, y: 1, z: 0}
+  tweenRigidbody: 0
+  wps:
+  - {x: -3.8039494, y: 0.9792458, z: -0.078125}
+  - {x: 0.7073269, y: -1.4935865, z: -0.078125}
+  - {x: 2.6808414, y: 1.4540852, z: 0}
+  - {x: 0.99677515, y: 2.8984547, z: 0}
+  - {x: -2.6770337, y: 0.58318555, z: 0}
+  - {x: -2.112527, y: 2.7459722, z: 0}
+  - {x: 1.1710539, y: 3.6170845, z: 0}
+  - {x: 3.9962554, y: 2.5470521, z: 0}
+  fullWps: []
+  path:
+    wpLengths:
+    - 0
+    - 1.4253111
+    - 5.2055497
+    - 3.7418356
+    - 2.4954503
+    - 4.3662696
+    - 2.4919887
+    - 3.4433591
+    - 3.042238
+    type: 1
+    subdivisionsXSegment: 10
+    subdivisions: 90
+    wps:
+    - {x: -3.77, y: 2.18, z: 0}
+    - {x: -3.8039494, y: 0.9792458, z: -0.078125}
+    - {x: 0.7073269, y: -1.4935865, z: -0.078125}
+    - {x: 2.6808414, y: 1.4540852, z: 0}
+    - {x: 0.99677515, y: 2.8984547, z: 0}
+    - {x: -2.6770337, y: 0.58318555, z: 0}
+    - {x: -2.112527, y: 2.7459722, z: 0}
+    - {x: 1.1710539, y: 3.6170845, z: 0}
+    - {x: 3.9962554, y: 2.5470521, z: 0}
+    controlPoints:
+    - a: {x: -3.8039494, y: 0.9792458, z: -0.078125}
+      b: {x: 0, y: 0, z: 0}
+    - a: {x: 6.821457, y: 1.4770198, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    length: 26.216902
+    isFinalized: 1
+    timesTable:
+    - 0.011111111
+    - 0.022222223
+    - 0.033333335
+    - 0.044444446
+    - 0.055555556
+    - 0.06666667
+    - 0.07777778
+    - 0.08888889
+    - 0.1
+    - 0.11111111
+    - 0.12222222
+    - 0.13333334
+    - 0.14444445
+    - 0.15555556
+    - 0.16666667
+    - 0.17777778
+    - 0.18888889
+    - 0.2
+    - 0.21111111
+    - 0.22222222
+    - 0.23333333
+    - 0.24444444
+    - 0.25555557
+    - 0.26666668
+    - 0.2777778
+    - 0.2888889
+    - 0.3
+    - 0.31111112
+    - 0.32222223
+    - 0.33333334
+    - 0.34444445
+    - 0.35555556
+    - 0.36666667
+    - 0.37777779
+    - 0.3888889
+    - 0.4
+    - 0.41111112
+    - 0.42222223
+    - 0.43333334
+    - 0.44444445
+    - 0.45555556
+    - 0.46666667
+    - 0.47777778
+    - 0.4888889
+    - 0.5
+    - 0.51111114
+    - 0.5222222
+    - 0.53333336
+    - 0.54444444
+    - 0.5555556
+    - 0.56666666
+    - 0.5777778
+    - 0.5888889
+    - 0.6
+    - 0.6111111
+    - 0.62222224
+    - 0.6333333
+    - 0.64444447
+    - 0.65555555
+    - 0.6666667
+    - 0.67777777
+    - 0.6888889
+    - 0.7
+    - 0.7111111
+    - 0.72222227
+    - 0.73333335
+    - 0.7444445
+    - 0.75555557
+    - 0.7666667
+    - 0.7777778
+    - 0.78888893
+    - 0.8
+    - 0.81111115
+    - 0.82222223
+    - 0.8333334
+    - 0.84444445
+    - 0.8555556
+    - 0.8666667
+    - 0.8777778
+    - 0.8888889
+    - 0.90000004
+    - 0.9111111
+    - 0.92222226
+    - 0.93333334
+    - 0.9444445
+    - 0.95555556
+    - 0.9666667
+    - 0.9777778
+    - 0.9888889
+    - 1
+    lengthsTable:
+    - 0.021691086
+    - 0.08077847
+    - 0.16860297
+    - 0.27712095
+    - 0.39928013
+    - 0.52965575
+    - 0.6654792
+    - 0.8080374
+    - 0.963838
+    - 1.1442674
+    - 1.3634068
+    - 1.6488392
+    - 2.0283074
+    - 2.4833503
+    - 2.993791
+    - 3.5395548
+    - 4.1007347
+    - 4.6576962
+    - 5.191272
+    - 5.6831384
+    - 6.1166697
+    - 6.479067
+    - 6.7758107
+    - 7.0729923
+    - 7.39377
+    - 7.741291
+    - 8.111196
+    - 8.494966
+    - 8.881797
+    - 9.259599
+    - 9.615558
+    - 9.9365015
+    - 10.209248
+    - 10.423494
+    - 10.6224165
+    - 10.828116
+    - 11.041177
+    - 11.260795
+    - 11.4854
+    - 11.713162
+    - 11.94242
+    - 12.172098
+    - 12.402138
+    - 12.633935
+    - 12.8707285
+    - 13.151738
+    - 13.50999
+    - 13.9313345
+    - 14.397401
+    - 14.8882675
+    - 15.383341
+    - 15.861765
+    - 16.302649
+    - 16.685364
+    - 16.990164
+    - 17.200552
+    - 17.329288
+    - 17.44836
+    - 17.599075
+    - 17.790884
+    - 18.019428
+    - 18.275978
+    - 18.55033
+    - 18.83186
+    - 19.110086
+    - 19.375206
+    - 19.618956
+    - 19.843985
+    - 20.093863
+    - 20.37248
+    - 20.674936
+    - 20.995655
+    - 21.328712
+    - 21.667986
+    - 22.007267
+    - 22.340332
+    - 22.66102
+    - 22.963326
+    - 23.242243
+    - 23.510366
+    - 23.776686
+    - 24.043482
+    - 24.311998
+    - 24.582615
+    - 24.855082
+    - 25.12871
+    - 25.402582
+    - 25.675734
+    - 25.94734
+    - 26.216902
+  inspectorMode: 0
+  pathType: 1
+  handlesType: 0
+  livePreview: 1
+  handlesDrawMode: 0
+  perspectiveHandleSize: 0.5
+  showIndexes: 1
+  showWpLength: 0
+  pathColor: {r: 1, g: 1, b: 1, a: 0.5}
+  lastSrcPosition: {x: -3.77, y: 2.18, z: 0}
+  wpsDropdown: 1
+  dropToFloorOffset: 0
+--- !u!114 &114443822603084894
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1576745391053654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b63236a93d014257823665a643807fc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  index: 0
+  autoNextWave: 0
+  startDelay: 1
+  miniWaveList:
+  - {fileID: 114614720356689222}
+  - {fileID: 114609016440017238}
+--- !u!114 &114609016440017238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035061632113764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b527ad7c361be44899c2d062bdb339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  StartDelay: 0.5
+  DelaySpawnEnemy: 0.5
+  Duration: 7
+  LifeTime: 8
+  NumberEnemy: 10
+  Prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
+  MovePath: {fileID: 114987727633593274}
+--- !u!114 &114614720356689222
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133515895160772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b527ad7c361be44899c2d062bdb339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 2
+  StartDelay: 0.5
+  DelaySpawnEnemy: 0.5
+  Duration: 7
+  LifeTime: 8
+  NumberEnemy: 10
+  Prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
+  MovePath: {fileID: 114174821227856852}
+--- !u!114 &114987727633593274
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1035061632113764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay: 0
+  duration: 15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loops: 1
+  id: 
+  loopType: 0
+  orientType: 1
+  lookAtTransform: {fileID: 0}
+  lookAtPosition: {x: 0, y: 0, z: 0}
+  lookAhead: 0.01
+  autoPlay: 0
+  autoKill: 0
+  relative: 1
+  isLocal: 0
+  isClosedPath: 0
+  pathResolution: 10
+  pathMode: 2
+  lockRotation: 0
+  assignForwardAndUp: 0
+  forwardDirection: {x: 0, y: 0, z: 1}
+  upDirection: {x: 0, y: 1, z: 0}
+  tweenRigidbody: 0
+  wps:
+  - {x: 3.6880884, y: 3.10487, z: 0}
+  - {x: 1.1518539, y: 2.8848696, z: 0}
+  - {x: -1.3979115, y: 2.5587976, z: 0}
+  - {x: -3.5453758, y: 1.1029611, z: 0}
+  - {x: -2.4162595, y: -0.3898901, z: 0}
+  - {x: 0.42399967, y: -1.0136111, z: 0}
+  - {x: 3.8614607, y: -0.7431399, z: 0}
+  fullWps: []
+  path:
+    wpLengths:
+    - 0
+    - 0.40813404
+    - 2.5458832
+    - 2.5798275
+    - 2.6403835
+    - 1.9973643
+    - 2.9265764
+    - 3.4515877
+    type: 1
+    subdivisionsXSegment: 10
+    subdivisions: 80
+    wps:
+    - {x: 3.63, y: 3.04, z: 0}
+    - {x: 3.6880884, y: 3.10487, z: 0}
+    - {x: 1.1518539, y: 2.8848696, z: 0}
+    - {x: -1.3979115, y: 2.5587976, z: 0}
+    - {x: -3.5453758, y: 1.1029611, z: 0}
+    - {x: -2.4162595, y: -0.3898901, z: 0}
+    - {x: 0.42399967, y: -1.0136111, z: 0}
+    - {x: 3.8614607, y: -0.7431399, z: 0}
+    controlPoints:
+    - a: {x: 3.6880884, y: 3.10487, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    - a: {x: 7.2989216, y: -0.47266877, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    length: 16.55076
+    isFinalized: 1
+    timesTable:
+    - 0.0125
+    - 0.025
+    - 0.0375
+    - 0.05
+    - 0.0625
+    - 0.075
+    - 0.0875
+    - 0.1
+    - 0.112500004
+    - 0.125
+    - 0.1375
+    - 0.15
+    - 0.16250001
+    - 0.175
+    - 0.1875
+    - 0.2
+    - 0.2125
+    - 0.22500001
+    - 0.2375
+    - 0.25
+    - 0.26250002
+    - 0.275
+    - 0.2875
+    - 0.3
+    - 0.3125
+    - 0.32500002
+    - 0.3375
+    - 0.35
+    - 0.3625
+    - 0.375
+    - 0.38750002
+    - 0.4
+    - 0.4125
+    - 0.425
+    - 0.4375
+    - 0.45000002
+    - 0.4625
+    - 0.475
+    - 0.4875
+    - 0.5
+    - 0.5125
+    - 0.52500004
+    - 0.5375
+    - 0.55
+    - 0.5625
+    - 0.575
+    - 0.58750004
+    - 0.6
+    - 0.6125
+    - 0.625
+    - 0.6375
+    - 0.65000004
+    - 0.6625
+    - 0.675
+    - 0.6875
+    - 0.7
+    - 0.71250004
+    - 0.725
+    - 0.7375
+    - 0.75
+    - 0.7625
+    - 0.77500004
+    - 0.7875
+    - 0.8
+    - 0.8125
+    - 0.825
+    - 0.83750004
+    - 0.85
+    - 0.8625
+    - 0.875
+    - 0.8875
+    - 0.90000004
+    - 0.9125
+    - 0.925
+    - 0.9375
+    - 0.95
+    - 0.96250004
+    - 0.975
+    - 0.9875
+    - 1
+    lengthsTable:
+    - 0.010101981
+    - 0.036737725
+    - 0.074404106
+    - 0.11760318
+    - 0.16084883
+    - 0.19868307
+    - 0.2257535
+    - 0.2375612
+    - 0.25165352
+    - 0.2921483
+    - 0.36546212
+    - 0.4767422
+    - 0.62478346
+    - 0.8044294
+    - 1.0104836
+    - 1.2377489
+    - 1.4810272
+    - 1.7351224
+    - 1.9948367
+    - 2.2549748
+    - 2.5103414
+    - 2.7557428
+    - 2.986216
+    - 3.211514
+    - 3.4387739
+    - 3.6673684
+    - 3.8965921
+    - 4.125725
+    - 4.3540874
+    - 4.5811005
+    - 4.8063507
+    - 5.029656
+    - 5.25114
+    - 5.471312
+    - 5.69679
+    - 5.9408426
+    - 6.1985803
+    - 6.464118
+    - 6.731602
+    - 6.9952517
+    - 7.24942
+    - 7.488687
+    - 7.708025
+    - 7.9031463
+    - 8.071236
+    - 8.213407
+    - 8.348463
+    - 8.488359
+    - 8.637722
+    - 8.798522
+    - 8.970845
+    - 9.153565
+    - 9.344799
+    - 9.542199
+    - 9.7431345
+    - 9.944809
+    - 10.144353
+    - 10.346974
+    - 10.564607
+    - 10.796193
+    - 11.0402
+    - 11.294922
+    - 11.558529
+    - 11.829114
+    - 12.104708
+    - 12.383302
+    - 12.662858
+    - 12.941318
+    - 13.217795
+    - 13.500392
+    - 13.790494
+    - 14.087209
+    - 14.389458
+    - 14.696034
+    - 15.005635
+    - 15.316898
+    - 15.628429
+    - 15.9388275
+    - 16.246714
+    - 16.55076
+  inspectorMode: 0
+  pathType: 1
+  handlesType: 0
+  livePreview: 1
+  handlesDrawMode: 0
+  perspectiveHandleSize: 0.5
+  showIndexes: 1
+  showWpLength: 0
+  pathColor: {r: 1, g: 1, b: 1, a: 0.5}
+  lastSrcPosition: {x: 3.63, y: 3.04, z: 0}
+  wpsDropdown: 1
+  dropToFloorOffset: 0

@@ -15,7 +15,24 @@ namespace UniBulletHell.Example.Script.Wave
         private void Start()
         {
             enemyPool = PoolManager.Pools.Create("Enemies");
-            
+            SetupPoolData();
+            StartWaves();
+        }
+
+        private void SetupPoolData()
+        {
+            foreach (var data in waveData)
+            {
+                data.SetupPool(enemyPool);
+            }
+        }
+
+        private void StartWaves()
+        {
+            foreach (var data in waveData)
+            {
+                data.StartWave();
+            }
         }
     }
 }

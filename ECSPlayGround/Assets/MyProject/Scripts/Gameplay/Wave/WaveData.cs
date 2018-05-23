@@ -17,11 +17,10 @@ public class WaveData : MonoBehaviour
 
     private SpawnPool pool;
 
-    public void StartWave(SpawnPool pool)
+    public void StartWave()
     {
         if (miniWaveList != null)
         {
-            SetupPool(pool);
             for (var i = 0; i < miniWaveList.Count; i++)
             {
                 Timing.RunCoroutine(SpawnMiniwave(miniWaveList[i]));
@@ -29,14 +28,17 @@ public class WaveData : MonoBehaviour
         }
     }
     
-    private void SetupPool(SpawnPool pool)
+    public void SetupPool(SpawnPool pool)
     {
         PrefabPool prefabPool = null;
         foreach (var miniWaveData in miniWaveList)
         {
-            prefabPool = new PrefabPool(miniWaveData.Prefab.transform);
-            prefabPool.preloadAmount = miniWaveData.NumberEnemy;            
-            pool.CreatePrefabPool(prefabPool);            
+            if (pool.GetPrefabPool(miniWaveData.Prefab.transform) == null)
+            {
+                prefabPool = new PrefabPool(miniWaveData.Prefab.transform);
+                prefabPool.preloadAmount = miniWaveData.NumberEnemy;            
+                pool.CreatePrefabPool(prefabPool); 
+            }
         }
         this.pool = pool;
     }
@@ -50,7 +52,9 @@ public class WaveData : MonoBehaviour
         for (int i = 0; i < miniWaveData.NumberEnemy; i++)
         {
             var enemy = pool.Spawn(miniWaveData.Prefab, pool.transform);
-            var enemyMove = enemy.DOPath(miniWaveData.MovePath.GetDrawPoints(), miniWaveData.Duration, PathType.CatmullRom, PathMode.TopDown2D)
+            var points = miniWaveData.MovePath.wps.ToArray();
+            enemy.position = points[0];
+            var enemyMove = enemy.DOPath(points, miniWaveData.Duration, PathType.CatmullRom, PathMode.TopDown2D)
                 .SetLookAt(0.01f, enemy.forward, - enemy.right);
             if (miniWaveData.Type == WaveType.AutoDestroyEnenmy)
             {

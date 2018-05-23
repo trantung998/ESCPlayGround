@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 
+/// <inheritdoc />
 /// <summary>
 /// Ubh bullet.
 /// </summary>
@@ -25,8 +26,6 @@ public class UbhBullet : UbhMonoBehaviour
 
     private UbhTentacleBullet m_tentacleBullet;
 
-    private Rigidbody2D rigidbody2D;
-
     public float Angle
     {
         get { return m_angle; }
@@ -46,7 +45,7 @@ public class UbhBullet : UbhMonoBehaviour
         }
     }
 
-    public bool shooting
+    public bool Shooting
     {
         get;
         private set;
@@ -55,14 +54,13 @@ public class UbhBullet : UbhMonoBehaviour
     private void Awake()
     {
         m_tentacleBullet = GetComponent<UbhTentacleBullet>();
-        rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
     private void OnDisable()
     {
         transform.ResetPosition();
         transform.ResetRotation();
-        shooting = false;
+        Shooting = false;
     }
 
     /// <summary>
@@ -73,11 +71,11 @@ public class UbhBullet : UbhMonoBehaviour
                       bool wave, float waveSpeed, float waveRangeSize,
                       bool pauseAndResume, float pauseTime, float resumeTime, UbhUtil.AXIS axisMove)
     {
-        if (shooting)
+        if (Shooting)
         {
             return;
         }
-        shooting = true;
+        Shooting = true;
 
         m_speed = speed;
         m_angle = angle;
@@ -114,7 +112,7 @@ public class UbhBullet : UbhMonoBehaviour
     /// </summary>
     public void UpdateMove()
     {
-        if (shooting == false)
+        if (Shooting == false)
         {
             return;
         }

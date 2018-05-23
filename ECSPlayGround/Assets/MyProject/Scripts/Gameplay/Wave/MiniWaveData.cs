@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using DG.Tweening;
-using DG.Tweening.Plugins.Core.PathCore;
 using UnityEngine;
 
 [Serializable]
