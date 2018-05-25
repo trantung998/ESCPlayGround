@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GamePlayManager : MonoBehaviour {
+public class GamePlayManager : MonoBehaviour 
+{
 
 	// Use this for initialization
 	void Start () {

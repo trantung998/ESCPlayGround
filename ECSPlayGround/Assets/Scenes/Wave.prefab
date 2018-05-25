@@ -28,6 +28,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1067101675151496
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4252123181811012}
+  - component: {fileID: 114621502767325936}
+  - component: {fileID: 114611774679432840}
+  m_Layer: 0
+  m_Name: MiniWave3
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1133515895160772
 GameObject:
   m_ObjectHideFlags: 0
@@ -61,6 +78,49 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1932007793818598
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4276786281105306}
+  - component: {fileID: 114665144376652064}
+  - component: {fileID: 114700842041564220}
+  m_Layer: 0
+  m_Name: Boss Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4252123181811012
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067101675151496}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.03, y: 5.61, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4280226523906376}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4276786281105306
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932007793818598}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.59, y: 7.59, z: 0}
+  m_LocalScale: {x: 0, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4280226523906376}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4280226523906376
 Transform:
   m_ObjectHideFlags: 1
@@ -73,6 +133,8 @@ Transform:
   m_Children:
   - {fileID: 4901995258441704}
   - {fileID: 4665013501813876}
+  - {fileID: 4252123181811012}
+  - {fileID: 4276786281105306}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -449,6 +511,8 @@ MonoBehaviour:
   miniWaveList:
   - {fileID: 114614720356689222}
   - {fileID: 114609016440017238}
+  - {fileID: 114621502767325936}
+  - {fileID: 114665144376652064}
 --- !u!114 &114609016440017238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -468,6 +532,221 @@ MonoBehaviour:
   NumberEnemy: 10
   Prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
   MovePath: {fileID: 114987727633593274}
+--- !u!114 &114611774679432840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067101675151496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay: 0
+  duration: 15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loops: 1
+  id: 
+  loopType: 0
+  orientType: 1
+  lookAtTransform: {fileID: 0}
+  lookAtPosition: {x: 0, y: 0, z: 0}
+  lookAhead: 0.01
+  autoPlay: 0
+  autoKill: 0
+  relative: 0
+  isLocal: 0
+  isClosedPath: 0
+  pathResolution: 10
+  pathMode: 2
+  lockRotation: 0
+  assignForwardAndUp: 0
+  forwardDirection: {x: 0, y: 0, z: 1}
+  upDirection: {x: 0, y: 1, z: 0}
+  tweenRigidbody: 0
+  wps:
+  - {x: -4.422328, y: 2.2528331, z: 0}
+  - {x: 4.2834344, y: 1.9866447, z: 0}
+  - {x: -4.281666, y: -1.6612294, z: 0}
+  fullWps: []
+  path:
+    wpLengths:
+    - 0
+    - 4.445545
+    - 8.779579
+    - 9.365776
+    type: 1
+    subdivisionsXSegment: 10
+    subdivisions: 40
+    wps:
+    - {x: -2.03, y: 5.61, z: 0}
+    - {x: -4.422328, y: 2.2528331, z: 0}
+    - {x: 4.2834344, y: 1.9866447, z: 0}
+    - {x: -4.281666, y: -1.6612294, z: 0}
+    controlPoints:
+    - a: {x: -4.422328, y: 2.2528331, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    - a: {x: -12.8467655, y: -5.3091035, z: 0}
+      b: {x: 0, y: 0, z: 0}
+    length: 22.605946
+    isFinalized: 1
+    timesTable:
+    - 0.025
+    - 0.05
+    - 0.075
+    - 0.1
+    - 0.125
+    - 0.15
+    - 0.175
+    - 0.2
+    - 0.22500001
+    - 0.25
+    - 0.275
+    - 0.3
+    - 0.32500002
+    - 0.35
+    - 0.375
+    - 0.4
+    - 0.425
+    - 0.45000002
+    - 0.475
+    - 0.5
+    - 0.52500004
+    - 0.55
+    - 0.575
+    - 0.6
+    - 0.625
+    - 0.65000004
+    - 0.675
+    - 0.7
+    - 0.725
+    - 0.75
+    - 0.77500004
+    - 0.8
+    - 0.825
+    - 0.85
+    - 0.875
+    - 0.90000004
+    - 0.925
+    - 0.95
+    - 0.975
+    - 1
+    lengthsTable:
+    - 0.07050712
+    - 0.26641852
+    - 0.5643661
+    - 0.94106555
+    - 1.3733566
+    - 1.8382702
+    - 2.3131523
+    - 2.7758954
+    - 3.2054267
+    - 3.5828638
+    - 3.8946521
+    - 4.1422434
+    - 4.367233
+    - 4.671593
+    - 5.1480193
+    - 5.7812014
+    - 6.539477
+    - 7.38824
+    - 8.291863
+    - 9.214309
+    - 10.119374
+    - 10.9708605
+    - 11.732758
+    - 12.369602
+    - 12.847584
+    - 13.14
+    - 13.285756
+    - 13.516427
+    - 13.89312
+    - 14.407648
+    - 15.041861
+    - 15.775217
+    - 16.586355
+    - 17.453558
+    - 18.354939
+    - 19.268534
+    - 20.172356
+    - 21.044437
+    - 21.862883
+    - 22.605946
+  inspectorMode: 0
+  pathType: 1
+  handlesType: 0
+  livePreview: 1
+  handlesDrawMode: 0
+  perspectiveHandleSize: 0.5
+  showIndexes: 1
+  showWpLength: 0
+  pathColor: {r: 1, g: 1, b: 1, a: 0.5}
+  lastSrcPosition: {x: -2.03, y: 5.61, z: 0}
+  wpsDropdown: 1
+  dropToFloorOffset: 0
 --- !u!114 &114614720356689222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -480,13 +759,212 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
-  StartDelay: 0.5
+  StartDelay: 5
   DelaySpawnEnemy: 0.5
   Duration: 7
   LifeTime: 8
   NumberEnemy: 10
   Prefab: {fileID: 1575994512434062, guid: 347549b519511ba42af130ba9acf12bd, type: 2}
   MovePath: {fileID: 114174821227856852}
+--- !u!114 &114621502767325936
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1067101675151496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b527ad7c361be44899c2d062bdb339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  StartDelay: 10
+  DelaySpawnEnemy: 0
+  Duration: 5
+  LifeTime: 8
+  NumberEnemy: 2
+  Prefab: {fileID: 1691956479407500, guid: 4c9348e599496594cbb0610e915cad0a, type: 2}
+  MovePath: {fileID: 114611774679432840}
+--- !u!114 &114665144376652064
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932007793818598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b527ad7c361be44899c2d062bdb339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Type: 3
+  StartDelay: 15
+  DelaySpawnEnemy: 0
+  Duration: 5
+  LifeTime: 8
+  NumberEnemy: 2
+  Prefab: {fileID: 1691956479407500, guid: 3c7f58c894b1c8f408ba58c66ec35094, type: 2}
+  MovePath: {fileID: 114700842041564220}
+--- !u!114 &114700842041564220
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1932007793818598}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -333801856, guid: aa0b1eebb5db27a419fa4564bbe5c9c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  updateType: 0
+  isSpeedBased: 0
+  hasOnStart: 0
+  hasOnPlay: 0
+  hasOnUpdate: 0
+  hasOnStepComplete: 0
+  hasOnComplete: 0
+  hasOnTweenCreated: 0
+  hasOnRewind: 0
+  onStart:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onPlay:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onUpdate:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onStepComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onComplete:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onTweenCreated:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  onRewind:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+  delay: 0
+  duration: 15
+  easeType: 6
+  easeCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  loops: 1
+  id: 
+  loopType: 0
+  orientType: 1
+  lookAtTransform: {fileID: 0}
+  lookAtPosition: {x: 0, y: 0, z: 0}
+  lookAhead: 0.01
+  autoPlay: 0
+  autoKill: 0
+  relative: 0
+  isLocal: 0
+  isClosedPath: 0
+  pathResolution: 10
+  pathMode: 2
+  lockRotation: 0
+  assignForwardAndUp: 0
+  forwardDirection: {x: 0, y: 0, z: 1}
+  upDirection: {x: 0, y: 1, z: 0}
+  tweenRigidbody: 0
+  wps:
+  - {x: -0.6845627, y: 6.618795, z: 0}
+  - {x: -0.23957649, y: 3.4314954, z: 0}
+  fullWps: []
+  path:
+    wpLengths:
+    - 0
+    - 0.97579795
+    - 3.2182124
+    type: 0
+    subdivisionsXSegment: 10
+    subdivisions: 30
+    wps:
+    - {x: -0.59, y: 7.59, z: 0}
+    - {x: -0.6845627, y: 6.618795, z: 0}
+    - {x: -0.23957649, y: 3.4314954, z: 0}
+    controlPoints: []
+    length: 4.1940103
+    isFinalized: 1
+    timesTable:
+    - 0
+    - 0.23266466
+    - 1
+    lengthsTable:
+    - 0.06362457
+    - 0.24230692
+    - 0.5178393
+    - 0.8721458
+    - 1.2873344
+    - 1.7457787
+    - 2.230241
+    - 2.7240837
+    - 3.2116246
+    - 3.6787934
+    - 4.1143622
+    - 4.512363
+    - 4.876619
+    - 5.2273817
+    - 5.6042604
+    - 6.056159
+    - 6.597643
+    - 7.224505
+    - 7.9289045
+    - 8.701235
+    - 9.53096
+    - 10.40701
+    - 11.31801
+    - 12.252396
+    - 13.198496
+    - 14.144597
+    - 15.078981
+    - 15.989981
+    - 16.866032
+    - 17.695755
+  inspectorMode: 0
+  pathType: 0
+  handlesType: 0
+  livePreview: 1
+  handlesDrawMode: 0
+  perspectiveHandleSize: 0.5
+  showIndexes: 1
+  showWpLength: 0
+  pathColor: {r: 1, g: 1, b: 1, a: 0.5}
+  lastSrcPosition: {x: -0.59, y: 7.59, z: 0}
+  wpsDropdown: 1
+  dropToFloorOffset: 0
 --- !u!114 &114987727633593274
 MonoBehaviour:
   m_ObjectHideFlags: 1
