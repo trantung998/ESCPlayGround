@@ -1,4 +1,6 @@
-﻿public enum AttributeId
+﻿using System.Collections.Generic;
+
+public enum AttributeId
 {
     None,
     Damage,
