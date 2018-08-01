@@ -15,3 +15,10 @@ public class PlayerInputComponent : IComponent
 public class DestroyPlayerInputComponent : IComponent
 {
 }
+
+[Input]
+
+public class CharacterMoveCommandComponent : IComponent
+{
+    public Vector3 Position;
+}

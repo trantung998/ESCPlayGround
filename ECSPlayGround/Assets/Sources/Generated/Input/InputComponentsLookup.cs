@@ -8,17 +8,20 @@
 //------------------------------------------------------------------------------
 public static class InputComponentsLookup {
 
-    public const int DestroyPlayerInput = 0;
-    public const int PlayerInput = 1;
+    public const int CharacterMoveCommand = 0;
+    public const int DestroyPlayerInput = 1;
+    public const int PlayerInput = 2;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
+        "CharacterMoveCommand",
         "DestroyPlayerInput",
         "PlayerInput"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(CharacterMoveCommandComponent),
         typeof(DestroyPlayerInputComponent),
         typeof(PlayerInputComponent)
     };

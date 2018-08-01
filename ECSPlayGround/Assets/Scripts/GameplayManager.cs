@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class GameplayManager : MonoBehaviour
 {
-    private Systems systems;
+    private Entitas.Systems systems;
 
     private Services services;
 
@@ -37,7 +37,7 @@ public class GameplayManager : MonoBehaviour
         systems.TearDown();
     }
 
-    private Systems CreateSystems(Contexts contexts)
+    private Entitas.Systems CreateSystems(Contexts contexts)
     {
         return new Feature("Systems")
             .Add(new InputExeSystem(contexts));

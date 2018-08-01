@@ -15,7 +15,7 @@ public class ServiceRegistrationSystems : Feature
         Add(new RegConfigurationServiceSystem(contexts.meta, services.GameConfig));
     }
 
-    public sealed override Systems Add(ISystem system)
+    public sealed override Entitas.Systems Add(ISystem system)
     {
         return base.Add(system);
     }

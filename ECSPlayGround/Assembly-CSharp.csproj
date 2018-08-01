@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <LangVersion>4</LangVersion>
@@ -61,6 +61,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaConfigurationServiceComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaInputServiceComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaPoolServiceComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaViewServiceComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterIdComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterTypeComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterStateComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputPlayerInputComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputDestroyPlayerInputComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputCharacterMoveCommandComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\MetaComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\MetaAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\MetaContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\MetaMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Contexts.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Meta\MetaEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Feature.cs" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\Scripts\Components\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Configs\PlayerMovementConfigs.cs" />
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
@@ -85,29 +115,6 @@
     <Compile Include="Assets\Scripts\Services\View\IViewService.cs" />
     <Compile Include="Assets\Scripts\Services\View\RegViewServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\View\UnityViewService.cs" />
-    <Compile Include="Assets\Sources\Generated\Contexts.cs" />
-    <Compile Include="Assets\Sources\Generated\Feature.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\Components\InputDestroyPlayerInputComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\Components\InputPlayerInputComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaConfigurationServiceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaInputServiceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaPoolServiceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\Components\MetaViewServiceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\MetaAttribute.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\MetaComponentsLookup.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\MetaContext.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\MetaEntity.cs" />
-    <Compile Include="Assets\Sources\Generated\Meta\MetaMatcher.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/Unity/Projects/JobSystemPlayground/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
