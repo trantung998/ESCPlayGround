@@ -19,14 +19,19 @@ public enum CharacterState
 [Game]
 public class CharacterIdComponent : IComponent
 {
-    [EntityIndex]
-    public string value;
+    [EntityIndex] public string value;
 }
 
 [Game]
 public class CharacterPositionComponent : IComponent
 {
     public Vector3 value;
+}
+
+[Game]
+public class CharacterMoveSpeed : IComponent
+{
+    public float value;
 }
 
 [Game]
@@ -38,5 +43,5 @@ public class CharacterTypeComponent : IComponent
 [Game]
 public class CharacterStateComponent : IComponent
 {
-    public CharacterState Position;
+    public CharacterState value;
 }

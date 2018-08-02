@@ -10,6 +10,7 @@ public class Services
     public readonly IViewService View;
     public readonly IPoolService Pool;
     public readonly IConfigurationService GameConfig;
+    public readonly ICameraService Camera;
 
     public Services(IInputService input, IViewService view, IPoolService pool)
     {
@@ -24,5 +25,14 @@ public class Services
         View = view;
         Pool = pool;
         GameConfig = gameConfig;
+    }
+
+    public Services(IInputService input, IViewService view, IPoolService pool, IConfigurationService gameConfig, ICameraService camera)
+    {
+        Input = input;
+        View = view;
+        Pool = pool;
+        GameConfig = gameConfig;
+        Camera = camera;
     }
 }

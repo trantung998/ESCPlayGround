@@ -13,6 +13,7 @@ public class ServiceRegistrationSystems : Feature
         Add(new RegViewServiceSystem(contexts.meta, services.View));
         Add(new RegPoolServiceSystem(contexts.meta, services.Pool));
         Add(new RegConfigurationServiceSystem(contexts.meta, services.GameConfig));
+        Add(new RegCameraServiceSystem(contexts.meta, services.Camera));
     }
 
     public sealed override Entitas.Systems Add(ISystem system)

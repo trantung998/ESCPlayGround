@@ -17,7 +17,9 @@ public class GameplayManager : MonoBehaviour
             new MouseInputService(),
             new UnityViewService(),
             new ObjectPool(),
-            GetComponent<UnityGameplayConfigurationService>());
+            GetComponent<UnityGameplayConfigurationService>(),
+            new UnityCameraService());
+
         var regService = new ServiceRegistrationSystems(contexts, services);
         regService.Initialize();
 
