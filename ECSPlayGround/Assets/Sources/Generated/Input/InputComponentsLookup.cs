@@ -11,18 +11,27 @@ public static class InputComponentsLookup {
     public const int CharacterMoveCommand = 0;
     public const int DestroyPlayerInput = 1;
     public const int PlayerInput = 2;
+    public const int TouchScreenStateComonent = 3;
+    public const int TouchScreenStateComonentListener = 4;
+    public const int TouchScreenStateComonentRemovedListener = 5;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 6;
 
     public static readonly string[] componentNames = {
         "CharacterMoveCommand",
         "DestroyPlayerInput",
-        "PlayerInput"
+        "PlayerInput",
+        "TouchScreenStateComonent",
+        "TouchScreenStateComonentListener",
+        "TouchScreenStateComonentRemovedListener"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(CharacterMoveCommandComponent),
         typeof(DestroyPlayerInputComponent),
-        typeof(PlayerInputComponent)
+        typeof(PlayerInputComponent),
+        typeof(TouchScreenStateComonent),
+        typeof(TouchScreenStateComonentListenerComponent),
+        typeof(TouchScreenStateComonentRemovedListenerComponent)
     };
 }

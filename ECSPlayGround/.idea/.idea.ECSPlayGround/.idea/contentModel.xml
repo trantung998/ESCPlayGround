@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\melod\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_ECSPlayGround.-1161716324.00" t="ExcludeRecursive" />
+    <e p="I:\Unity\Projects\ESCPlayGround\ECSPlayGround" t="IncludeRecursive">
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="Plugins" t="Include">
+          <e p="DesperateDevs" t="Include">
+            <e p="Compile.cs" t="Include" />
+          </e>
+          <e p="Entitas" t="Include">
+            <e p="LICENSE.txt" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="Character" t="Include">
+            <e p="Components" t="Include">
+              <e p="CharacterComponents.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Configs" t="Include">
+            <e p="PlayerMovementConfigs.cs" t="Include" />
+          </e>
+          <e p="GamePlayManager.cs" t="Include" />
+          <e p="Input" t="Include">
+            <e p="Components" t="Include">
+              <e p="PlayerInputComponent.cs" t="Include" />
+            </e>
+            <e p="Systems" t="Include">
+              <e p="InputExeSystem.cs" t="Include" />
+              <e p="MovePLayerSystem.cs" t="Include" />
+              <e p="PlayerInputProcessSystem.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Services" t="Include">
+            <e p="Camera" t="Include">
+              <e p="ICameraService.cs" t="Include" />
+              <e p="RegCameraServiceSystem.cs" t="Include" />
+              <e p="UnityCameraService.cs" t="Include" />
+            </e>
+            <e p="Components" t="Include">
+              <e p="CameraServiceComponent.cs" t="Include" />
+              <e p="ConfigurationServiceComponent.cs" t="Include" />
+              <e p="InputServiceComponent.cs" t="Include" />
+              <e p="PoolServiceComponent.cs" t="Include" />
+              <e p="ViewServiceComponent.cs" t="Include" />
+            </e>
+            <e p="Config" t="Include">
+              <e p="IConfigurationService.cs" t="Include" />
+              <e p="RegConfigurationServiceSystem.cs" t="Include" />
+              <e p="UnityGameplayConfigurationService.cs" t="Include" />
+            </e>
+            <e p="Input" t="Include">
+              <e p="IInputService.cs" t="Include" />
+              <e p="MouseInputService.cs" t="Include" />
+              <e p="RegisterInputServiceSystem.cs" t="Include" />
+              <e p="TouchScreenStateComonent.cs" t="Include" />
+            </e>
+            <e p="ObjectPool" t="Include">
+              <e p="IPoolService.cs" t="Include" />
+              <e p="ObjectPool.cs" t="Include" />
+              <e p="RegPoolServiceSystem.cs" t="Include" />
+            </e>
+            <e p="ServiceRegistrationSystems.cs" t="Include" />
+            <e p="Services.cs" t="Include" />
+            <e p="View" t="Include">
+              <e p="IViewService.cs" t="Include" />
+              <e p="RegViewServiceSystem.cs" t="Include" />
+              <e p="UnityViewService.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Systems" t="Include">
+            <e p="Game" t="Include">
+              <e p="GameSystems.cs" t="Include" />
+              <e p="Systems" t="Include">
+                <e p="PositionReactiveSystem.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="Sources" t="Include">
+          <e p="Generated" t="Include">
+            <e p="Contexts.cs" t="Include" />
+            <e p="Events" t="Include">
+              <e p="Components" t="Include">
+                <e p="TouchScreenStateComonentListenerComponent.cs" t="Include" />
+                <e p="TouchScreenStateComonentRemovedListenerComponent.cs" t="Include" />
+              </e>
+              <e p="InputEventSystems.cs" t="Include" />
+              <e p="Interfaces" t="Include">
+                <e p="ITouchScreenStateComonentListener.cs" t="Include" />
+                <e p="ITouchScreenStateComonentRemovedListener.cs" t="Include" />
+              </e>
+              <e p="Systems" t="Include">
+                <e p="TouchScreenStateComonentEventSystem.cs" t="Include" />
+                <e p="TouchScreenStateComonentRemovedEventSystem.cs" t="Include" />
+              </e>
+            </e>
+            <e p="Feature.cs" t="Include" />
+            <e p="Game" t="Include">
+              <e p="Components" t="Include">
+                <e p="GameCharacterIdComponent.cs" t="Include" />
+                <e p="GameCharacterMoveSpeedComponent.cs" t="Include" />
+                <e p="GameCharacterPositionComponent.cs" t="Include" />
+                <e p="GameCharacterStateComponent.cs" t="Include" />
+                <e p="GameCharacterTypeComponent.cs" t="Include" />
+              </e>
+              <e p="GameAttribute.cs" t="Include" />
+              <e p="GameComponentsLookup.cs" t="Include" />
+              <e p="GameContext.cs" t="Include" />
+              <e p="GameEntity.cs" t="Include" />
+              <e p="GameMatcher.cs" t="Include" />
+            </e>
+            <e p="Input" t="Include">
+              <e p="Components" t="Include">
+                <e p="InputCharacterMoveCommandComponent.cs" t="Include" />
+                <e p="InputDestroyPlayerInputComponent.cs" t="Include" />
+                <e p="InputPlayerInputComponent.cs" t="Include" />
+                <e p="InputTouchScreenStateComonentComponent.cs" t="Include" />
+                <e p="InputTouchScreenStateComonentListenerComponent.cs" t="Include" />
+                <e p="InputTouchScreenStateComonentRemovedListenerComponent.cs" t="Include" />
+              </e>
+              <e p="InputAttribute.cs" t="Include" />
+              <e p="InputComponentsLookup.cs" t="Include" />
+              <e p="InputContext.cs" t="Include" />
+              <e p="InputEntity.cs" t="Include" />
+              <e p="InputMatcher.cs" t="Include" />
+            </e>
+            <e p="Meta" t="Include">
+              <e p="Components" t="Include">
+                <e p="MetaCameraServiceComponent.cs" t="Include" />
+                <e p="MetaConfigurationServiceComponent.cs" t="Include" />
+                <e p="MetaInputServiceComponent.cs" t="Include" />
+                <e p="MetaPoolServiceComponent.cs" t="Include" />
+                <e p="MetaViewServiceComponent.cs" t="Include" />
+              </e>
+              <e p="MetaAttribute.cs" t="Include" />
+              <e p="MetaComponentsLookup.cs" t="Include" />
+              <e p="MetaContext.cs" t="Include" />
+              <e p="MetaEntity.cs" t="Include" />
+              <e p="MetaMatcher.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="ECSPlayGround.sln" t="IncludeFlat" />
+      <e p="Library" t="ExcludeRecursive" />
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp" t="ExcludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+      </e>
+    </e>
+  </component>
+</project>
