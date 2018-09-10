@@ -45,3 +45,9 @@ public class CharacterStateComponent : IComponent
 {
     public CharacterState value;
 }
+
+[Unique, Game]
+public class CharacterRef : IComponent
+{
+    public GameEntity value;
+}

@@ -1,8 +1,12 @@
-﻿
+﻿using System;
+using UnityEngine;
 
-    public class PlayerMovementConfigs
-    {
-        public float MoveSpeed;
-        public float StopMove;
-    }
+[Serializable]
+public class PlayerMovementConfigs
+{
+    public Vector2 topRight, botLeft;
+    public float MoveSpeed;
+    public float StopMove;
 
+    public Vector3 RespawnPosition;
+}

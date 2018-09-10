@@ -12,12 +12,15 @@
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile></TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2018.2.3f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
@@ -352,9 +355,12 @@
     <Compile Include="Assets\Scripts\Services\Input\IInputService.cs" />
     <Compile Include="Assets\Scripts\Services\Input\MouseInputService.cs" />
     <Compile Include="Assets\Scripts\Services\Input\RegisterInputServiceSystem.cs" />
-    <Compile Include="Assets\Scripts\Services\Input\TouchStateComonent.cs" />
+    <Compile Include="Assets\Scripts\Services\Input\TouchScreenStateComonent.cs" />
     <Compile Include="Assets\Scripts\Services\ObjectPool\IPoolService.cs" />
-    <Compile Include="Assets\Scripts\Services\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\LGPoolService.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\PreRuntimePoolItem.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\SpawnPool.cs" />
     <Compile Include="Assets\Scripts\Services\ObjectPool\RegPoolServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\ServiceRegistrationSystems.cs" />
     <Compile Include="Assets\Scripts\Services\Services.cs" />
@@ -364,6 +370,13 @@
     <Compile Include="Assets\Scripts\Systems\Game\GameSystems.cs" />
     <Compile Include="Assets\Scripts\Systems\Game\Systems\PositionReactiveSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Components\TouchScreenStateComonentListenerComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Components\TouchScreenStateComonentRemovedListenerComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\InputEventSystems.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Interfaces\ITouchScreenStateComonentListener.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Interfaces\ITouchScreenStateComonentRemovedListener.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Systems\TouchScreenStateComonentEventSystem.cs" />
+    <Compile Include="Assets\Sources\Generated\Events\Systems\TouchScreenStateComonentRemovedEventSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterIdComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterMoveSpeedComponent.cs" />
@@ -378,6 +391,9 @@
     <Compile Include="Assets\Sources\Generated\Input\Components\InputCharacterMoveCommandComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputDestroyPlayerInputComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputPlayerInputComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputTouchScreenStateComonentComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputTouchScreenStateComonentListenerComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\Components\InputTouchScreenStateComonentRemovedListenerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />

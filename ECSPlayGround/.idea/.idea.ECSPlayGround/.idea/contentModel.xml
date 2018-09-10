@@ -13,6 +13,9 @@
           <e p="Entitas" t="Include">
             <e p="LICENSE.txt" t="Include" />
           </e>
+          <e p="Trinary Software" t="Include">
+            <e p="Timing.cs" t="Include" />
+          </e>
         </e>
         <e p="Scripts" t="Include">
           <e p="Character" t="Include">
@@ -21,6 +24,7 @@
             </e>
           </e>
           <e p="Configs" t="Include">
+            <e p="GameplayConfig.cs" t="Include" />
             <e p="PlayerMovementConfigs.cs" t="Include" />
           </e>
           <e p="GamePlayManager.cs" t="Include" />
@@ -30,8 +34,8 @@
             </e>
             <e p="Systems" t="Include">
               <e p="InputExeSystem.cs" t="Include" />
-              <e p="MovePLayerSystem.cs" t="Include" />
               <e p="PlayerInputProcessSystem.cs" t="Include" />
+              <e p="PlayerMoveComandSystem.cs" t="Include" />
             </e>
           </e>
           <e p="Services" t="Include">
@@ -60,7 +64,12 @@
             </e>
             <e p="ObjectPool" t="Include">
               <e p="IPoolService.cs" t="Include" />
-              <e p="ObjectPool.cs" t="Include" />
+              <e p="PoolManager" t="Include">
+                <e p="LGPoolService.cs" t="Include" />
+                <e p="PoolManager.cs" t="Include" />
+                <e p="PreRuntimePoolItem.cs" t="Include" />
+                <e p="SpawnPool.cs" t="Include" />
+              </e>
               <e p="RegPoolServiceSystem.cs" t="Include" />
             </e>
             <e p="ServiceRegistrationSystems.cs" t="Include" />
@@ -104,8 +113,10 @@
                 <e p="GameCharacterIdComponent.cs" t="Include" />
                 <e p="GameCharacterMoveSpeedComponent.cs" t="Include" />
                 <e p="GameCharacterPositionComponent.cs" t="Include" />
+                <e p="GameCharacterRefComponent.cs" t="Include" />
                 <e p="GameCharacterStateComponent.cs" t="Include" />
                 <e p="GameCharacterTypeComponent.cs" t="Include" />
+                <e p="GameConfigsGameplayConfigComponent.cs" t="Include" />
               </e>
               <e p="GameAttribute.cs" t="Include" />
               <e p="GameComponentsLookup.cs" t="Include" />

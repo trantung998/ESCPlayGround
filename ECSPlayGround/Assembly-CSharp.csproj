@@ -56,12 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\Components\CharacterComponents.cs" />
+    <Compile Include="Assets\Scripts\Configs\GameplayConfig.cs" />
     <Compile Include="Assets\Scripts\Configs\PlayerMovementConfigs.cs" />
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
     <Compile Include="Assets\Scripts\Input\Components\PlayerInputComponent.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\InputExeSystem.cs" />
-    <Compile Include="Assets\Scripts\Input\Systems\MovePLayerSystem.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\PlayerInputProcessSystem.cs" />
+    <Compile Include="Assets\Scripts\Input\Systems\PlayerMoveComandSystem.cs" />
     <Compile Include="Assets\Scripts\Services\Camera\ICameraService.cs" />
     <Compile Include="Assets\Scripts\Services\Camera\RegCameraServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\Camera\UnityCameraService.cs" />
@@ -78,7 +79,10 @@
     <Compile Include="Assets\Scripts\Services\Input\RegisterInputServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\Input\TouchScreenStateComonent.cs" />
     <Compile Include="Assets\Scripts\Services\ObjectPool\IPoolService.cs" />
-    <Compile Include="Assets\Scripts\Services\ObjectPool\ObjectPool.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\LGPoolService.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\PoolManager.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\PreRuntimePoolItem.cs" />
+    <Compile Include="Assets\Scripts\Services\ObjectPool\PoolManager\SpawnPool.cs" />
     <Compile Include="Assets\Scripts\Services\ObjectPool\RegPoolServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\ServiceRegistrationSystems.cs" />
     <Compile Include="Assets\Scripts\Services\Services.cs" />
@@ -86,6 +90,7 @@
     <Compile Include="Assets\Scripts\Services\View\RegViewServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\View\UnityViewService.cs" />
     <Compile Include="Assets\Scripts\Systems\Game\GameSystems.cs" />
+    <Compile Include="Assets\Scripts\Systems\Game\Systems\GameplayInitSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Game\Systems\PositionReactiveSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Events\Components\TouchScreenStateComonentListenerComponent.cs" />
@@ -99,8 +104,10 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterIdComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterMoveSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterRefComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterTypeComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameConfigsGameplayConfigComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />

@@ -16,7 +16,7 @@ public class GameplayManager : MonoBehaviour
         services = new Services(
             new MouseInputService(),
             new UnityViewService(),
-            new ObjectPool(),
+            new LGPoolService(),
             GetComponent<UnityGameplayConfigurationService>(),
             new UnityCameraService());
 

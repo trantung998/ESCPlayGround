@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Plugins\DesperateDevs\Compile.cs" />
+    <Compile Include="Assets\Plugins\Trinary Software\Timing.cs" />
     <None Include="Assets\Plugins\Entitas\LICENSE.txt" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>I:/Unity/Projects/ESCPlayGround/ECSPlayGround/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
