@@ -42,6 +42,7 @@ public class GameplayManager : MonoBehaviour
     private Entitas.Systems CreateSystems(Contexts contexts)
     {
         return new Feature("Systems")
-            .Add(new InputExeSystem(contexts));
+            .Add(new InputExeSystem(contexts))
+            .Add(new GameplayInitSystem(contexts));
     }
 }

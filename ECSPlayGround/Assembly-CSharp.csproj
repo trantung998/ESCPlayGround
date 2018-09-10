@@ -56,8 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Character\Components\CharacterComponents.cs" />
-    <Compile Include="Assets\Scripts\Configs\GameplayConfig.cs" />
-    <Compile Include="Assets\Scripts\Configs\PlayerMovementConfigs.cs" />
+    <Compile Include="Assets\Scripts\Configs\CharacterConfigs.cs" />
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
     <Compile Include="Assets\Scripts\Input\Components\PlayerInputComponent.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\InputExeSystem.cs" />
@@ -101,13 +100,13 @@
     <Compile Include="Assets\Sources\Generated\Events\Systems\TouchScreenStateComonentEventSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Events\Systems\TouchScreenStateComonentRemovedEventSystem.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterGameobjectComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterIdComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterMoveSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterRefComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterStateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCharacterTypeComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameConfigsGameplayConfigComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />

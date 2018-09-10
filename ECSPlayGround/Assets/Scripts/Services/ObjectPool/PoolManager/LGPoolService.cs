@@ -24,7 +24,6 @@ public class LGPoolService : IPoolService
 
     public void CreatePrefabPool(Transform prefab)
     {
-        throw new System.NotImplementedException();
     }
 
     public Transform Spawn(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
@@ -34,32 +33,32 @@ public class LGPoolService : IPoolService
 
     public Transform Spawn(Transform prefab, Vector3 pos, Quaternion rot)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot);
     }
 
     public Transform Spawn(Transform prefab)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab);
     }
 
     public Transform Spawn(Transform prefab, Transform parent)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab, parent);
     }
 
     public Transform Spawn(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot, parent);
     }
 
     public Transform Spawn(GameObject prefab, Vector3 pos, Quaternion rot)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot);
     }
 
     public Transform Spawn(GameObject prefab)
     {
-        throw new System.NotImplementedException();
+        return PoolManager.Pools["Test"].Spawn(prefab);
     }
 
     public AudioSource Spawn(AudioSource prefab, Vector3 pos, Quaternion rot)

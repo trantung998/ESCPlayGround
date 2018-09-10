@@ -17,6 +17,12 @@ public enum CharacterState
 }
 
 [Game]
+public class CharacterGameobjectComponent : IComponent
+{
+    public GameObject value;
+}
+
+[Game]
 public class CharacterIdComponent : IComponent
 {
     [EntityIndex] public string value;

@@ -8,33 +8,33 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int CharacterId = 0;
-    public const int CharacterMoveSpeed = 1;
-    public const int CharacterPosition = 2;
-    public const int CharacterRef = 3;
-    public const int CharacterState = 4;
-    public const int CharacterType = 5;
-    public const int ConfigsGameplayConfig = 6;
+    public const int CharacterGameobject = 0;
+    public const int CharacterId = 1;
+    public const int CharacterMoveSpeed = 2;
+    public const int CharacterPosition = 3;
+    public const int CharacterRef = 4;
+    public const int CharacterState = 5;
+    public const int CharacterType = 6;
 
     public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
+        "CharacterGameobject",
         "CharacterId",
         "CharacterMoveSpeed",
         "CharacterPosition",
         "CharacterRef",
         "CharacterState",
-        "CharacterType",
-        "ConfigsGameplayConfig"
+        "CharacterType"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(CharacterGameobjectComponent),
         typeof(CharacterIdComponent),
         typeof(CharacterMoveSpeed),
         typeof(CharacterPositionComponent),
         typeof(CharacterRef),
         typeof(CharacterStateComponent),
-        typeof(CharacterTypeComponent),
-        typeof(Configs.GameplayConfig)
+        typeof(CharacterTypeComponent)
     };
 }

@@ -2,5 +2,5 @@
 
 public interface IConfigurationService
 {
-    PlayerMovementConfigs GetPlayerMovementConfigs { get; }
+    CharacterConfigs GetCharacterConfigs { get; }
 }

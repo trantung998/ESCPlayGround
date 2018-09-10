@@ -17,8 +17,8 @@ public class PlayerMoveComandSystem : IExecuteSystem, ICleanupSystem
         _inputs = _inputContext.GetGroup(InputMatcher.CharacterMoveCommand);
         playerRef = contexts.game.characterRef.value;
 
-        min = contexts.meta.configurationService.instance.GetPlayerMovementConfigs.botLeft;
-        max = contexts.meta.configurationService.instance.GetPlayerMovementConfigs.topRight;
+        min = contexts.meta.configurationService.instance.GetCharacterConfigs.botLeft;
+        max = contexts.meta.configurationService.instance.GetCharacterConfigs.topRight;
     }
 
     private void MoveHandler(Vector3 playerPosition, float moveSpeed)
