@@ -19,8 +19,7 @@ public class InputExeSystem : IExecuteSystem
         if (_inputService.IsTouch)
         {
             var inputEntity = inputContext.CreateEntity();
-            inputEntity.playerInput.IsTouch = true;
-            inputEntity.playerInput.TouchPosition = _inputService.TouchPosition;
+            inputEntity.AddPlayerInput(true, _inputService.TouchPosition);
         }
     }
 }

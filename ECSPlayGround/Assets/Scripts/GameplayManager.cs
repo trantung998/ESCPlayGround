@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Systems.Game.Systems;
 using Entitas;
 using UnityEngine;
 
@@ -42,7 +43,16 @@ public class GameplayManager : MonoBehaviour
     private Entitas.Systems CreateSystems(Contexts contexts)
     {
         return new Feature("Systems")
-            .Add(new InputExeSystem(contexts))
-            .Add(new GameplayInitSystem(contexts));
+                .Add(new InputExeSystem(contexts))
+                //events
+                .Add(new GameEventSystems(contexts))
+                //Add View
+                .Add(new AssetReactiveSystem(contexts))
+                //Init
+                .Add(new GameplayInitSystem(contexts))
+                //Player input
+                .Add(new PlayerInputProcessSystem(contexts))
+                .Add(new PlayerMoveComandSystem(contexts))
+            ;
     }
 }

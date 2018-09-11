@@ -2,7 +2,9 @@
 
 public class UnityGameplayConfigurationService : MonoBehaviour, IConfigurationService
 {
-    [SerializeField] private CharacterConfigs playerGameplayConfigs;
+    [SerializeField] 
+    private CharacterConfigs playerGameplayConfigs;
+    
     private readonly Vector2 VIEW_PORT_LEFT_BOTTOM = new Vector2(0, 0);
     private readonly Vector2 VIEW_PORT_RIGHT_TOP = new Vector2(1, 1);
 

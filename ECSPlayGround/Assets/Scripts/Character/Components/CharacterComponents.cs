@@ -23,6 +23,12 @@ public class CharacterGameobjectComponent : IComponent
 }
 
 [Game]
+public class ViewComponent : IComponent
+{
+    public IViewControler instance;
+}
+
+[Game]
 public class CharacterIdComponent : IComponent
 {
     [EntityIndex] public string value;
@@ -56,4 +62,10 @@ public class CharacterStateComponent : IComponent
 public class CharacterRef : IComponent
 {
     public GameEntity value;
+}
+
+[Game]
+public class AssetComponent : IComponent
+{
+    public string assetPath;
 }

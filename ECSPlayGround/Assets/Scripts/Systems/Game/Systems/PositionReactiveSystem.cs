@@ -19,11 +19,16 @@ namespace Systems.Game.Systems
 
         protected override bool Filter(GameEntity entity)
         {
-            return entity.hasCharacterPosition;
+            return entity.hasCharacterPosition && entity.hasCharacterGameobject;
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
+            //Transform service?
+            foreach (var gameEntity in entities)
+            {
+                gameEntity.characterGameobject.value.transform.position = gameEntity.characterPosition.value;
+            }
         }
     }
 }

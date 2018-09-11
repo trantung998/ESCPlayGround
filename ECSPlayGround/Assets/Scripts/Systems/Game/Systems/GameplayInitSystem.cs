@@ -1,17 +1,16 @@
 ﻿using Entitas;
 using Entitas.Unity;
+using Extensions;
 
 public class GameplayInitSystem : IInitializeSystem
 {
     private readonly GameContext _gameContext;
     private readonly IConfigurationService _configurationService;
-    private readonly IPoolService _poolService;
 
     public GameplayInitSystem(Contexts contexts)
     {
         _gameContext = contexts.game;
         _configurationService = contexts.meta.configurationService.instance;
-        _poolService = contexts.meta.poolService.instance;
     }
 
     public void Initialize()
@@ -19,12 +18,10 @@ public class GameplayInitSystem : IInitializeSystem
         var player = _gameContext.CreateEntity();
         player.AddCharacterId("Player1");
         player.AddCharacterMoveSpeed(_configurationService.GetCharacterConfigs.MoveSpeed);
-        player.AddCharacterPosition(_configurationService.GetCharacterConfigs.RespawnPosition);
+        player.AddEventsPosition(_configurationService.GetCharacterConfigs.RespawnPosition.ToVector2D());
+        player.AddAsset(_configurationService.GetCharacterConfigs.characterPrefabPath);
+        player.AddCharacterState(CharacterState.Normal);
 
-        var playerGameObject = _poolService.Spawn(_configurationService.GetCharacterConfigs.characterPrefab);
-
-        playerGameObject.gameObject.Link(player, _gameContext);
-
-        player.AddCharacterGameobject(playerGameObject.gameObject);
+        _gameContext.SetCharacterRef(player);
     }
 }

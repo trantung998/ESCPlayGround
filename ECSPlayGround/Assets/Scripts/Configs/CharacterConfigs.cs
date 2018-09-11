@@ -4,9 +4,10 @@ using UnityEngine;
 [Serializable]
 public class CharacterConfigs
 {
-    public GameObject characterPrefab;
-
+    public string characterPrefabPath;
+    [HideInInspector]
     public Vector2 topRight, botLeft;
+    
     public float MoveSpeed;
     public float StopMove;
 

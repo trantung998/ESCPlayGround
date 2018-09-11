@@ -1,6 +1,7 @@
-﻿using UnityEngine;
+﻿using Entitas;
+using UnityEngine;
 
 public interface IViewService
 {
-    void CreateShip(string prefabPath);
+    void CreateView(Contexts contexts, IEntity entity, string assetPath, bool usePool);
 }

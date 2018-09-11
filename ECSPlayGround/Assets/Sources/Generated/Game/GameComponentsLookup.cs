@@ -8,33 +8,45 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int CharacterGameobject = 0;
-    public const int CharacterId = 1;
-    public const int CharacterMoveSpeed = 2;
-    public const int CharacterPosition = 3;
-    public const int CharacterRef = 4;
-    public const int CharacterState = 5;
-    public const int CharacterType = 6;
+    public const int Asset = 0;
+    public const int CharacterGameobject = 1;
+    public const int CharacterId = 2;
+    public const int CharacterMoveSpeed = 3;
+    public const int CharacterPosition = 4;
+    public const int CharacterRef = 5;
+    public const int CharacterState = 6;
+    public const int CharacterType = 7;
+    public const int EventsPosition = 8;
+    public const int EventsPositionListener = 9;
+    public const int View = 10;
 
-    public const int TotalComponents = 7;
+    public const int TotalComponents = 11;
 
     public static readonly string[] componentNames = {
+        "Asset",
         "CharacterGameobject",
         "CharacterId",
         "CharacterMoveSpeed",
         "CharacterPosition",
         "CharacterRef",
         "CharacterState",
-        "CharacterType"
+        "CharacterType",
+        "EventsPosition",
+        "EventsPositionListener",
+        "View"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AssetComponent),
         typeof(CharacterGameobjectComponent),
         typeof(CharacterIdComponent),
         typeof(CharacterMoveSpeed),
         typeof(CharacterPositionComponent),
         typeof(CharacterRef),
         typeof(CharacterStateComponent),
-        typeof(CharacterTypeComponent)
+        typeof(CharacterTypeComponent),
+        typeof(Events.PositionComponent),
+        typeof(EventsPositionListenerComponent),
+        typeof(ViewComponent)
     };
 }

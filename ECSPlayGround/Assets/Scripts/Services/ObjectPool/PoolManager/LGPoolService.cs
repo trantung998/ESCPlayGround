@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class LGPoolService : IPoolService
 {
+    private string poolName = "CommonPool";
+    
     public LGPoolService()
     {
-        Init("CommonPool");
+//        Init(poolName);
     }
 
     public void Init(string poolname)
@@ -28,37 +30,37 @@ public class LGPoolService : IPoolService
 
     public Transform Spawn(Transform prefab, Vector3 pos, Quaternion rot, Transform parent)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot, parent);
+        return PoolManager.Pools[poolName].Spawn(prefab, pos, rot, parent);
     }
 
     public Transform Spawn(Transform prefab, Vector3 pos, Quaternion rot)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot);
+        return PoolManager.Pools[poolName].Spawn(prefab, pos, rot);
     }
 
     public Transform Spawn(Transform prefab)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab);
+        return PoolManager.Pools[poolName].Spawn(prefab);
     }
 
     public Transform Spawn(Transform prefab, Transform parent)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab, parent);
+        return PoolManager.Pools[poolName].Spawn(prefab, parent);
     }
 
     public Transform Spawn(GameObject prefab, Vector3 pos, Quaternion rot, Transform parent)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot, parent);
+        return PoolManager.Pools[poolName].Spawn(prefab, pos, rot, parent);
     }
 
     public Transform Spawn(GameObject prefab, Vector3 pos, Quaternion rot)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab, pos, rot);
+        return PoolManager.Pools[poolName].Spawn(prefab, pos, rot);
     }
 
     public Transform Spawn(GameObject prefab)
     {
-        return PoolManager.Pools["Test"].Spawn(prefab);
+        return PoolManager.Pools[poolName].Spawn(prefab);
     }
 
     public AudioSource Spawn(AudioSource prefab, Vector3 pos, Quaternion rot)
