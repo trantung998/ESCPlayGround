@@ -1,21 +1,24 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Entitas;
+using Extensions;
 using UnityEngine;
 
-public class PlayerMoveComandSystem : IExecuteSystem, ICleanupSystem
+public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>, IExecuteSystem
 {
     private readonly InputContext _inputContext;
+    private readonly GameContext _gameContext;
+
     private Vector3 touchPosition;
     private IGroup<InputEntity> _inputs;
     private GameEntity playerRef;
     private Vector2 min;
     private Vector2 max;
 
-    public PlayerMoveComandSystem(Contexts contexts)
+    public PlayerMoveComandSystem(Contexts contexts) : base(contexts.input)
     {
         _inputContext = contexts.input;
-        _inputs = _inputContext.GetGroup(InputMatcher.CharacterMoveCommand);
-        playerRef = contexts.game.characterRef.value;
+        _gameContext = contexts.game;
 
         min = contexts.meta.configurationService.instance.GetCharacterConfigs.botLeft;
         max = contexts.meta.configurationService.instance.GetCharacterConfigs.topRight;
@@ -29,26 +32,36 @@ public class PlayerMoveComandSystem : IExecuteSystem, ICleanupSystem
 
         playerPosition = Vector3.Lerp(playerPosition, touchPosition, Time.deltaTime * moveSpeed);
 
-        playerRef.ReplaceCharacterPosition(playerPosition);
+        playerRef.ReplaceEventsPosition(playerPosition.ToVector2D());
     }
 
-    private readonly List<InputEntity> _buffer = new List<InputEntity>();
-
-    public void Cleanup()
+    protected override ICollector<InputEntity> GetTrigger(IContext<InputEntity> context)
     {
-        foreach (var inputEntity in _inputs.GetEntities(_buffer))
-        {
-            inputEntity.Destroy();
-        }
+        return context.CreateCollector(InputMatcher.CharacterMoveCommand);
+    }
+
+    protected override bool Filter(InputEntity entity)
+    {
+        return entity.hasCharacterMoveCommand;
+    }
+
+    protected override void Execute(List<InputEntity> entities)
+    {
+        var entity = entities[0];
+        touchPosition = entity.characterMoveCommand.Position;
+        entity.isDestroyPlayerInput = true;
     }
 
     public void Execute()
     {
-        if (_inputs.count > 0)
+        if (playerRef == null)
         {
-            touchPosition = _inputs.GetEntities(_buffer)[0].characterMoveCommand.Position;
+            playerRef = _gameContext.GetEntitiesWithCharacterId("Player1").FirstOrDefault();
         }
 
-        MoveHandler(playerRef.characterPosition.value, playerRef.characterMoveSpeed.value);
+        if (playerRef != null)
+        {
+            MoveHandler(playerRef.eventsPosition.value.ToVector2(), playerRef.characterMoveSpeed.value);
+        }
     }
 }

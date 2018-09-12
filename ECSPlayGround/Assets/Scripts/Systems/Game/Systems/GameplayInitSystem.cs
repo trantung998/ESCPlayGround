@@ -21,7 +21,5 @@ public class GameplayInitSystem : IInitializeSystem
         player.AddEventsPosition(_configurationService.GetCharacterConfigs.RespawnPosition.ToVector2D());
         player.AddAsset(_configurationService.GetCharacterConfigs.characterPrefabPath);
         player.AddCharacterState(CharacterState.Normal);
-
-        _gameContext.SetCharacterRef(player);
     }
 }

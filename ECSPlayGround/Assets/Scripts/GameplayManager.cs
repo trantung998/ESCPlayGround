@@ -10,6 +10,8 @@ public class GameplayManager : MonoBehaviour
 
     private Services services;
 
+    private bool IsInit = false;
+
     // Use this for initialization
     void Start()
     {
@@ -26,11 +28,14 @@ public class GameplayManager : MonoBehaviour
 
         systems = CreateSystems(contexts);
         systems.Initialize();
+        IsInit = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (!IsInit) return;
+
         systems.Execute();
         systems.Cleanup();
     }
@@ -46,13 +51,15 @@ public class GameplayManager : MonoBehaviour
                 .Add(new InputExeSystem(contexts))
                 //events
                 .Add(new GameEventSystems(contexts))
-                //Add View
+                //Add View System
                 .Add(new AssetReactiveSystem(contexts))
-                //Init
-                .Add(new GameplayInitSystem(contexts))
+
                 //Player input
                 .Add(new PlayerInputProcessSystem(contexts))
                 .Add(new PlayerMoveComandSystem(contexts))
+                .Add(new PlayerInputDestroySystem(contexts))
+                //Init
+                .Add(new GameplayInitSystem(contexts))
             ;
     }
 }

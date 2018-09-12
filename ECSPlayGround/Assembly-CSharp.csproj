@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\GameplayManager.cs" />
     <Compile Include="Assets\Scripts\Input\Components\PlayerInputComponent.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\InputExeSystem.cs" />
+    <Compile Include="Assets\Scripts\Input\Systems\PlayerInputDestroySystem.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\PlayerInputProcessSystem.cs" />
     <Compile Include="Assets\Scripts\Input\Systems\PlayerMoveComandSystem.cs" />
     <Compile Include="Assets\Scripts\Services\Camera\ICameraService.cs" />
@@ -79,6 +80,8 @@
     <Compile Include="Assets\Scripts\Services\Config\IConfigurationService.cs" />
     <Compile Include="Assets\Scripts\Services\Config\RegConfigurationServiceSystem.cs" />
     <Compile Include="Assets\Scripts\Services\Config\UnityGameplayConfigurationService.cs" />
+    <Compile Include="Assets\Scripts\Services\DebugService\DebugServiceComponent.cs" />
+    <Compile Include="Assets\Scripts\Services\DebugService\IDebugService.cs" />
     <Compile Include="Assets\Scripts\Services\Input\IInputService.cs" />
     <Compile Include="Assets\Scripts\Services\Input\MouseInputService.cs" />
     <Compile Include="Assets\Scripts\Services\Input\RegisterInputServiceSystem.cs" />
