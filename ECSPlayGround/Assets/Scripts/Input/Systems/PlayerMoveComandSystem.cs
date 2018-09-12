@@ -4,7 +4,8 @@ using Entitas;
 using Extensions;
 using UnityEngine;
 
-public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>, IExecuteSystem
+public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>
+//    , IExecuteSystem
 {
     private readonly InputContext _inputContext;
     private readonly GameContext _gameContext;
@@ -26,9 +27,9 @@ public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>, IExecuteSyste
 
     private void MoveHandler(Vector3 playerPosition, float moveSpeed)
     {
-        touchPosition.x = Mathf.Clamp(touchPosition.x, min.x, max.x);
-        touchPosition.y = Mathf.Clamp(touchPosition.y, min.y, max.y);
-        touchPosition.z = playerPosition.z;
+//        touchPosition.x = Mathf.Clamp(touchPosition.x, min.x, max.x);
+//        touchPosition.y = Mathf.Clamp(touchPosition.y, min.y, max.y);
+//        touchPosition.z = playerPosition.z;
 
         playerPosition = Vector3.Lerp(playerPosition, touchPosition, Time.deltaTime * moveSpeed);
 
@@ -48,12 +49,7 @@ public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>, IExecuteSyste
     protected override void Execute(List<InputEntity> entities)
     {
         var entity = entities[0];
-        touchPosition = entity.characterMoveCommand.Position;
-        entity.isDestroyPlayerInput = true;
-    }
-
-    public void Execute()
-    {
+//        touchPosition = entity.characterMoveCommand.Position;
         if (playerRef == null)
         {
             playerRef = _gameContext.GetEntitiesWithCharacterId("Player1").FirstOrDefault();
@@ -61,7 +57,22 @@ public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>, IExecuteSyste
 
         if (playerRef != null)
         {
-            MoveHandler(playerRef.eventsPosition.value.ToVector2(), playerRef.characterMoveSpeed.value);
+            MoveHandler(entity.characterMoveCommand.Position, playerRef.characterMoveSpeed.value);
         }
+
+        entity.isDestroyPlayerInput = true;
     }
+
+//    public void Execute()
+//    {
+//        if (playerRef == null)
+//        {
+//            playerRef = _gameContext.GetEntitiesWithCharacterId("Player1").FirstOrDefault();
+//        }
+//
+//        if (playerRef != null)
+//        {
+//            MoveHandler(touchPosition, playerRef.characterMoveSpeed.value);
+//        }
+//    }
 }

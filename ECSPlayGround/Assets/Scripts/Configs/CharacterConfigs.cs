@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterConfigs
 {
     public string characterPrefabPath;
-    [HideInInspector]
+    
     public Vector2 topRight, botLeft;
     
     public float MoveSpeed;

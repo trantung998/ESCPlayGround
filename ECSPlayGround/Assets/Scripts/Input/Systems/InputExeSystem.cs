@@ -7,11 +7,13 @@ public class InputExeSystem : IExecuteSystem
 {
     private readonly InputContext inputContext;
     private readonly IInputService _inputService;
+    private readonly ICameraService _cameraService;
 
     public InputExeSystem(Contexts contexts)
     {
         this.inputContext = contexts.input;
         this._inputService = contexts.meta.inputService.instance;
+        _cameraService = contexts.meta.cameraService.instance;
     }
 
     public void Execute()
@@ -19,7 +21,8 @@ public class InputExeSystem : IExecuteSystem
         if (_inputService.IsTouch)
         {
             var inputEntity = inputContext.CreateEntity();
-            inputEntity.AddPlayerInput(true, _inputService.TouchPosition);
+            var screenPosition = _cameraService.ScreenToWorldPoint(_inputService.TouchPosition);
+            inputEntity.AddPlayerInput(true, screenPosition);
         }
     }
 }
