@@ -14,6 +14,7 @@ public class ServiceRegistrationSystems : Feature
         Add(new RegPoolServiceSystem(contexts.meta, services.Pool));
         Add(new RegConfigurationServiceSystem(contexts.meta, services.GameConfig));
         Add(new RegCameraServiceSystem(contexts.meta, services.Camera));
+        Add(new RegTimeService(contexts.meta, services.Time));
     }
 
     public sealed override Entitas.Systems Add(ISystem system)

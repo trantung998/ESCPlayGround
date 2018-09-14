@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\melod\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_ECSPlayGround.-1161716324.00" t="ExcludeRecursive" />
-    <e p="I:\Unity\Projects\ESCPlayGround\ECSPlayGround" t="IncludeRecursive">
+    <e p="C:\Users\melod\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_ECSPlayGround.1582501225.00" t="ExcludeRecursive" />
+    <e p="G:\ECSPlayGround\ECSPlayGround" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -87,8 +87,18 @@
               </e>
               <e p="RegPoolServiceSystem.cs" t="Include" />
             </e>
+            <e p="PhysicService" t="Include">
+              <e p="ICollisionControler.cs" t="Include" />
+              <e p="IPhysicService.cs" t="Include" />
+            </e>
             <e p="ServiceRegistrationSystems.cs" t="Include" />
             <e p="Services.cs" t="Include" />
+            <e p="TimerService" t="Include">
+              <e p="ITimerService.cs" t="Include" />
+              <e p="RegTimeService.cs" t="Include" />
+              <e p="TimeServiceComponent.cs" t="Include" />
+              <e p="UnityTimeService.cs" t="Include" />
+            </e>
             <e p="View" t="Include">
               <e p="IViewControler.cs" t="Include" />
               <e p="IViewService.cs" t="Include" />
@@ -106,6 +116,12 @@
                 <e p="PositionReactiveSystem.cs" t="Include" />
               </e>
             </e>
+          </e>
+          <e p="WeaponSystem" t="Include">
+            <e p="Systems" t="Include">
+              <e p="BulletControlSystem.cs" t="Include" />
+            </e>
+            <e p="WeaponComponents.cs" t="Include" />
           </e>
         </e>
         <e p="Sources" t="Include">
@@ -134,6 +150,8 @@
             <e p="Game" t="Include">
               <e p="Components" t="Include">
                 <e p="GameAssetComponent.cs" t="Include" />
+                <e p="GameAtkSpeedComponent.cs" t="Include" />
+                <e p="GameBulletConfigsComponent.cs" t="Include" />
                 <e p="GameCharacterGameobjectComponent.cs" t="Include" />
                 <e p="GameCharacterIdComponent.cs" t="Include" />
                 <e p="GameCharacterMoveSpeedComponent.cs" t="Include" />
@@ -141,9 +159,13 @@
                 <e p="GameCharacterRefComponent.cs" t="Include" />
                 <e p="GameCharacterStateComponent.cs" t="Include" />
                 <e p="GameCharacterTypeComponent.cs" t="Include" />
+                <e p="GameCollsionsComponent.cs" t="Include" />
+                <e p="GameDamageComponent.cs" t="Include" />
                 <e p="GameEventsPositionComponent.cs" t="Include" />
                 <e p="GameEventsPositionListenerComponent.cs" t="Include" />
+                <e p="GameHpComponent.cs" t="Include" />
                 <e p="GameViewComponent.cs" t="Include" />
+                <e p="GameWeaponIdComponent.cs" t="Include" />
               </e>
               <e p="GameAttribute.cs" t="Include" />
               <e p="GameComponentsLookup.cs" t="Include" />
@@ -170,8 +192,10 @@
               <e p="Components" t="Include">
                 <e p="MetaCameraServiceComponent.cs" t="Include" />
                 <e p="MetaConfigurationServiceComponent.cs" t="Include" />
+                <e p="MetaDebugServiceComponent.cs" t="Include" />
                 <e p="MetaInputServiceComponent.cs" t="Include" />
                 <e p="MetaPoolServiceComponent.cs" t="Include" />
+                <e p="MetaTimeServiceComponent.cs" t="Include" />
                 <e p="MetaViewServiceComponent.cs" t="Include" />
               </e>
               <e p="MetaAttribute.cs" t="Include" />

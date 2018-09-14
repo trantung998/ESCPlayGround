@@ -9,21 +9,29 @@
 public static class GameComponentsLookup {
 
     public const int Asset = 0;
-    public const int CharacterGameobject = 1;
-    public const int CharacterId = 2;
-    public const int CharacterMoveSpeed = 3;
-    public const int CharacterPosition = 4;
-    public const int CharacterRef = 5;
-    public const int CharacterState = 6;
-    public const int CharacterType = 7;
-    public const int EventsPosition = 8;
-    public const int EventsPositionListener = 9;
-    public const int View = 10;
+    public const int AtkSpeed = 1;
+    public const int BulletConfigs = 2;
+    public const int CharacterGameobject = 3;
+    public const int CharacterId = 4;
+    public const int CharacterMoveSpeed = 5;
+    public const int CharacterPosition = 6;
+    public const int CharacterRef = 7;
+    public const int CharacterState = 8;
+    public const int CharacterType = 9;
+    public const int Collsions = 10;
+    public const int Damage = 11;
+    public const int EventsPosition = 12;
+    public const int EventsPositionListener = 13;
+    public const int Hp = 14;
+    public const int View = 15;
+    public const int WeaponId = 16;
 
-    public const int TotalComponents = 11;
+    public const int TotalComponents = 17;
 
     public static readonly string[] componentNames = {
         "Asset",
+        "AtkSpeed",
+        "BulletConfigs",
         "CharacterGameobject",
         "CharacterId",
         "CharacterMoveSpeed",
@@ -31,13 +39,19 @@ public static class GameComponentsLookup {
         "CharacterRef",
         "CharacterState",
         "CharacterType",
+        "Collsions",
+        "Damage",
         "EventsPosition",
         "EventsPositionListener",
-        "View"
+        "Hp",
+        "View",
+        "WeaponId"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AssetComponent),
+        typeof(AtkSpeedComponent),
+        typeof(BulletConfigs),
         typeof(CharacterGameobjectComponent),
         typeof(CharacterIdComponent),
         typeof(CharacterMoveSpeed),
@@ -45,8 +59,12 @@ public static class GameComponentsLookup {
         typeof(CharacterRef),
         typeof(CharacterStateComponent),
         typeof(CharacterTypeComponent),
+        typeof(CollsionsComponent),
+        typeof(DamageComponent),
         typeof(Events.PositionComponent),
         typeof(EventsPositionListenerComponent),
-        typeof(ViewComponent)
+        typeof(HpComponent),
+        typeof(ViewComponent),
+        typeof(WeaponIdComponent)
     };
 }

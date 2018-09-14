@@ -31,7 +31,8 @@ public class PlayerMoveComandSystem : ReactiveSystem<InputEntity>
 //        touchPosition.y = Mathf.Clamp(touchPosition.y, min.y, max.y);
 //        touchPosition.z = playerPosition.z;
 
-        playerPosition = Vector3.Lerp(playerPosition, touchPosition, Time.deltaTime * moveSpeed);
+        playerPosition = Vector3.Lerp(playerRef.eventsPosition.value.ToVector2(), playerPosition,
+            Time.deltaTime * moveSpeed);
 
         playerRef.ReplaceEventsPosition(playerPosition.ToVector2D());
     }

@@ -11,7 +11,8 @@ public class Services
     public readonly IPoolService Pool;
     public readonly IConfigurationService GameConfig;
     public readonly ICameraService Camera;
-
+    public readonly ITimerService Time;
+    
     public Services(IInputService input, IViewService view, IPoolService pool)
     {
         Input = input;
@@ -34,5 +35,15 @@ public class Services
         Pool = pool;
         GameConfig = gameConfig;
         Camera = camera;
+    }
+
+    public Services(IInputService input, IViewService view, IPoolService pool, IConfigurationService gameConfig, ICameraService camera, ITimerService time)
+    {
+        Input = input;
+        View = view;
+        Pool = pool;
+        GameConfig = gameConfig;
+        Camera = camera;
+        Time = time;
     }
 }

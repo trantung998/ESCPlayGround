@@ -10,25 +10,31 @@ public static class MetaComponentsLookup {
 
     public const int CameraService = 0;
     public const int ConfigurationService = 1;
-    public const int InputService = 2;
-    public const int PoolService = 3;
-    public const int ViewService = 4;
+    public const int DebugService = 2;
+    public const int InputService = 3;
+    public const int PoolService = 4;
+    public const int TimeService = 5;
+    public const int ViewService = 6;
 
-    public const int TotalComponents = 5;
+    public const int TotalComponents = 7;
 
     public static readonly string[] componentNames = {
         "CameraService",
         "ConfigurationService",
+        "DebugService",
         "InputService",
         "PoolService",
+        "TimeService",
         "ViewService"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(CameraServiceComponent),
         typeof(ConfigurationServiceComponent),
+        typeof(DebugServiceComponent),
         typeof(InputServiceComponent),
         typeof(PoolServiceComponent),
+        typeof(TimeServiceComponent),
         typeof(ViewServiceComponent)
     };
 }
