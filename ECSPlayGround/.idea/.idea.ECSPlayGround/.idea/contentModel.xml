@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\melod\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_ECSPlayGround.1582501225.00" t="ExcludeRecursive" />
-    <e p="G:\ECSPlayGround\ECSPlayGround" t="IncludeRecursive">
+    <e p="C:\Users\melod\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_ECSPlayGround.-1161716324.00" t="ExcludeRecursive" />
+    <e p="I:\Unity\Projects\ESCPlayGround\ECSPlayGround" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
@@ -32,9 +32,11 @@
             <e p="EventComponens.cs" t="Include" />
             <e p="IEventListener.cs" t="Include" />
             <e p="UnityPositionListener.cs" t="Include" />
+            <e p="UnityRotationListener.cs" t="Include" />
           </e>
           <e p="Extensions" t="Include">
             <e p="GameobjectExtension.cs" t="Include" />
+            <e p="TransformExtension.cs" t="Include" />
             <e p="VectorExtension.cs" t="Include" />
           </e>
           <e p="GamePlayManager.cs" t="Include" />
@@ -120,6 +122,7 @@
           <e p="WeaponSystem" t="Include">
             <e p="Systems" t="Include">
               <e p="BulletControlSystem.cs" t="Include" />
+              <e p="SpawnBulletSystem.cs" t="Include" />
             </e>
             <e p="WeaponComponents.cs" t="Include" />
           </e>
@@ -130,6 +133,7 @@
             <e p="Events" t="Include">
               <e p="Components" t="Include">
                 <e p="EventsPositionListenerComponent.cs" t="Include" />
+                <e p="EventsRorationListenerComponent.cs" t="Include" />
                 <e p="TouchScreenStateComonentListenerComponent.cs" t="Include" />
                 <e p="TouchScreenStateComonentRemovedListenerComponent.cs" t="Include" />
               </e>
@@ -137,11 +141,13 @@
               <e p="InputEventSystems.cs" t="Include" />
               <e p="Interfaces" t="Include">
                 <e p="IEventsPositionListener.cs" t="Include" />
+                <e p="IEventsRorationListener.cs" t="Include" />
                 <e p="ITouchScreenStateComonentListener.cs" t="Include" />
                 <e p="ITouchScreenStateComonentRemovedListener.cs" t="Include" />
               </e>
               <e p="Systems" t="Include">
                 <e p="EventsPositionEventSystem.cs" t="Include" />
+                <e p="EventsRorationEventSystem.cs" t="Include" />
                 <e p="TouchScreenStateComonentEventSystem.cs" t="Include" />
                 <e p="TouchScreenStateComonentRemovedEventSystem.cs" t="Include" />
               </e>
@@ -161,8 +167,11 @@
                 <e p="GameCharacterTypeComponent.cs" t="Include" />
                 <e p="GameCollsionsComponent.cs" t="Include" />
                 <e p="GameDamageComponent.cs" t="Include" />
+                <e p="GameDirectionComponenComponent.cs" t="Include" />
                 <e p="GameEventsPositionComponent.cs" t="Include" />
                 <e p="GameEventsPositionListenerComponent.cs" t="Include" />
+                <e p="GameEventsRorationComponent.cs" t="Include" />
+                <e p="GameEventsRorationListenerComponent.cs" t="Include" />
                 <e p="GameHpComponent.cs" t="Include" />
                 <e p="GameViewComponent.cs" t="Include" />
                 <e p="GameWeaponIdComponent.cs" t="Include" />

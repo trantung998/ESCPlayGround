@@ -32,6 +32,12 @@ public class CollsionsComponent : IComponent
     public bool isInitialized;
 }
 
+[Game]
+public class DirectionComponen : IComponent
+{
+    public Vector2D value;
+}
+
 public enum BulletTrajectory
 {
     None,
@@ -47,4 +53,20 @@ public class BulletConfigs : IComponent
     public float DelayShot;
     public float ShotAngel;
     public float BulletSpeed;
+}
+
+//weapon entity
+//- fire rate
+//- bullet
+//- damage
+//- status (active/ deactive)
+
+//systems
+//
+
+
+[Game]
+public class WeaponConfigs : IComponent
+{
+
 }

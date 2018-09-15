@@ -9,6 +9,12 @@ namespace Events
         public Vector2D value;
     }
 
+    [Game, Event(EventTarget.Self)]
+    public class RorationComponent : IComponent
+    {
+        public float angel;
+    }
+
 //    [Game, Event(EventTarget.Self)]
 //    public class ViewComponent : IComponent
 //    {

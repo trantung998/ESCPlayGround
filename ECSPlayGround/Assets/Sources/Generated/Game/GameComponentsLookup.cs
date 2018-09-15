@@ -21,12 +21,14 @@ public static class GameComponentsLookup {
     public const int Collsions = 10;
     public const int Damage = 11;
     public const int EventsPosition = 12;
-    public const int EventsPositionListener = 13;
-    public const int Hp = 14;
-    public const int View = 15;
-    public const int WeaponId = 16;
+    public const int EventsRorationCompoent = 13;
+    public const int EventsPositionListener = 14;
+    public const int EventsRorationCompoentListener = 15;
+    public const int Hp = 16;
+    public const int View = 17;
+    public const int WeaponId = 18;
 
-    public const int TotalComponents = 17;
+    public const int TotalComponents = 19;
 
     public static readonly string[] componentNames = {
         "Asset",
@@ -42,7 +44,9 @@ public static class GameComponentsLookup {
         "Collsions",
         "Damage",
         "EventsPosition",
+        "EventsRorationCompoent",
         "EventsPositionListener",
+        "EventsRorationCompoentListener",
         "Hp",
         "View",
         "WeaponId"
@@ -62,7 +66,9 @@ public static class GameComponentsLookup {
         typeof(CollsionsComponent),
         typeof(DamageComponent),
         typeof(Events.PositionComponent),
+        typeof(Events.RorationComponent),
         typeof(EventsPositionListenerComponent),
+        typeof(EventsRorationCompoentListenerComponent),
         typeof(HpComponent),
         typeof(ViewComponent),
         typeof(WeaponIdComponent)
